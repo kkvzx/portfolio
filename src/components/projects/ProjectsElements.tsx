@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const ProjectsWrapper = styled.div`
   width: 100%;
-  background: white;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -51,14 +50,14 @@ export const Title = styled.h1`
   font-family: var(--secondary-font);
   letter-spacing: 2px;
   color: #ffb703;
-  padding-left: 7%;
+  padding-left: 6rem;
   font-size: 5rem;
   font-weight: 800;
 `;
 export const PortfolioText = styled.p`
   margin-bottom: 6rem;
   width: 60rem;
-  padding-left: 7%;
+  padding-left: 6rem;
   font-family: var(--secondary-font);
   font-weight: 200;
   letter-spacing: 1px;

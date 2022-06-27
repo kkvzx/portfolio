@@ -8,6 +8,7 @@ import Hero from "../Hero";
 import Sidebar from "../Sidebar";
 import AboutSection from "../AboutSection";
 import Projects from "../projects";
+import Contact from "../Contact";
 
 const Main = () => {
   // constants
@@ -50,8 +51,10 @@ const Main = () => {
         <Header toggle={toggleSideBar} />
         <Content>
           <Hero />
-          <Projects />
           <AboutSection />
+          <Projects />
+
+          <Contact />
         </Content>
       </MainWrapper>
       <GlobalStyles />

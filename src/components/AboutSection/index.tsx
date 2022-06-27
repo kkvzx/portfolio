@@ -23,7 +23,7 @@ const AboutSection = () => {
     </TechnologiesSquare>
   ));
   return (
-    <AboutWrapper>
+    <AboutWrapper id="about">
       <AboutTitle>About me</AboutTitle>
       <AboutMeContainer>
         <AboutMePhoto src={photo}></AboutMePhoto>

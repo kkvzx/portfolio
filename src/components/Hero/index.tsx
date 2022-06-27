@@ -1,5 +1,5 @@
-import React from "react";
-import { FaGreaterThan } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaGreaterThan, FaToggleOn } from "react-icons/fa";
 import {
   HeroBg,
   HeroContainer,
@@ -15,8 +15,14 @@ import {
 const photo = require("../../img/photo.png");
 
 const Hero = () => {
+  const [exploreActive, setExploreActive] = useState(false);
+
+  const toggle = () => {
+    setExploreActive((prev) => !prev);
+  };
+
   return (
-    <HeroContainer>
+    <HeroContainer id="hero">
       <HeroBg>
         <TextContainer>
           <HeroHeading>
@@ -31,8 +37,22 @@ const Hero = () => {
         </TextContainer>
       </HeroBg>
       <FrontPage>
-        <ExploreButton>Explore!</ExploreButton>
-        <Circle>
+        <ExploreButton
+          active={exploreActive}
+          onMouseEnter={() => toggle()}
+          onMouseLeave={() => toggle()}
+        >
+          Explore!
+        </ExploreButton>
+        <Circle
+          to="projects"
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={500}
+          onMouseEnter={() => toggle()}
+          onMouseLeave={() => toggle()}
+        >
           <FaGreaterThan />
         </Circle>
       </FrontPage>

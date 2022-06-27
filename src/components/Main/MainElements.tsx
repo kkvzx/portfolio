@@ -8,6 +8,7 @@ export const MainWrapper = styled.div`
   box-sizing: border-box;
   position: relative;
   justify-items: center;
+  background:var(--background-color);
 `;
 export const Content = styled.div`
   width: 100vw;

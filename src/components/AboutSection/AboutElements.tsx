@@ -5,12 +5,13 @@ export const AboutWrapper = styled.div`
   width: 100%;
   display: grid;
   grid-template-rows: auto 1fr;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: auto auto;
   justify-items: center;
-  /* align-items: center; */
+  align-items: flex-end;
   background: var(--background-color);
   color: var(--text-color);
-  padding-left: 7%;
+  padding-left: 6rem;
+  margin-top: 5rem;
 `;
 export const AboutTitle = styled.h1`
   grid-column-start: -1;
@@ -19,20 +20,23 @@ export const AboutTitle = styled.h1`
   height: 6rem;
   font-size: 5rem;
   font-weight: 800;
+  margin: 0;
   letter-spacing: 2px;
+
   color: var(--additional-color);
 `;
 // export const ContentContainer = styled.div`
 //   background: pink;
 // `;
 export const AboutMeContainer = styled.div`
+  width: 100%;
   height: 100%;
+
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
-  margin-top: 50px;
-  padding: 0 15rem;
+  text-align: center;
 `;
 export const AboutMePhoto = styled.img`
   width: 367px;
@@ -44,35 +48,32 @@ export const AboutMeHeader = styled.h1`
   margin-bottom: 0;
 `;
 export const AboutMeText = styled(PortfolioText)`
-  width: 50rem;
+  width: 60%;
+  padding: 0;
 `;
 
 export const Technologies = styled.div`
-  width: 100%;
   display: grid;
-  grid-template-rows: repeat(3, 300px);
+  width: 100%;
+  height: 100%;
+  /* grid-template-rows: repeat(3, 300px); */
   grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  gap: 30px;
+  /* justify-items: center; */
+  gap: 2%;
 `;
 export const TechnologiesSquare = styled.div`
-  width: 100%;
-  height: 16.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
   font-size: 1.5rem;
+  aspect-ratio: 1/ 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--text-color);
 `;
 export const SquareImage = styled.img`
-  height: 100%;
-  margin-bottom: 5px;
-  position: relative;
-  &:after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-  }
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  object-position: center;
 `;
 
 // TODO POPRAWIĆ RESPONSYWNOSĆ ELEMENTÓW i ZMIENIĆ OBRAZKI

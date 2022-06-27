@@ -28,16 +28,50 @@ const Header = (props: HeaderProps) => {
       </MobileIcon>
       <NavMenu>
         <NavItem>
-          <NavLinks to="about">About</NavLinks>
+          <NavLinks
+            to="hero"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            Start Page
+          </NavLinks>
+        </NavItem>
+
+        <NavItem>
+          <NavLinks
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            About Me
+          </NavLinks>
+        </NavItem>
+
+        <NavItem>
+          <NavLinks
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            My Portfolio
+          </NavLinks>
         </NavItem>
         <NavItem>
-          <NavLinks to="projects">My Skills</NavLinks>
-        </NavItem>
-        <NavItem>
-          <NavLinks to="resume">Work</NavLinks>
-        </NavItem>
-        <NavItem>
-          <NavLinks to="resume">Contact</NavLinks>
+          <NavLinks
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            Contact
+          </NavLinks>
         </NavItem>
       </NavMenu>
 

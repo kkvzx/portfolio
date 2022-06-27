@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as LinkS } from "react-scroll";
 
 export const HeroContainer = styled.div`
   height: 100vh;
@@ -79,31 +80,31 @@ export const FrontPage = styled.div`
   justify-content: flex-end;
   align-items: center;
 `;
-export const ExploreButton = styled.button`
+export const ExploreButton = styled.button<{ active: boolean }>`
   padding: 20px 30px;
   overflow: hidden;
   background: linear-gradient(-45deg, #DFF6FF, #47B5FF, #1363DF, #06283D);
 	background-size: 400% 400%;
-	animation: gradient 13s ease infinite;
+	animation: gradient 10s ease infinite;
   display:flex;
   justify-content:center;
   align-items:flex-end;
   border:none;
   border-radius:20px;
-  font-size:1.2rem;
   font-weight:800;
   font-family: "Oswald", sans-serif;
   letter-spacing:1px;
   cursor:pointer;
   color:white;
   font-family:
-  transition:0.3s all;
+  transition:all 2s ease-out;
+  font-size:1.2rem;
+  ${({ active }) =>
+    active && "  transition:all 0.3s ease-out; font-size:1.6rem;"}
+
+}
 
 
-  &:hover{
-      font-size:1.6rem;
-
-  }
 
 @keyframes gradient {
 	0% {
@@ -117,9 +118,8 @@ export const ExploreButton = styled.button`
 	}
 
 `;
-export const Circle = styled.div`
+export const Circle = styled(LinkS)`
   border-radius: 100%;
-  color: CCF3EE;
   font-size: 1.5rem;
   transform: rotateZ(90deg);
   width: 5rem;
@@ -127,9 +127,9 @@ export const Circle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #47b5ff;
   margin-top: 15px;
   margin-bottom: 5rem;
+  border: 2px solid var(--additional-color);
   color: var(--additional-color);
   cursor: pointer;
 `;

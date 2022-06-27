@@ -24,7 +24,7 @@ const Projects = () => {
   ));
 
   return (
-    <ProjectsWrapper>
+    <ProjectsWrapper id="projects">
       <Title>My Portfolio</Title>
       <PortfolioText>
         A small gallery of recent project chosen by me. I've done them while
