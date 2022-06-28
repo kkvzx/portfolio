@@ -17,4 +17,7 @@ export const Content = styled.div`
   align-items: center;
   justify-content: center;
   padding-left: 8rem;
+  @media screen and (max-width: 1275px) {
+    padding-left: 0;
+  }
 `;

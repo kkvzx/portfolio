@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { nanoid } from "nanoid";
 import { projectsData } from "./data";
 import {
@@ -10,14 +10,15 @@ import {
   SingleProject,
   Title,
 } from "./ProjectsElements";
+import ProjectBox from "../ProjectBox";
 
-const Projects = () => {
-  const showProject = () => {
-    console.log("Hello im kinda sad");
-  };
+type ProjectsProps = {
+  projectBoxToggle: (id: number) => void;
+};
 
-  const htmlProjectsData = projectsData.map((singleObj) => (
-    <SingleProject key={nanoid()} onClick={() => showProject()}>
+const Projects = (props: ProjectsProps) => {
+  const htmlProjectsData = projectsData.map((singleObj, index) => (
+    <SingleProject key={nanoid()} onClick={() => props.projectBoxToggle(index)}>
       <ProjectPhoto src={singleObj.photoSrc} alt="" />
       <ProjectTitle>{singleObj.name}</ProjectTitle>
     </SingleProject>

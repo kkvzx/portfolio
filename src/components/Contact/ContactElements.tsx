@@ -18,14 +18,36 @@ export const FormSection = styled.div`
 `;
 export const Forms = styled.form`
   width: 100%;
+  position: relative;
 `;
 export const Input = styled.input`
   width: 50%;
   padding: 12px;
-
+  background: #0e5581;
   box-sizing: border-box;
   resize: vertical;
   margin: 0.6rem 0;
+  border: 0;
+  caret-color: var(--additional-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  letter-spacing: 1px;
+
+  box-shadow: inset 0 45px 0 0 #0e5581;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.35s;
+
+  &:focus {
+    outline: none;
+    box-shadow: inset 0 45px 0 0 #0e5581,
+      inset 550px 0 0 0 var(--additional-color);
+  }
+  &:focus:invalid {
+    box-shadow: inset 0 45px 0 0 #0e5581, inset 550px 0 0 0 red;
+  }
+  /* &:focus:invalid {
+    box-shadow: inset 1px -4px 0 0 red;
+  } */
   &.left {
     margin-right: 1%;
     width: 49%;
@@ -34,22 +56,46 @@ export const Input = styled.input`
     width: 49%;
     margin-left: 1%;
   }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
 `;
 export const InputSubject = styled.input`
   width: 50%;
   padding: 12px;
-  border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
   margin: 0.6rem 0;
   width: 100%;
+  border: 0;
+  outline: none;
+  background: #0e5581;
+  caret-color: var(--additional-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  letter-spacing: 1px;
+
+  box-shadow: inset 0 45px 0 0 #0e5581;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.35s;
+
+  &:focus {
+    outline: none;
+    box-shadow: inset 0 45px 0 0 #0e5581,
+      inset 1100px 0 0 0 var(--additional-color);
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
 `;
 export const InputMessage = styled.textarea`
   width: 100%;
   margin: 0.6rem 0;
   padding: 12px;
-
+  border: 0;
   box-sizing: border-box;
   resize: vertical;
   height: 100px;
@@ -57,6 +103,26 @@ export const InputMessage = styled.textarea`
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
+  outline: none;
+  caret-color: var(--additional-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  background: #0e5581;
+  resize: none;
+
+  box-shadow: inset 0 97px 0 0 #0e5581;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.35s;
+
+  &:focus {
+    outline: none;
+    box-shadow: inset 0 97px 0 0 #0e5581,
+      inset 1100px 0 0 0 var(--additional-color);
+  }
+  &:focus::placeholder {
+    color: transparent;
+  }
 `;
 export const InputButton = styled.input`
   background: none;

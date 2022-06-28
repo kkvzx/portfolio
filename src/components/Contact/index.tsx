@@ -14,8 +14,12 @@ import {
   MapSection,
 } from "./ContactElements";
 const mapPhoto = require("../../img/map.png");
+const FORM_ENDPOINT = "https://formsubmit.co/0a2e73ee5eeb3a0c900ca5e8e3823519";
 
 const Contact = () => {
+  const handleSubmit = (e: React.MouseEvent) => {
+    e.preventDefault();
+  };
   return (
     <ContactWrapper id="contact">
       <FormSection>
@@ -24,12 +28,36 @@ const Contact = () => {
           Im intrested in working opportunities. Do not hesitate to use form
           below.
         </AboutMeText>
-        <Forms>
-          <Input type="text" className="left" placeholder="Name" />
-          <Input type="email" className="right" placeholder="Email" />
-          <InputSubject type="text" placeholder="Subject" />
-          <InputMessage placeholder="Message" />
-          <InputButton type="submit" value="Send message!" />
+        <Forms action={FORM_ENDPOINT} method="POST">
+          <Input
+            name="name"
+            type="text"
+            className="left"
+            placeholder="Name"
+            required
+          />
+          <Input
+            name="email"
+            type="email"
+            className="right"
+            placeholder="Email"
+            required
+          />
+          <InputSubject
+            name="_subject"
+            type="text"
+            placeholder="Subject"
+            required
+          />
+          <Input type="hidden" name="_captcha" value="false" />
+
+          <InputMessage name="message" placeholder="Message" />
+          <InputButton
+            type="submit"
+            value="Send message!"
+            // onClick={(e) => handleSubmit(e)}
+            required
+          />
         </Forms>
       </FormSection>
       <MapSection>

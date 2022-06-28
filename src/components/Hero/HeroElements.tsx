@@ -58,7 +58,7 @@ export const HeroHeading = styled.div`
   align-self: flex-start;
 `;
 export const Img = styled.img`
-  width: 32rem;
+  width: 21rem;
   /* height: 29.25rem; */
 `;
 export const HeroMainText = styled.h1`

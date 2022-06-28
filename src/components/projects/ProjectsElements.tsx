@@ -6,13 +6,14 @@ export const ProjectsWrapper = styled.div`
   align-items: flex-start;
   flex-direction: column;
   background: var(--background-color);
+  position: relative;
 `;
 
 export const ProjectsContainer = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
 `;
 export const SingleProject = styled.div`
   width: 20%;

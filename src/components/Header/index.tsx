@@ -4,7 +4,6 @@ import {
   HeaderWrapper,
   NavLogo,
   NavMenu,
-  MobileIcon,
   NavItem,
   NavLinks,
   OutsideLinks,
@@ -13,26 +12,20 @@ import {
 } from "./HeaderElements";
 import Sidebar from "../Sidebar";
 
-type HeaderProps = {
-  toggle: () => void;
-};
-
-const Header = (props: HeaderProps) => {
+const Header = () => {
   return (
     <HeaderWrapper>
       <NavLogo>
         <LogoWrapper to="/">kkvzx</LogoWrapper>
       </NavLogo>
-      <MobileIcon>
-        <FaBars onClick={() => props.toggle()} />
-      </MobileIcon>
+
       <NavMenu>
         <NavItem>
           <NavLinks
             to="hero"
             spy={true}
             smooth={true}
-            offset={50}
+            offset={0}
             duration={500}
           >
             Start Page
@@ -44,7 +37,7 @@ const Header = (props: HeaderProps) => {
             to="about"
             spy={true}
             smooth={true}
-            offset={50}
+            offset={0}
             duration={500}
           >
             About Me
@@ -56,7 +49,7 @@ const Header = (props: HeaderProps) => {
             to="projects"
             spy={true}
             smooth={true}
-            offset={50}
+            offset={0}
             duration={500}
           >
             My Portfolio
@@ -67,7 +60,7 @@ const Header = (props: HeaderProps) => {
             to="contact"
             spy={true}
             smooth={true}
-            offset={50}
+            offset={0}
             duration={500}
           >
             Contact
@@ -94,3 +87,5 @@ const Header = (props: HeaderProps) => {
 };
 
 export default Header;
+
+// TODO SIDEBAR MENU - PROJECT SEGMENT - WORKING CONTACT FORM - REACT ROUTER

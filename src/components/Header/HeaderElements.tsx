@@ -14,34 +14,24 @@ export const HeaderWrapper = styled.div`
   background: #06283d;
   position: fixed;
   z-index: 999;
-
-  /* @media screen and (max-width: 960px) {
-    transition: 0.8s all ease;
+  @media screen and (max-width: 1275px) {
+    display: none;
   }
-  &:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(1);
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: #656565;
-  } */
 `;
 // ==================First element===================
 export const NavLogo = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   color: var(--text-color);
-  height: 15rem;
+  height: 10rem;
   width: 100%;
+  background: #041926;
 
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     width: 100%;
     justify-content: center;
-  }
+  } */
 `;
 export const LogoWrapper = styled(LinkR)`
   color: var(--text-color);
@@ -53,21 +43,6 @@ export const LogoWrapper = styled(LinkR)`
   cursor: pointer;
 `;
 
-export const MobileIcon = styled.div`
-  display: none;
-
-  @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 37%;
-    right: 30px;
-    /* transform: translate(-100%, 60%); */
-    font-size: 2rem;
-    color: var(--text-color);
-    cursor: pointer;
-    transition: 0.3s all;
-  }
-`;
 // ===============Second element===============
 export const NavMenu = styled.ul`
   display: flex;
@@ -79,9 +54,9 @@ export const NavMenu = styled.ul`
   width: 100%;
   padding: 0;
 
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 1275px) {
     display: none;
-  }
+  } */
 `;
 export const NavItem = styled.li`
   width: 100%;
@@ -96,12 +71,11 @@ export const NavLinks = styled(LinkS)`
   font-weight: 200;
   position: relative;
   height: 60px;
-  border-top: 1px solid #656565;
-  border-bottom: 1px solid #656565;
+  border-top: 1px solid #414141;
+  border-bottom: 1px solid #414141;
   font-family: "Oswald", sans-serif;
   letter-spacing: 1px;
   font-size: 1.2rem;
-
   &.active {
     .border-bottom: 3px solid violet;
   }
@@ -123,34 +97,32 @@ export const NavLinks = styled(LinkS)`
 
 // ===========Third element=================
 export const OutsideLinks = styled.div`
-  width: 100%;
-  height: 15rem;
+  width: 8rem;
+  height: 10rem;
   font-size: 1.3rem;
   display: flex;
   justify-content: center;
   color: var(--text-color);
-  @media screen and (max-width: 768px) {
-    display: none;
+  @media screen and (max-width: 1275px) {
+    background: #041926;
   }
 `;
 export const SingleOutsideLink = styled.div`
   margin: 3px;
-  height: 30px;
+  height: 10rem;
   cursor: pointer;
-  position: relative;
+  box-shadow: inset 0 0 0 0 var(--additional-color);
+  transition: ease-out 0.25s;
 
-  &:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--additional-color);
-    transition: transform 0.2s ease-out;
-  }
-  &:hover:after {
-    transform: scaleX(1);
+  &:hover {
+    box-shadow: inset 0 -10rem 0 0 var(--additional-color);
+    color: black;
   }
 `;
+// box-shadow: inset 0 0 0 0 var(--additional-color);
+// transition: ease-out 0.25s;
+
+// &:hover {
+//   box-shadow: inset 220px 0 0 var(--additional-color);
+//   color: black;
+// }

@@ -9,6 +9,7 @@ import Sidebar from "../Sidebar";
 import AboutSection from "../AboutSection";
 import Projects from "../projects";
 import Contact from "../Contact";
+import ProjectBox from "../ProjectBox";
 
 const Main = () => {
   // constants
@@ -21,13 +22,20 @@ const Main = () => {
   };
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [windowSize, SetWindowSize] = useState(getWindowSize());
+  const [isOpenProjectBox, setIsOpenProjectBox] = useState<boolean>(false);
+  const [idOfProjectBox, setIdOfProjectBox] = useState<number>(0);
 
   // functions and hooks
 
   const toggleSideBar = () => {
     setIsOpen((prev) => !prev);
-    console.log("hi");
   };
+
+  const projectBoxToggle: (id: number) => void = (id: number) => {
+    setIsOpenProjectBox((prev) => !prev);
+    setIdOfProjectBox(id);
+  };
+
   useEffect(() => {
     const windowResize = () => {
       SetWindowSize(getWindowSize());
@@ -48,12 +56,12 @@ const Main = () => {
     <Router>
       <MainWrapper>
         <Sidebar toggle={toggleSideBar} isOpen={isOpen} />
-        <Header toggle={toggleSideBar} />
+        <Header />
         <Content>
           <Hero />
           <AboutSection />
-          <Projects />
-
+          <Projects projectBoxToggle={projectBoxToggle} />
+          {isOpenProjectBox && <ProjectBox idOfBox={idOfProjectBox} />}
           <Contact />
         </Content>
       </MainWrapper>
