@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback, useRef } from "react";
 import GlobalStyles from "../GlobalStyles";
 import Header from "../Header";
 import { Content, MainWrapper } from "./MainElements";
@@ -35,13 +35,16 @@ const Main = () => {
     setIsOpenProjectBox((prev) => !prev);
     setIdOfProjectBox(id);
   };
-
+  const scrollHandler = () => {
+    setIsOpenProjectBox(false);
+  };
   useEffect(() => {
     const windowResize = () => {
       SetWindowSize(getWindowSize());
     };
-    window.addEventListener("resize", windowResize);
 
+    window.addEventListener("resize", windowResize);
+    window.addEventListener("scroll", scrollHandler);
     return () => {
       window.removeEventListener("resize", windowResize);
     };
@@ -61,7 +64,9 @@ const Main = () => {
           <Hero />
           <AboutSection />
           <Projects projectBoxToggle={projectBoxToggle} />
-          {isOpenProjectBox && <ProjectBox idOfBox={idOfProjectBox} />}
+          {isOpenProjectBox && (
+            <ProjectBox idOfBox={idOfProjectBox} boxToggle={scrollHandler} />
+          )}
           <Contact />
         </Content>
       </MainWrapper>

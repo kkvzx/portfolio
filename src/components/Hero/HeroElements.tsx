@@ -14,7 +14,7 @@ export const HeroContainer = styled.div`
   background: #08324c;
 `;
 export const HeroBg = styled.div`
-  width: 105%;
+  width: 110%;
   height: 50vh;
   margin-top:-3%;
   transform: rotateZ(-3deg);
@@ -26,8 +26,9 @@ export const HeroBg = styled.div`
   justify-content:space-between;
   z-index:1;
   padding-left:7%;
-}
-
+  @media screen and (max-width: 900px) {
+    height:75vh;
+  }
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -37,14 +38,9 @@ export const HeroBg = styled.div`
 	}
 	100% {
 		background-position: 0% 50%;
-	}
+	};
+
 `;
-/* export const FirstContainer = styled.div`
-  width: 100%;
-  background: green;
-  position: absolute;
-  
-`; */
 export const TextContainer = styled.div`
   width: 80%;
   transform: rotateZ(3deg);
@@ -58,21 +54,46 @@ export const HeroHeading = styled.div`
   align-self: flex-start;
 `;
 export const Img = styled.img`
-  width: 21rem;
-  /* height: 29.25rem; */
+  width: 26rem;
+  height: auto;
+  @media screen and (max-height: 1000px) {
+    width: 19rem;
+  }
+  @media screen and (max-height: 700px) {
+    width: 16rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 21rem;
+  }
 `;
 export const HeroMainText = styled.h1`
   color: white;
   font-weight: 700;
-  margin: 0;
+  margin: 2px;
   font-family: "Oswald", sans-serif;
+  padding: 0;
+  line-height: 1;
+  font-size: var(--big-font-size);
+  @media screen and (max-width: 900px) {
+    font-size: var(--big-font-sizeMobile);
+  }
+  @media screen and (max-height: 1050px) {
+    font-size: var(--big-font-sizeMobile);
+  }
 `;
 export const HeroSecondaryText = styled.p`
   color: white;
-  font-size: 1.2rem;
+  font-size: var(--h2-font-size);
   font-weight: 200;
-  letter-spacing:1px;
-  font-family: "Oswald", sans-serif;\
+  letter-spacing: 1px;
+  font-family: "Oswald", sans-serif;
+  @media screen and (max-width: 900px) {
+    font-size: var(--h2-font-sizeMobile);
+  }
+  @media screen and (max-height: 1050px) {
+    font-size: var(--h2-font-sizeMobile);
+  }
 `;
 export const FrontPage = styled.div`
   display: flex;
@@ -103,7 +124,9 @@ export const ExploreButton = styled.button<{ active: boolean }>`
     active && "  transition:all 0.3s ease-out; font-size:1.6rem;"}
 
 }
-
+  @media screen and (max-width: 900px) {
+    padding:10px 20px;
+  }
 
 
 @keyframes gradient {
@@ -132,4 +155,10 @@ export const Circle = styled(LinkS)`
   border: 2px solid var(--additional-color);
   color: var(--additional-color);
   cursor: pointer;
+  @media screen and (max-width: 900px) {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
 `;

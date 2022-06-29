@@ -1,14 +1,15 @@
 import React from "react";
 import { FaBars, FaGithub, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import {
-  LogoWrapper,
   NavLogo,
   OutsideLinks,
   SingleOutsideLink,
+  HeaderLogo,
 } from "../Header/HeaderElements";
 import {
   ClosingIcon,
   ContentWrapper,
+  LogoWrap,
   MobileIcon,
   SidebarLogo,
   SidebarMenu,
@@ -31,7 +32,9 @@ const Sidebar = (props: NavMobileMenuProps) => {
       <ContentWrapper isOpen={props.isOpen} onClick={() => props.toggle()}>
         <ClosingIcon></ClosingIcon>
         <SidebarLogo>
-          <LogoWrapper to="/">kkvzx</LogoWrapper>
+          <LogoWrap>
+            <HeaderLogo src="https://i.imgur.com/V83tec7.png" />
+          </LogoWrap>
         </SidebarLogo>
         <SidebarMenu>
           <SideItem>

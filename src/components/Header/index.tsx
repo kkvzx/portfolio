@@ -8,7 +8,7 @@ import {
   NavLinks,
   OutsideLinks,
   SingleOutsideLink,
-  LogoWrapper,
+  HeaderLogo,
 } from "./HeaderElements";
 import Sidebar from "../Sidebar";
 
@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <NavLogo>
-        <LogoWrapper to="/">kkvzx</LogoWrapper>
+        <HeaderLogo src="https://i.imgur.com/V83tec7.png" />
       </NavLogo>
 
       <NavMenu>

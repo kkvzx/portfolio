@@ -9,6 +9,7 @@ export const MainWrapper = styled.div`
   position: relative;
   justify-items: center;
   background:var(--background-color);
+
 `;
 export const Content = styled.div`
   width: 100vw;

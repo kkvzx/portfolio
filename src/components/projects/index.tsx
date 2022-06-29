@@ -12,6 +12,7 @@ import {
 } from "./ProjectsElements";
 import ProjectBox from "../ProjectBox";
 
+// require("../../img/projectsDataImg/tenzis/1.png")
 type ProjectsProps = {
   projectBoxToggle: (id: number) => void;
 };
@@ -19,7 +20,7 @@ type ProjectsProps = {
 const Projects = (props: ProjectsProps) => {
   const htmlProjectsData = projectsData.map((singleObj, index) => (
     <SingleProject key={nanoid()} onClick={() => props.projectBoxToggle(index)}>
-      <ProjectPhoto src={singleObj.photoSrc} alt="" />
+      <ProjectPhoto src={singleObj.photos[0]} alt="" />
       <ProjectTitle>{singleObj.name}</ProjectTitle>
     </SingleProject>
   ));

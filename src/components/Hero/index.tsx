@@ -30,7 +30,7 @@ const Hero = () => {
             <HeroMainText>I'm Konrad</HeroMainText>
             <HeroMainText>Aircraft Engineer</HeroMainText>
             <HeroSecondaryText>
-              Who choosed diffrent path and loves learning, creating and travels
+              Who choosed diffrent path. I love learning and creating.
             </HeroSecondaryText>
           </HeroHeading>
           <Img src={photo} alt="photo-png" />

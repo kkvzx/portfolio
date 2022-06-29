@@ -33,14 +33,10 @@ export const NavLogo = styled.div`
     justify-content: center;
   } */
 `;
-export const LogoWrapper = styled(LinkR)`
-  color: var(--text-color);
-  font-weight: 700;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  text-decoration: none;
 
-  cursor: pointer;
+export const HeaderLogo = styled.img`
+  margin: 0 5%;
+  width: 90%;
 `;
 
 // ===============Second element===============

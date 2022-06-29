@@ -6,6 +6,9 @@ export const ContactWrapper = styled.div`
   /* height: 100%; */
   background: var(--background-color);
   display: flex;
+  @media screen and (max-width: 1050px) {
+    flex-direction: column;
+  }
 `;
 export const FormSection = styled.div`
   width: 50%;
@@ -15,6 +18,11 @@ export const FormSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  @media screen and (max-width: 1050px) {
+    padding-left: 2rem;
+    width: 100%;
+    min-width: 0;
+  }
 `;
 export const Forms = styled.form`
   width: 100%;
@@ -45,9 +53,7 @@ export const Input = styled.input`
   &:focus:invalid {
     box-shadow: inset 0 45px 0 0 #0e5581, inset 550px 0 0 0 red;
   }
-  /* &:focus:invalid {
-    box-shadow: inset 1px -4px 0 0 red;
-  } */
+
   &.left {
     margin-right: 1%;
     width: 49%;
@@ -145,25 +151,34 @@ export const InputButton = styled.input`
 `;
 export const MapSection = styled.div`
   width: 50%;
-  height: 57rem;
+  /* height: 57rem; */
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
   position: relative;
+  @media screen and (max-width: 1050px) {
+    width: 100%;
+    justify-content: center;
+    margin-top: 2rem;
+  }
 `;
 
 export const MapImg = styled.img`
-  width: 57rem;
-  height: 57rem;
+  width: 100%;
+  height: auto;
   object-fit: cover;
+  @media screen and (max-width: 1050px) {
+    width: 80%;
+    height: auto;
+  }
 `;
 
 export const InfoDiv = styled.div`
   background: black;
   opacity: 0.85;
   position: absolute;
-  top: 2rem;
+  top: 2%;
   left: 4rem;
   padding: 10px 15px;
 `;
@@ -171,8 +186,12 @@ export const InfoText = styled.p`
   color: var(--text-color);
   margin: 0;
   letter-spacing: 1px;
+  font-size: var(--text-size);
   &.email {
     color: var(--additional-color);
     margin-top: 2rem;
+  }
+  @media screen and (max-width: 1050px) {
+    font-size: var(--text-sizeMobile);
   }
 `;

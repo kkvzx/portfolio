@@ -7,6 +7,12 @@ const GlobalStyles = createGlobalStyle`
  --secondary-font: "Oswald", sans-serif;
  --additional-color:#FFB703;
  --background-color:#08324c;
+ --text-size:1.3rem;
+ --text-sizeMobile:0.8rem;
+ --big-font-size:5rem;
+ --big-font-sizeMobile:3rem;
+ --h2-font-size:2.2rem;
+ --h2-font-sizeMobile:1.3rem;
 }
 *{
  box-sizing:border-box;

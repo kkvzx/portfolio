@@ -58,6 +58,9 @@ export const SidebarLogo = styled(NavLogo)`
   text-transform: uppercase;
   margin: 0;
 `;
+export const LogoWrap = styled.div`
+  width: 20%;
+`;
 
 export const SidebarMenu = styled(NavMenu)`
   flex-direction: column;

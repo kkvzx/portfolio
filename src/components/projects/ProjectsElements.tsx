@@ -19,17 +19,22 @@ export const SingleProject = styled.div`
   width: 20%;
   background: #1f4690;
   text-align: center;
-  filter: brightness(50%);
+  /* filter: brightness(50%); */
   cursor: pointer;
   position: relative;
   transition: 0.3s all;
-  &:hover {
-    filter: brightness(100%);
-  }
+
   &:after {
     content: "";
     display: block;
     padding-bottom: 100%;
+  }
+  @media screen and (max-width: 900px) {
+    width: 33.3%;
+  }
+  @media screen and (max-width: 380px) {
+    width: 50%;
+    font-size: 0.5rem;
   }
 `;
 export const ProjectPhoto = styled.img`
@@ -39,12 +44,16 @@ export const ProjectPhoto = styled.img`
   top: 0;
   width: 100%;
   height: 100%;
+  filter: brightness(10%);
+  transition: 0.4s all;
+  &:hover {
+    filter: brightness(100%);
+  }
 `;
 export const ProjectTitle = styled.h2`
   color: white;
   position: absolute;
   width: 100%;
-  height: 100%;
 `;
 export const Title = styled.h1`
   margin: 4rem 0 20px 0;
@@ -52,16 +61,24 @@ export const Title = styled.h1`
   letter-spacing: 2px;
   color: #ffb703;
   padding-left: 6rem;
-  font-size: 5rem;
+  font-size: var(--big-font-size);
   font-weight: 800;
+  @media screen and (max-width: 900px) {
+    font-size: var(--big-font-sizeMobile);
+    padding-left: 2rem;
+  }
 `;
 export const PortfolioText = styled.p`
   margin-bottom: 6rem;
-  width: 60rem;
-  padding-left: 6rem;
+  padding: 0 30% 0 6rem;
   font-family: var(--secondary-font);
   font-weight: 200;
   letter-spacing: 1px;
-  font-size: 1.6rem;
+  font-size: var(--text-size);
   color: var(--text-color);
+  @media screen and (max-width: 900px) {
+    font-size: var(--text-sizeMobile);
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+  }
 `;
