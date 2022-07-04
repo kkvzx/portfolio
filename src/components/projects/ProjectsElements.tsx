@@ -44,8 +44,11 @@ export const SingleProject = styled.div`
     padding-bottom: 150%;
   }
   &:hover ${ReadMore} {
-    color: var(--text-color);
+    color: black;
     background: var(--additional-color);
+  }
+  &:hover {
+    box-shadow: 0 0 1em black;
   }
   /* @media screen and (max-width: 900px) {
     width: 25%;

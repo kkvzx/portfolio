@@ -30,7 +30,7 @@ const Projects = (props: ProjectsProps) => {
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt
           quaerat possimus quod laborum ratione, odit perspiciatis dolorum
           reiciendis fugiat sit aut aspernatur rerum nam voluptatem natus
-          accusantium sed quasi animi! <ReadMore>...Read More</ReadMore>
+          accusantium sed quasi animi!... <ReadMore>Read More</ReadMore>
         </ProjectInformation>
       </InfoSection>
     </SingleProject>
