@@ -30,11 +30,11 @@ const Main = () => {
   const toggleSideBar = () => {
     setIsOpen((prev) => !prev);
   };
-
   const projectBoxToggle: (id: number) => void = (id: number) => {
     setIsOpenProjectBox((prev) => !prev);
     setIdOfProjectBox(id);
   };
+
   const scrollHandler = () => {
     setIsOpenProjectBox(false);
   };

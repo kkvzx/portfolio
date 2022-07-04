@@ -28,6 +28,7 @@ export const AboutTitle = styled.h1`
   margin: 0;
   letter-spacing: 2px;
   color: var(--additional-color);
+  margin-bottom: 2rem;
   @media screen and (max-width: 900px) {
     justify-self: center;
     font-size: var(--big-font-sizeMobile);
@@ -75,6 +76,7 @@ export const Technologies = styled.div`
   width: 100%;
   height: 100%;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 2%;
   position: relative;
   padding-right: 2rem;
@@ -88,7 +90,9 @@ export const TechnologiesSquare = styled.div`
   font-size: 1.5rem;
   aspect-ratio: 1/ 1;
   display: flex;
+  text-align: center;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   color: var(--text-color);
   @media screen and (max-width: 900px) {
