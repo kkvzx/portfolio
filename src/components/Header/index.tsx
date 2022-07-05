@@ -69,10 +69,13 @@ const Header = () => {
       </NavMenu>
 
       <OutsideLinks>
-        <SingleOutsideLink>
+        <SingleOutsideLink href="https://github.com/kkvzx" target="_blank">
           <FaGithub />
         </SingleOutsideLink>
-        <SingleOutsideLink>
+        <SingleOutsideLink
+          href="https://www.linkedin.com/in/konrad-kazusek-630b1716a/"
+          target="_blank"
+        >
           <FaLinkedin />
         </SingleOutsideLink>
         <SingleOutsideLink>

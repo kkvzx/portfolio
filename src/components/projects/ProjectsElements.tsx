@@ -1,3 +1,4 @@
+import { FaGithub } from "react-icons/fa";
 import styled from "styled-components";
 
 export const ProjectsWrapper = styled.div`
@@ -20,12 +21,22 @@ export const ProjectsContainer = styled.div`
   }
 `;
 export const ReadMore = styled.a`
-  font-size: var(--text-font-size);
-  color: var(--additional-color);
+  font-size: 1.4rem;
+  color: var(--text-color);
   font-weight: 400;
   background: none;
-  padding: 1px 5px;
+  padding: 1px 10px;
   border-radius: 20px;
+  margin-right: 30px;
+  float: right;
+  transition: 0.3s all;
+`;
+export const GithubLink = styled(FaGithub)`
+  float: left;
+  margin-left: 30px;
+  font-size: 1.5rem;
+  color: black;
+  color: var(--text-color);
 `;
 export const SingleProject = styled.div`
   width: 18%;
@@ -37,6 +48,7 @@ export const SingleProject = styled.div`
   background: #0e5581;
   position: relative;
   transition: 0.3s all;
+  cursor: pointer;
 
   &:after {
     content: "";
@@ -47,17 +59,22 @@ export const SingleProject = styled.div`
     color: black;
     background: var(--additional-color);
   }
+
   &:hover {
     box-shadow: 0 0 1em black;
   }
-  /* @media screen and (max-width: 900px) {
-    width: 25%;
+
+  @media screen and (max-width: 2010px) {
+    min-width: 250px;
+    min-height: 515px;
+  }
+  @media screen and (max-width: 900px) {
   }
   @media screen and (max-width: 380px) {
-    width: 35%;
     font-size: 0.5rem;
-  } */
+  } ;
 `;
+
 export const ProjectPhoto = styled.img`
   width: 100%;
   max-height: 250px;
@@ -71,6 +88,9 @@ export const ProjectPhoto = styled.img`
     content: "";
     display: block;
     padding-bottom: 100%;
+  }
+  @media screen and (max-width: 2010px) {
+    height: 40%;
   }
 `;
 export const InfoSection = styled.div`
@@ -87,10 +107,13 @@ export const ProjectInformation = styled.p`
 
 export const ProjectTitle = styled.h2`
   color: white;
-  margin-top: 75%;
+  margin-top: 260px;
   width: 100%;
   font-size: var(--h2-font-size);
   /* position: absolute; */
+  @media screen and (max-width: 2000px) {
+    margin-top: 230px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -116,6 +139,7 @@ export const PortfolioText = styled.p`
   letter-spacing: 1px;
   font-size: var(--text-size);
   color: var(--text-color);
+
   @media screen and (max-width: 900px) {
     font-size: var(--text-sizeMobile);
     margin-bottom: 2rem;

@@ -19,7 +19,7 @@ export const HeroBg = styled.div`
   margin-top:-3%;
   transform: rotateZ(-3deg);
   overflow: hidden;
-  background: linear-gradient(-45deg, #DFF6FF, #47B5FF, #1363DF, #06283D);
+  background: linear-gradient(-45deg,#DFF6FF, #47B5FF, #1363DF, #06283D);
 	background-size: 400% 400%;
 	animation: gradient 13s ease infinite;
   display:flex;

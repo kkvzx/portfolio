@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
  --secondary-font: "Oswald", sans-serif;
  --additional-color:#FFB703;
  --background-color:#08324c;
+ --green-color:#054a23;
  --text-size:1.3rem;
  --text-sizeMobile:0.8rem;
  --big-font-size:5rem;

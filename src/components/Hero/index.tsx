@@ -48,7 +48,7 @@ const Hero = () => {
           to="projects"
           spy={true}
           smooth={true}
-          offset={0}
+          offset={70}
           duration={500}
           onMouseEnter={() => toggle()}
           onMouseLeave={() => toggle()}

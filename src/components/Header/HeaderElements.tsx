@@ -103,13 +103,17 @@ export const OutsideLinks = styled.div`
     background: #041926;
   }
 `;
-export const SingleOutsideLink = styled.div`
+export const SingleOutsideLink = styled.a`
   margin: 3px;
   height: 10rem;
   cursor: pointer;
   box-shadow: inset 0 0 0 0 var(--additional-color);
   transition: ease-out 0.25s;
-
+  text-decoration: none;
+  color: white;
+  &:visited {
+    color: white;
+  }
   &:hover {
     box-shadow: inset 0 -10rem 0 0 var(--additional-color);
     color: black;

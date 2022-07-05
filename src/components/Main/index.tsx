@@ -10,6 +10,7 @@ import AboutSection from "../AboutSection";
 import Projects from "../projects";
 import Contact from "../Contact";
 import ProjectBox from "../ProjectBox";
+import { projectsData } from "../projects/data";
 
 const Main = () => {
   // constants
@@ -38,6 +39,16 @@ const Main = () => {
   const scrollHandler = () => {
     setIsOpenProjectBox(false);
   };
+
+  const projectBoxSwitch = (operation: string) => {
+    if (operation === "plus" && idOfProjectBox < projectsData.length - 1) {
+      setIdOfProjectBox((prev) => prev + 1);
+    } else if (operation === "minus" && idOfProjectBox > 0) {
+      setIdOfProjectBox((prev) => prev - 1);
+    } else {
+      console.log("No mathcing conditions");
+    }
+  };
   useEffect(() => {
     const windowResize = () => {
       SetWindowSize(getWindowSize());
@@ -65,7 +76,11 @@ const Main = () => {
           <AboutSection />
           <Projects projectBoxToggle={projectBoxToggle} />
           {isOpenProjectBox && (
-            <ProjectBox idOfBox={idOfProjectBox} boxToggle={scrollHandler} />
+            <ProjectBox
+              idOfBox={idOfProjectBox}
+              boxToggle={scrollHandler}
+              projectBoxSwitch={projectBoxSwitch}
+            />
           )}
           <Contact />
         </Content>

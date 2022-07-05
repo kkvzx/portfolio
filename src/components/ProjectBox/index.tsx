@@ -1,6 +1,7 @@
 import { nanoid } from "nanoid";
 import React, { useState } from "react";
 import { projectsData } from "../projects/data";
+import { ReadMore } from "../projects/ProjectsElements";
 import { ClosingIcon } from "../Sidebar/SidebarElements";
 import {
   BoxWrapper,
@@ -16,9 +17,20 @@ import {
   TechnologiesUsed,
   SkipButtons,
   SkipBtn,
+  GithubLinkInBox,
+  SingleOutsideBoxLink,
+  LiveDemo,
+  Arrows,
+  LeftArrow,
+  RightArrow,
+  EmptyArrow,
 } from "./ProjectBoxElements";
 
-const ProjectBox = (props: { idOfBox: number; boxToggle: () => void }) => {
+const ProjectBox = (props: {
+  idOfBox: number;
+  boxToggle: () => void;
+  projectBoxSwitch: (operation: string) => void;
+}) => {
   const [photoIndex, setPhotoIndex] = useState(0);
 
   const project = projectsData[props.idOfBox];
@@ -58,7 +70,32 @@ const ProjectBox = (props: { idOfBox: number; boxToggle: () => void }) => {
             {project.description}
           </DifficultiesToOvercomeText>
         </DifficultiesToOvercomeContainer>
+        <SingleOutsideBoxLink href={project.github} target="_blank">
+          <GithubLinkInBox></GithubLinkInBox>
+        </SingleOutsideBoxLink>
+        <SingleOutsideBoxLink href={project.liveDemo} target="_blank">
+          <ReadMore>Live Demo</ReadMore>
+        </SingleOutsideBoxLink>
       </InformationContainer>
+      <Arrows>
+        {props.idOfBox > 0 && (
+          <LeftArrow
+            className="minus"
+            onClick={(e) =>
+              props.projectBoxSwitch((e as any).target.classList[2])
+            }
+          ></LeftArrow>
+        )}
+        {props.idOfBox === 0 && <EmptyArrow />}
+        {props.idOfBox < projectsData.length - 1 && (
+          <RightArrow
+            className="plus"
+            onClick={(e) =>
+              props.projectBoxSwitch((e as any).target.classList[2])
+            }
+          ></RightArrow>
+        )}
+      </Arrows>
     </BoxWrapper>
   );
 };

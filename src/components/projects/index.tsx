@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { nanoid } from "nanoid";
 import { projectsData } from "./data";
 import {
+  GithubLink,
   InfoSection,
   PortfolioText,
   ProjectInformation,
@@ -29,9 +30,10 @@ const Projects = (props: ProjectsProps) => {
         <ProjectInformation>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt
           quaerat possimus quod laborum ratione, odit perspiciatis dolorum
-          reiciendis fugiat sit aut aspernatur rerum nam voluptatem natus
-          accusantium sed quasi animi!... <ReadMore>Read More</ReadMore>
+          reiciendis fugiat sit aut...
         </ProjectInformation>
+        <ReadMore>Show More</ReadMore>
+        <GithubLink />
       </InfoSection>
     </SingleProject>
   ));

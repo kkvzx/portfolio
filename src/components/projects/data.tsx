@@ -19,6 +19,8 @@ export const projectsData = [
       "https://i.imgur.com/6N2HMTZ.png?1",
     ],
     photoAlt: "/",
+    github: "https://github.com/kkvzx/Tenzies",
+    liveDemo: "https://game-manager.vercel.app/",
   },
   {
     id: 1,
@@ -42,10 +44,12 @@ export const projectsData = [
       "https://i.imgur.com/RtANS1Y.png?2",
     ],
     photoAlt: "/",
+    github: "https://github.com/kkvzx/tic-tac-toe",
+    liveDemo: "https://game-manager.vercel.app/",
   },
   {
     id: 2,
-    name: "< FunGenerator/>",
+    name: "<FunGenerator/>",
     technologies: [
       "html",
       "css",
@@ -64,6 +68,8 @@ export const projectsData = [
       "https://i.imgur.com/IJryVBF.png",
     ],
     photoAlt: "/",
+    github: "https://github.com/kkvzx/quizapp",
+    liveDemo: "https://game-manager.vercel.app/",
   },
   {
     id: 3,
@@ -86,27 +92,12 @@ export const projectsData = [
       "https://i.imgur.com/3RHqkrd.png?1",
     ],
     photoAlt: "/",
+    github: "https://github.com/kkvzx/game-manager",
+    liveDemo: "https://game-manager.vercel.app/",
   },
+
   {
     id: 4,
-    name: "Game Manager",
-    technologies: [
-      "html",
-      "css",
-      "javascript",
-      "styledComponents",
-      "React",
-      "Figma",
-    ],
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique est, reprehenderit et iste quo laboriosam dolore animi perferendis officia nemo.",
-    photos: [
-      "https://images.pexels.com/photos/6431895/pexels-photo-6431895.jpeg",
-    ],
-    photoAlt: "/",
-  },
-  {
-    id: 5,
     name: "Portfolio 1.0",
     technologies: [
       "html",
@@ -122,59 +113,61 @@ export const projectsData = [
       "https://images.pexels.com/photos/6431895/pexels-photo-6431895.jpeg",
     ],
     photoAlt: "/",
+    github: "https://github.com/kkvzx/portfolio",
+    liveDemo: "",
   },
-  {
-    id: 6,
-    name: "Meme Generator",
-    technologies: [
-      "html",
-      "css",
-      "javascript",
-      "styledComponents",
-      "React",
-      "Figma",
-    ],
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique est, reprehenderit et iste quo laboriosam dolore animi perferendis officia nemo.",
-    photos: [
-      "https://images.pexels.com/photos/6431895/pexels-photo-6431895.jpeg",
-    ],
-    photoAlt: "/",
-  },
-  {
-    id: 7,
-    name: "Chess",
-    technologies: [
-      "html",
-      "css",
-      "javascript",
-      "styledComponents",
-      "React",
-      "Figma",
-    ],
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique est, reprehenderit et iste quo laboriosam dolore animi perferendis officia nemo.",
-    photos: [
-      "https://images.pexels.com/photos/6431895/pexels-photo-6431895.jpeg",
-    ],
-    photoAlt: "/",
-  },
-  {
-    id: 8,
-    name: "Instagram clone",
-    technologies: [
-      "html",
-      "css",
-      "javascript",
-      "styledComponents",
-      "React",
-      "Figma",
-    ],
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique est, reprehenderit et iste quo laboriosam dolore animi perferendis officia nemo.",
-    photos: [
-      "https://images.pexels.com/photos/6431895/pexels-photo-6431895.jpeg",
-    ],
-    photoAlt: "/",
-  },
+  // {
+  //   id: 6,
+  //   name: "Meme Generator",
+  //   technologies: [
+  //     "html",
+  //     "css",
+  //     "javascript",
+  //     "styledComponents",
+  //     "React",
+  //     "Figma",
+  //   ],
+  //   description:
+  //     "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique est, reprehenderit et iste quo laboriosam dolore animi perferendis officia nemo.",
+  //   photos: [
+  //     "https://images.pexels.com/photos/6431895/pexels-photo-6431895.jpeg",
+  //   ],
+  //   photoAlt: "/",
+  // },
+  // {
+  //   id: 7,
+  //   name: "Chess",
+  //   technologies: [
+  //     "html",
+  //     "css",
+  //     "javascript",
+  //     "styledComponents",
+  //     "React",
+  //     "Figma",
+  //   ],
+  //   description:
+  //     "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique est, reprehenderit et iste quo laboriosam dolore animi perferendis officia nemo.",
+  //   photos: [
+  //     "https://images.pexels.com/photos/6431895/pexels-photo-6431895.jpeg",
+  //   ],
+  //   photoAlt: "/",
+  // },
+  // {
+  //   id: 8,
+  //   name: "Instagram clone",
+  //   technologies: [
+  //     "html",
+  //     "css",
+  //     "javascript",
+  //     "styledComponents",
+  //     "React",
+  //     "Figma",
+  //   ],
+  //   description:
+  //     "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique est, reprehenderit et iste quo laboriosam dolore animi perferendis officia nemo.",
+  //   photos: [
+  //     "https://images.pexels.com/photos/6431895/pexels-photo-6431895.jpeg",
+  //   ],
+  //   photoAlt: "/",
+  // },
 ];
