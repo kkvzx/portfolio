@@ -24,10 +24,7 @@ const Contact = () => {
     <ContactWrapper id="contact">
       <FormSection>
         <AboutTitle>Contact me</AboutTitle>
-        <AboutMeText>
-          Im intrested in working opportunities. Do not hesitate to use form
-          below.
-        </AboutMeText>
+        <AboutMeText>Have a question or want to work together?</AboutMeText>
         <Forms action={FORM_ENDPOINT} method="POST">
           <Input
             name="name"
@@ -55,7 +52,7 @@ const Contact = () => {
           <InputButton
             type="submit"
             value="Send message!"
-            // onClick={(e) => handleSubmit(e)}
+            onClick={(e) => handleSubmit(e)}
             required
           />
         </Forms>

@@ -66,7 +66,7 @@ export const SingleProject = styled.div`
 
   @media screen and (max-width: 2010px) {
     min-width: 250px;
-    min-height: 515px;
+    min-height: 520px;
   }
   @media screen and (max-width: 900px) {
   }

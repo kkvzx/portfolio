@@ -13,6 +13,7 @@ export const projectsData = [
     ],
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique est, reprehenderit et iste quo laboriosam dolore animi perferendis officia nemo.",
+    smallDescription: "",
     photos: [
       "https://i.imgur.com/1odyL7L.png?1",
       "https://i.imgur.com/2DgCdde.png?1",

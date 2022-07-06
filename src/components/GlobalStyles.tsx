@@ -24,6 +24,9 @@ body{
  margin:0;
  padding:0;
  background: white;
+overflow-x:hidden;
+overflow-y:scroll;
+
  /* background-image: radial-gradient(#3c3d43 1px, transparent 0);
  background-size: 30px 30px;
  background-position: -19px -19px; */
