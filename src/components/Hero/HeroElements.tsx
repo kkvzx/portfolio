@@ -101,7 +101,7 @@ export const FrontPage = styled.div`
   justify-content: flex-end;
   align-items: center;
 `;
-export const ExploreButton = styled.button<{ active: boolean }>`
+export const ExploreButton = styled(LinkS)<{ active: boolean }>`
   padding: 20px 30px;
   overflow: hidden;
   background: linear-gradient(-45deg, #DFF6FF, #47B5FF, #1363DF, #06283D);

@@ -29,9 +29,7 @@ const Hero = () => {
             <HeroMainText>Hi,</HeroMainText>
             <HeroMainText>I'm Konrad</HeroMainText>
             <HeroMainText>Aircraft Engineer</HeroMainText>
-            <HeroSecondaryText>
-              Who choosed diffrent path. I love learning and creating.
-            </HeroSecondaryText>
+            <HeroSecondaryText>Who choosed diffrent path.</HeroSecondaryText>
           </HeroHeading>
           <Img src={photo} alt="photo-png" />
         </TextContainer>
@@ -41,6 +39,11 @@ const Hero = () => {
           active={exploreActive}
           onMouseEnter={() => toggle()}
           onMouseLeave={() => toggle()}
+          to="projects"
+          spy={true}
+          smooth={true}
+          offset={70}
+          duration={500}
         >
           Explore!
         </ExploreButton>

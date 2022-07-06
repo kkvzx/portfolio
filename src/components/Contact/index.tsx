@@ -6,6 +6,7 @@ import {
   FormSection,
   InfoDiv,
   InfoText,
+  InfoTextBig,
   Input,
   InputButton,
   InputMessage,
@@ -17,9 +18,6 @@ const mapPhoto = require("../../img/map.png");
 const FORM_ENDPOINT = "https://formsubmit.co/0a2e73ee5eeb3a0c900ca5e8e3823519";
 
 const Contact = () => {
-  const handleSubmit = (e: React.MouseEvent) => {
-    e.preventDefault();
-  };
   return (
     <ContactWrapper id="contact">
       <FormSection>
@@ -49,16 +47,18 @@ const Contact = () => {
           <Input type="hidden" name="_captcha" value="false" />
 
           <InputMessage name="message" placeholder="Message" />
-          <InputButton
-            type="submit"
-            value="Send message!"
-            onClick={(e) => handleSubmit(e)}
-            required
-          />
+          <InputButton type="submit" value="Send message!" required />
         </Forms>
       </FormSection>
       <MapSection>
         <MapImg src={mapPhoto} />
+        <InfoDiv>
+          <InfoTextBig>KONRAD KAZUSEK</InfoTextBig>
+          <InfoText>EMAIL:</InfoText>
+          <InfoTextBig>KONRAD.KAZUSEK3@GMAIL.COM</InfoTextBig>
+          <InfoText>PHONE NUMBER:</InfoText>
+          <InfoTextBig>+48 737 919 224</InfoTextBig>
+        </InfoDiv>
       </MapSection>
     </ContactWrapper>
   );

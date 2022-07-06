@@ -51,6 +51,15 @@ export const Input = styled.input`
   color: var(--text-color);
   font-size: 1rem;
   letter-spacing: 1px;
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+  }
+  &:-webkit-autofill {
+    -webkit-text-fill-color: var(--text-color) !important;
+  }
 
   box-shadow: inset 0 45px 0 0 #0e5581;
   -webkit-transition: box-shadow 0.3s;
@@ -93,7 +102,15 @@ export const InputSubject = styled.input`
   color: var(--text-color);
   font-size: 1rem;
   letter-spacing: 1px;
-
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+  }
+  &:-webkit-autofill {
+    -webkit-text-fill-color: var(--text-color) !important;
+  }
   box-shadow: inset 0 45px 0 0 #0e5581;
   -webkit-transition: box-shadow 0.3s;
   transition: box-shadow 0.35s;
@@ -127,7 +144,15 @@ export const InputMessage = styled.textarea`
   letter-spacing: 1px;
   background: #0e5581;
   resize: none;
-
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+  }
+  &:-webkit-autofill {
+    -webkit-text-fill-color: var(--text-color) !important;
+  }
   box-shadow: inset 0 97px 0 0 #0e5581;
   -webkit-transition: box-shadow 0.3s;
   transition: box-shadow 0.35s;
@@ -168,6 +193,7 @@ export const MapSection = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   overflow: hidden;
+  position: relative;
 
   @media screen and (max-width: 1050px) {
     width: 100%;
@@ -185,18 +211,21 @@ export const MapImg = styled.img`
 `;
 
 export const InfoDiv = styled.div`
-  background: black;
-  opacity: 0.85;
   position: absolute;
-  top: 2%;
-  left: 4rem;
+  top: 3rem;
+  left: 6rem;
   padding: 10px 15px;
+  background: rgb(0, 0, 0, 0.4);
+  @media screen and (max-width: 1050px) {
+    left: 2rem;
+  }
 `;
 export const InfoText = styled.p`
   color: var(--text-color);
   margin: 0;
   letter-spacing: 1px;
   font-size: var(--text-size);
+  font-weight: 700;
   &.email {
     color: var(--additional-color);
     margin-top: 2rem;
@@ -204,4 +233,8 @@ export const InfoText = styled.p`
   @media screen and (max-width: 1050px) {
     font-size: var(--text-sizeMobile);
   }
+`;
+export const InfoTextBig = styled(InfoText)`
+  font-size: 1.8rem;
+  margin-bottom: 15px;
 `;
