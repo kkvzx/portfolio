@@ -25,6 +25,7 @@ const Main = () => {
   const [windowSize, SetWindowSize] = useState(getWindowSize());
   const [isOpenProjectBox, setIsOpenProjectBox] = useState<boolean>(false);
   const [idOfProjectBox, setIdOfProjectBox] = useState<number>(0);
+  const [innerPhotoIndex, setInnerPhotoIndex] = useState(0);
 
   // functions and hooks
 
@@ -50,6 +51,9 @@ const Main = () => {
     }
   };
   useEffect(() => {
+    setInnerPhotoIndex(0);
+  }, [idOfProjectBox]);
+  useEffect(() => {
     const windowResize = () => {
       SetWindowSize(getWindowSize());
     };
@@ -60,6 +64,20 @@ const Main = () => {
       window.removeEventListener("resize", windowResize);
     };
   }, []);
+
+  const handlePhotoIndex = (e: any) => {
+    const whichBtn = e.target.classList[2];
+    if (
+      whichBtn === "right" &&
+      innerPhotoIndex < projectsData[idOfProjectBox].photos.length - 1
+    ) {
+      setInnerPhotoIndex((prev) => prev + 1);
+    } else if (whichBtn === "left" && innerPhotoIndex > 0) {
+      setInnerPhotoIndex((prev) => prev - 1);
+    } else {
+      console.log("error");
+    }
+  };
 
   // Closing SmallnavMenu while resizing
   useEffect(() => {
@@ -80,6 +98,8 @@ const Main = () => {
               idOfBox={idOfProjectBox}
               boxToggle={scrollHandler}
               projectBoxSwitch={projectBoxSwitch}
+              handlePhotoIndex={handlePhotoIndex}
+              photoIndex={innerPhotoIndex}
             />
           )}
           <Contact />
