@@ -63,9 +63,11 @@ export const AboutMeHeader = styled.h1`
   }
 `;
 export const AboutMeText = styled(PortfolioText)`
-  width: 60%;
+  width: 70%;
   padding: 0;
   font-size: var(--text-size);
+  font-family: var(--text-font);
+  margin-bottom: 2rem;
   @media screen and (max-width: 900px) {
     font-size: var(--text-sizeMobile);
   }

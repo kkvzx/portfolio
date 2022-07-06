@@ -3,9 +3,10 @@ import styled from "styled-components";
 export const ContactWrapper = styled.div`
   margin-top: 10rem;
   width: 100%;
-  /* height: 100%; */
   background: var(--background-color);
   display: flex;
+  flex-direction: column;
+  position: relative;
   @media screen and (max-width: 1050px) {
     flex-direction: column;
   }
@@ -15,9 +16,8 @@ export const FormSection = styled.div`
   min-width: 558px;
   padding-left: 6rem;
   padding-right: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  z-index: 1;
+
   @media screen and (max-width: 1050px) {
     padding-left: 2rem;
     width: 100%;
@@ -25,8 +25,19 @@ export const FormSection = styled.div`
   }
 `;
 export const Forms = styled.form`
-  width: 100%;
-  position: relative;
+  width: 50%;
+  position: absolute;
+  bottom: 5%;
+  right: 10%;
+
+  @media screen and (max-width: 900px) {
+    width: 90%;
+    left: 5%;
+  }
+  @media screen and (max-width: 900px) {
+    position: static;
+    width: 95%;
+  }
 `;
 export const Input = styled.input`
   width: 50%;
@@ -141,6 +152,7 @@ export const InputButton = styled.input`
   margin-top: 1rem;
   cursor: pointer;
   float: right;
+  font-weight: 700;
   box-shadow: inset 0 0 0 0 var(--additional-color);
   transition: ease-out 0.25s;
 
@@ -150,17 +162,19 @@ export const InputButton = styled.input`
   }
 `;
 export const MapSection = styled.div`
-  width: 50%;
+  width: 100%;
   /* height: 57rem; */
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   overflow: hidden;
-  position: relative;
+
   @media screen and (max-width: 1050px) {
     width: 100%;
     justify-content: center;
-    margin-top: 2rem;
+  }
+  @media screen and (max-width: 900px) {
+    display: none;
   }
 `;
 
@@ -168,10 +182,6 @@ export const MapImg = styled.img`
   width: 100%;
   height: auto;
   object-fit: cover;
-  @media screen and (max-width: 1050px) {
-    width: 80%;
-    height: auto;
-  }
 `;
 
 export const InfoDiv = styled.div`

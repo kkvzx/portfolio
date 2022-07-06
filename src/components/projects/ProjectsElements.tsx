@@ -39,7 +39,7 @@ export const GithubLink = styled(FaGithub)`
   color: var(--text-color);
 `;
 export const SingleProject = styled.div`
-  width: 18%;
+  width: 17.8%;
   margin-right: 30px;
   margin: 0 30px 30px 0;
   border-radius: 30px;
@@ -61,7 +61,7 @@ export const SingleProject = styled.div`
   }
 
   &:hover {
-    box-shadow: 0 0 1em black;
+    box-shadow: 0 0 1em 0.5em black;
   }
 
   @media screen and (max-width: 2010px) {

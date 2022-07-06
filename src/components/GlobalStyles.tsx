@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 :root{
- --text-color:white;
+ --text-color:#dfdfdf;
  --secondary-color:#ffdc85;
  --secondary-font: "Oswald", sans-serif;
  --additional-color:#FFB703;

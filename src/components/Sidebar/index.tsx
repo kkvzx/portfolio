@@ -11,11 +11,13 @@ import {
   ContentWrapper,
   LogoWrap,
   MobileIcon,
+  OutsideLinksMobile,
   SidebarLogo,
   SidebarMenu,
   SidebarWrapper,
   SideItem,
   SideLinks,
+  SingleOutsideLinkMobile,
 } from "./SidebarElements";
 
 type NavMobileMenuProps = {
@@ -59,20 +61,20 @@ const Sidebar = (props: NavMobileMenuProps) => {
           </SideItem>
         </SidebarMenu>
 
-        <OutsideLinks>
-          <SingleOutsideLink>
+        <OutsideLinksMobile>
+          <SingleOutsideLinkMobile>
             <FaGithub />
-          </SingleOutsideLink>
-          <SingleOutsideLink>
+          </SingleOutsideLinkMobile>
+          <SingleOutsideLinkMobile>
             <FaLinkedin />
-          </SingleOutsideLink>
-          <SingleOutsideLink>
+          </SingleOutsideLinkMobile>
+          <SingleOutsideLinkMobile>
             <FaMoon />
-          </SingleOutsideLink>
-          <SingleOutsideLink>
+          </SingleOutsideLinkMobile>
+          <SingleOutsideLinkMobile>
             <FaSun />
-          </SingleOutsideLink>
-        </OutsideLinks>
+          </SingleOutsideLinkMobile>
+        </OutsideLinksMobile>
       </ContentWrapper>
     </SidebarWrapper>
   );

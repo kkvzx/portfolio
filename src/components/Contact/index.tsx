@@ -59,13 +59,6 @@ const Contact = () => {
       </FormSection>
       <MapSection>
         <MapImg src={mapPhoto} />
-        <InfoDiv>
-          <InfoText>Konrad Kazusek</InfoText>
-          <InfoText>Poland, ul.Dąbrowskiego</InfoText>
-          <InfoText>2/7, 40-035 Katowice</InfoText>
-          <InfoText className="email">@:</InfoText>
-          <InfoText>konrad.kazusek3@gmail.com</InfoText>
-        </InfoDiv>
       </MapSection>
     </ContactWrapper>
   );

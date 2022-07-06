@@ -1,5 +1,12 @@
 import styled from "styled-components";
-import { NavItem, NavLinks, NavLogo, NavMenu } from "../Header/HeaderElements";
+import {
+  NavItem,
+  NavLinks,
+  NavLogo,
+  NavMenu,
+  OutsideLinks,
+  SingleOutsideLink,
+} from "../Header/HeaderElements";
 import { FaTimes } from "react-icons/fa";
 
 export const SidebarWrapper = styled.div`
@@ -77,4 +84,16 @@ export const SideLinks = styled(NavLinks)`
   height: 60px;
   margin: 0;
   color: var(--text-color);
+`;
+export const SingleOutsideLinkMobile = styled(SingleOutsideLink)`
+  font-size: 2rem;
+  margin: 10px;
+`;
+
+export const OutsideLinksMobile = styled(OutsideLinks)`
+  width: 25%;
+  height: 10%;
+  @media screen and (max-width: 800px) {
+    width: 250px;
+  }
 `;
