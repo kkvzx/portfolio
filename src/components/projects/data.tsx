@@ -3,17 +3,11 @@ export const projectsData = [
   {
     id: 0,
     name: "Tenzies",
-    technologies: [
-      "html",
-      "css",
-      "javascript",
-      "styledComponents",
-      "React",
-      "Figma",
-    ],
+    technologies: ["html", "css", "javascript", "React", "Figma"],
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique est, reprehenderit et iste quo laboriosam dolore animi perferendis officia nemo.",
-    smallDescription: "",
+      "I started this project in order to practice React Hooks such as useState and useEffect. During the process I found more about passing states as props to children elements and  controlling functions. Also while working on Tenzies I found out a lot about how typescript works. My main problem to overcome was understanding how react rendering works.  ",
+    smallDescription:
+      "The object of the game is to roll the dice as fast as possible, the player who gets all dice on the same number is the winner.",
     photos: [
       "https://i.imgur.com/1odyL7L.png?1",
       "https://i.imgur.com/2DgCdde.png?1",
@@ -35,7 +29,9 @@ export const projectsData = [
       "Figma",
     ],
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique est, reprehenderit et iste quo laboriosam dolore animi perferendis officia nemo.",
+      "One of the problems was to make a pretty design for such a simple game. During the process I looked at many UX and UI materials. I wanted to keep code as simple as possible to avoid using many conditions statements - I’ve managed to do so by creating an array of correct sequences which is way more readable. ",
+    smallDescription:
+      "Paper-and-pencil game for two players who take turns marking the spaces. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.",
     photos: [
       "https://i.imgur.com/TK5ZxCb.png?2",
       "https://i.imgur.com/DCptNYi.png?2",
@@ -60,7 +56,10 @@ export const projectsData = [
       "Figma",
     ],
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique est, reprehenderit et iste quo laboriosam dolore animi perferendis officia nemo.",
+      "FunGerator is an app that uses an outside API with questions. It downloads 5 questions from the API with answers. Users can answer these questions and after submitting game counts score and show all bad answers. I’ve used figma to make the design of the application. My main problem was to properly handle submitting. To overcome all logical problems I’ve made a mind map of the process on paper and implemented it.",
+    smallDescription:
+      "Simple quiz app that uses an API. Object of the game is to answer corectly to 5 question from given answers.",
+
     photos: [
       "https://i.imgur.com/hanNU3t.png",
       "https://i.imgur.com/BQfpHuk.png",
@@ -85,6 +84,7 @@ export const projectsData = [
     ],
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique est, reprehenderit et iste quo laboriosam dolore animi perferendis officia nemo.",
+    smallDescription: "",
     photos: [
       "https://i.imgur.com/rq4HS4A.png?1",
       "https://i.imgur.com/idUDF3t.png?1",

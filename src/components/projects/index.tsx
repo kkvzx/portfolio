@@ -27,11 +27,7 @@ const Projects = (props: ProjectsProps) => {
       <ProjectPhoto src={singleObj.photos[0]}></ProjectPhoto>
       <InfoSection>
         <ProjectTitle>{singleObj.name}</ProjectTitle>
-        <ProjectInformation>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt
-          quaerat possimus quod laborum ratione, odit perspiciatis dolorum
-          reiciendis fugiat sit aut...
-        </ProjectInformation>
+        <ProjectInformation>{singleObj.smallDescription}</ProjectInformation>
         <ReadMore>Show More</ReadMore>
         <GithubLink />
       </InfoSection>
