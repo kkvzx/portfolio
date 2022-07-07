@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 import React, { useEffect, useState } from "react";
-import { projectsData } from "../projects/data";
+import { AiFillSwitcher } from "react-icons/ai";
 import { ReadMore } from "../projects/ProjectsElements";
 import { ClosingIcon } from "../Sidebar/SidebarElements";
 import {
@@ -19,7 +19,6 @@ import {
   SingleOutsideBoxLink,
   LeftArrow,
   RightArrow,
-  EmptyArrow,
   RightArrowPhoto,
   LeftArrowPhoto,
   CircleDots,
@@ -43,27 +42,14 @@ interface ProjectDataProps extends Array<ProjectDataProps> {}
 const ProjectBox = (props: {
   idOfBox: number;
   boxToggle: () => void;
-  projectBoxSwitch: (operation: string) => void;
-  handlePhotoIndex: (e: any) => void;
+  switcher: (operation: string, action: string) => void;
   photoIndex: number;
+  projectsData: ProjectDataProps;
 }) => {
-  const project = projectsData[props.idOfBox];
+  const project = props.projectsData[props.idOfBox];
   const htmlTechnologies = project.technologies.map((singleTechnology) => (
     <TechnologiesLi key={nanoid()}>{singleTechnology}</TechnologiesLi>
   ));
-
-  // const handlePhotoIndex = (e: any) => {
-  //   const whichBtn = e.target.classList[2];
-  //   if (whichBtn === "right" && photoIndex < project.photos.length - 1) {
-  //     setPhotoIndex((prev) => prev + 1);
-  //   } else if (whichBtn === "left" && photoIndex > 0) {
-  //     setPhotoIndex((prev) => prev - 1);
-  //   } else {
-  //     console.log("error");
-  //   }
-  // };
-
-  // const singleDotshtml=  project.photos.map((singlePhoto, index) => (index===photoIndex?<SingleDot active={true}/>:<SingleDot active={false}))
 
   const [current, setCurrent] = useState<number>(0);
   const length: number = project.photos.length;
@@ -78,7 +64,7 @@ const ProjectBox = (props: {
   };
 
   const singleDotshtml = project.photos.map((singlePhoto, index) => {
-    return index === current ? (
+    return index === props.photoIndex ? (
       <SingleDot key={nanoid()} active={true} />
     ) : (
       <SingleDot key={nanoid()} active={false} />
@@ -112,42 +98,36 @@ const ProjectBox = (props: {
         {project.photos.map((singlePhoto, index) => {
           return (
             <WindowForPhoto
-              className={index === current ? "window active" : "window"}
+              active={index === props.photoIndex ? true : false}
               key={nanoid()}
             >
-              {index === current && <Photo src={singlePhoto} alt="/" />}
+              {index === props.photoIndex && (
+                <Photo src={singlePhoto} alt="/" />
+              )}
             </WindowForPhoto>
           );
         })}
         <LeftArrowPhoto
           className="left"
-          onClick={() => prevSlide()}
+          onClick={(e) => props.switcher("left", "photo")}
         ></LeftArrowPhoto>
 
         <CircleDots>{singleDotshtml}</CircleDots>
         <RightArrowPhoto
           className="right"
-          onClick={() => nextSlide()}
+          onClick={(e) => props.switcher("right", "photo")}
         ></RightArrowPhoto>
       </PhotoContainer>
 
-      {props.idOfBox > 0 && (
-        <LeftArrow
-          className="minus"
-          onClick={(e) =>
-            props.projectBoxSwitch((e as any).target.classList[2])
-          }
-        ></LeftArrow>
-      )}
-      {props.idOfBox === 0 && <EmptyArrow />}
-      {props.idOfBox < projectsData.length - 1 && (
-        <RightArrow
-          className="plus"
-          onClick={(e) =>
-            props.projectBoxSwitch((e as any).target.classList[2])
-          }
-        ></RightArrow>
-      )}
+      <LeftArrow
+        className="minus"
+        onClick={(e) => props.switcher("minus", "project")}
+      />
+
+      <RightArrow
+        className="plus"
+        onClick={(e) => props.switcher("plus", "project")}
+      />
     </BoxWrapper>
   );
 };

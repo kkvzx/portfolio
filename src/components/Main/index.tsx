@@ -26,6 +26,8 @@ const Main = () => {
   const [isOpenProjectBox, setIsOpenProjectBox] = useState<boolean>(false);
   const [idOfProjectBox, setIdOfProjectBox] = useState<number>(0);
   const [innerPhotoIndex, setInnerPhotoIndex] = useState(0);
+  const [currentProject, setCurrentProject] = useState<number>(0);
+  const length: number = projectsData.length;
 
   // functions and hooks
 
@@ -37,47 +39,57 @@ const Main = () => {
     setIdOfProjectBox(id);
   };
 
-  const scrollHandler = () => {
-    setIsOpenProjectBox(false);
-  };
-
-  const projectBoxSwitch = (operation: string) => {
-    if (operation === "plus" && idOfProjectBox < projectsData.length - 1) {
-      setIdOfProjectBox((prev) => prev + 1);
-    } else if (operation === "minus" && idOfProjectBox > 0) {
-      setIdOfProjectBox((prev) => prev - 1);
-    } else {
-      console.log("No mathcing conditions");
-    }
-  };
-  useEffect(() => {
-    setInnerPhotoIndex(0);
-  }, [idOfProjectBox]);
   useEffect(() => {
     const windowResize = () => {
       SetWindowSize(getWindowSize());
     };
-
     window.addEventListener("resize", windowResize);
     window.addEventListener("scroll", scrollHandler);
     return () => {
       window.removeEventListener("resize", windowResize);
     };
   }, []);
-
-  const handlePhotoIndex = (e: any) => {
-    const whichBtn = e.target.classList[2];
-    if (
-      whichBtn === "right" &&
-      innerPhotoIndex < projectsData[idOfProjectBox].photos.length - 1
-    ) {
-      setInnerPhotoIndex((prev) => prev + 1);
-    } else if (whichBtn === "left" && innerPhotoIndex > 0) {
-      setInnerPhotoIndex((prev) => prev - 1);
-    } else {
-      console.log("error");
+  // ========================PROJECT BOX CONTROL START=========================
+  const scrollHandler = () => {
+    setIsOpenProjectBox(false);
+  };
+  // change of ProjectBox and innerPhotos (from data)
+  // -------------------------------------------------------------
+  const switcher = (operation: string, action: string) => {
+    if (action === "project") {
+      if (operation === "plus") {
+        setIdOfProjectBox((prev) =>
+          prev === projectsData.length - 1 ? 0 : prev + 1
+        );
+      } else if (operation === "minus") {
+        setIdOfProjectBox((prev) =>
+          prev === 0 ? projectsData.length - 1 : prev - 1
+        );
+      } else {
+        console.log("No mathcing conditions");
+      }
+    } else if (action === "photo") {
+      if (operation === "right") {
+        setInnerPhotoIndex((prev) =>
+          prev === projectsData[idOfProjectBox].photos.length - 1 ? 0 : prev + 1
+        );
+      } else if (operation === "left") {
+        setInnerPhotoIndex((prev) =>
+          prev === 0 ? projectsData[idOfProjectBox].photos.length - 1 : prev - 1
+        );
+      } else {
+        console.log(operation);
+      }
     }
   };
+  // --------------------------------------------------------------
+
+  // Reseting PhotoIndex after change of project (valid?)
+  useEffect(() => {
+    setInnerPhotoIndex(0);
+  }, [idOfProjectBox]);
+
+  // ========================PROJECT BOX CONTROL END=========================
 
   // Closing SmallnavMenu while resizing
   useEffect(() => {
@@ -97,9 +109,9 @@ const Main = () => {
             <ProjectBox
               idOfBox={idOfProjectBox}
               boxToggle={scrollHandler}
-              projectBoxSwitch={projectBoxSwitch}
-              handlePhotoIndex={handlePhotoIndex}
+              switcher={switcher}
               photoIndex={innerPhotoIndex}
+              projectsData={projectsData as any}
             />
           )}
           <Contact />

@@ -7,8 +7,10 @@ export const ProjectsWrapper = styled.div`
   align-items: flex-start;
   flex-direction: column;
   background: var(--background-color);
-
   position: relative;
+  @media screen and (max-width: 900px) {
+    align-items: center;
+  }
 `;
 
 export const ProjectsContainer = styled.div`
@@ -18,6 +20,7 @@ export const ProjectsContainer = styled.div`
   flex-wrap: wrap;
   @media screen and (max-width: 900px) {
     padding-left: 2rem;
+    justify-content: center;
   }
 `;
 export const ReadMore = styled.a`
@@ -127,7 +130,7 @@ export const Title = styled.h1`
   margin-bottom: 2rem;
   @media screen and (max-width: 900px) {
     font-size: var(--big-font-sizeMobile);
-    padding-left: 2rem;
+    padding-left: 0;
   }
 `;
 export const PortfolioText = styled.p`
@@ -143,6 +146,8 @@ export const PortfolioText = styled.p`
   @media screen and (max-width: 900px) {
     font-size: var(--text-sizeMobile);
     margin-bottom: 2rem;
-    padding-left: 2rem;
+    padding: 0 5rem;
+    padding-left: auto;
+    text-align: center;
   }
 `;

@@ -28,7 +28,6 @@ export const AboutTitle = styled.h1`
   margin: 0;
   letter-spacing: 2px;
   color: var(--additional-color);
-  margin-bottom: 2rem;
   @media screen and (max-width: 900px) {
     justify-self: center;
     font-size: var(--big-font-sizeMobile);
@@ -63,13 +62,15 @@ export const AboutMeHeader = styled.h1`
   }
 `;
 export const AboutMeText = styled(PortfolioText)`
-  width: 70%;
+  width: 85%;
   padding: 0;
   font-size: var(--text-size);
   font-family: var(--text-font);
   margin-bottom: 2rem;
   @media screen and (max-width: 900px) {
     font-size: var(--text-sizeMobile);
+    padding: 0 2rem;
+    width: 95%;
   }
 `;
 

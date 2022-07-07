@@ -8,6 +8,7 @@ import { BsChevronCompactRight, BsChevronCompactLeft } from "react-icons/bs";
 import styled from "styled-components";
 import { SingleOutsideLink } from "../Header/HeaderElements";
 import { GithubLink, ReadMore } from "../projects/ProjectsElements";
+import { keyframes } from "styled-components";
 
 export const BoxWrapper = styled.div`
   width: 80%;
@@ -64,6 +65,20 @@ export const PhotoContainer = styled.div`
 export const Photo = styled.img`
   width: 100%;
   border-radius: 10px;
+`;
+
+export const WindowForPhoto = styled.div<{ active: boolean }>`
+  opacity: 0;
+  transform: scale(1);
+  transition: 2s all;
+
+  ${({ active }) =>
+    active &&
+    `  
+    transition: 2s all
+    transform: scale(1.1);
+    opacity:1;
+    `};
 `;
 
 export const InformationContainer = styled.div`
@@ -177,7 +192,7 @@ export const LeftArrow = styled(AiOutlineArrowLeft)`
   cursor: pointer;
   margin-left: 50px;
   box-shadow: inset 0 0 0 0 var(--text-color);
-  transition: 0.3s all;
+  transition: 0.2s all;
   z-index: 999;
   position: absolute;
   top: 45%;
@@ -192,6 +207,28 @@ export const LeftArrow = styled(AiOutlineArrowLeft)`
     margin-left: 5px;
   }
 `;
+export const RightArrow = styled(AiOutlineArrowRight)`
+  border: 2px solid var(--text-color);
+  font-size: 3.3rem;
+  color: white;
+  border-radius: 100%;
+  cursor: pointer;
+  margin-right: 50px;
+  box-shadow: inset 0 0 0 0 var(--text-color);
+  transition: 0.2s all;
+  z-index: 999;
+  position: absolute;
+  top: 45%;
+  right: 0;
+  &:hover {
+    box-shadow: inset 50px 0 0 var(--text-color);
+    border: 2px solid black;
+    color: black;
+  }
+  @media screen and (max-width: 560px) {
+    margin-right: 5px;
+  }
+`;
 
 export const RightArrowPhoto = styled(BsChevronCompactRight)`
   font-size: 8rem;
@@ -200,7 +237,7 @@ export const RightArrowPhoto = styled(BsChevronCompactRight)`
   z-index: 999;
   position: absolute;
   top: 40%;
-  right: 0;
+  right: -9%;
 
   &:active {
     color: rgba(114, 114, 144, 0.8);
@@ -216,7 +253,7 @@ export const LeftArrowPhoto = styled(BsChevronCompactLeft)`
   z-index: 999;
   position: absolute;
   top: 40%;
-  left: 0;
+  left: -9%;
 
   &:active {
     color: rgba(114, 114, 144, 0.8);
@@ -224,35 +261,6 @@ export const LeftArrowPhoto = styled(BsChevronCompactLeft)`
   @media screen and (max-width: 560px) {
     margin-left: 5px;
   }
-`;
-
-export const RightArrow = styled(AiOutlineArrowRight)`
-  border: 2px solid var(--text-color);
-  font-size: 3.3rem;
-  color: white;
-  border-radius: 100%;
-  cursor: pointer;
-  margin-right: 50px;
-  box-shadow: inset 0 0 0 0 var(--text-color);
-  transition: 0.3s all;
-  z-index: 999;
-  position: absolute;
-  top: 45%;
-  right: 0;
-  &:hover {
-    box-shadow: inset 50px 0 0 var(--text-color);
-    border: 2px solid black;
-    color: black;
-  }
-  @media screen and (max-width: 560px) {
-    margin-right: 5px;
-  }
-`;
-
-export const EmptyArrow = styled(LeftArrow)`
-  opacity: 0;
-  cursor: mouse;
-  z-index: -1;
 `;
 
 export const PhotoCounter = styled.div`
@@ -282,15 +290,4 @@ export const SingleDot = styled.div<{ active: boolean }>`
   margin: 4px;
   background: rgb(114, 114, 144);
   opacity: ${({ active }) => (active ? 1 : 0.5)};
-`;
-export const WindowForPhoto = styled.div`
-  transition: 2s all;
-
-  &.window {
-    opacity: 0;
-  }
-  &.active {
-    opacity: 1;
-    transform: scale(1);
-  }
 `;

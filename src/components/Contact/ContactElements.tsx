@@ -9,6 +9,7 @@ export const ContactWrapper = styled.div`
   position: relative;
   @media screen and (max-width: 1050px) {
     flex-direction: column;
+    text-align: center;
   }
 `;
 export const FormSection = styled.div`
@@ -31,12 +32,8 @@ export const Forms = styled.form`
   right: 10%;
 
   @media screen and (max-width: 900px) {
-    width: 90%;
-    left: 5%;
-  }
-  @media screen and (max-width: 900px) {
-    position: static;
     width: 95%;
+    position: static;
   }
 `;
 export const Input = styled.input`

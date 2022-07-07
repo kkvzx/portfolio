@@ -34,15 +34,16 @@ const AboutSection = () => {
           and creating things so I found tutorials about C++ and managed to
           learn fundamentals of the language. In the years, I’ve graduated
           Aircraft Engineering at Silesian University of Technology - during
-          that time I often used my experience in C++. At that time and during
-          work at the airport I learned a lot about importance of standarization
-          and complex systems such as an airplane. When the chance occured after
-          graduation I fully focused on my passion for coding by learning React
-          and how systems in IT works. I was building games using JavaScript
-          becouse i found them interesting.First time in a long time I find
-          passion in my work and the beauty behind creating things. I’m now
-          looking for a junior dev position or internship to finally kick start
-          my career and learn among professionals.
+          that time I often used my experience in C++.During time spent at the
+          airport and university I learned a lot about importance of
+          standarization and complex systems such as an airplane, transport
+          systems or design processes. When the chance occured after graduation
+          I fully focused on my passion for coding by learning React and how
+          systems in IT works. I was building games using JavaScript becouse i
+          found them interesting.First time in a long time I find passion in my
+          work and the beauty behind creating things. I’m now looking for a
+          junior dev position or internship to finally kick start my career and
+          learn among professionals.
         </AboutMeText>
       </AboutMeContainer>
       <Technologies>{htmlTechnologiesData}</Technologies>

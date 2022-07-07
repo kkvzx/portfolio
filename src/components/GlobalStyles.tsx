@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
  --big-font-sizeMobile:3rem;
  --h2-font-size:2.2rem;
  --h2-font-sizeMobile:1.3rem;
+ 
 }
 *{
  box-sizing:border-box;
