@@ -20,9 +20,9 @@ export const BoxWrapper = styled.div`
   padding: 2rem 7rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   transition: 0.3s all;
-  z-index: 1;
+  z-index: 3;
   &:after {
     content: "";
     display: block;
@@ -35,23 +35,35 @@ export const BoxWrapper = styled.div`
     padding: 0;
   }
 `;
+// export const PhotoContainer = styled.div`
+//   max-width: 30rem;
+//   min-width: 20rem;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   position: relative;
+//   @media screen and (max-width: 1250px) {
+//     min-width: 10rem;
+//   }
+//   @media screen and (max-width: 1000px) {
+//     display: none;
+//   }
+// `;
+// export const Photo = styled.img`
+//   width: 100%;
+//   object-fit: cover;
+// `;
 export const PhotoContainer = styled.div`
+  position: relative;
   max-width: 30rem;
   min-width: 20rem;
   display: flex;
-  align-items: center;
   justify-content: center;
-  position: relative;
-  @media screen and (max-width: 1250px) {
-    min-width: 10rem;
-  }
-  @media screen and (max-width: 1000px) {
-    display: none;
-  }
+  align-items: center;
 `;
 export const Photo = styled.img`
   width: 100%;
-  object-fit: cover;
+  border-radius: 10px;
 `;
 
 export const InformationContainer = styled.div`
@@ -156,17 +168,10 @@ export const LiveDemo = styled.div`
   height: 10rem;
 `;
 
-export const Arrows = styled.div`
-  position: absolute;
-  top: 45%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  font-size: 3rem;
-  color: var(--text-color);
-`;
 export const LeftArrow = styled(AiOutlineArrowLeft)`
   border: 2px solid var(--text-color);
+  font-size: 3.3rem;
+  color: white;
   border-radius: 100%;
   padding: 4px;
   cursor: pointer;
@@ -174,6 +179,9 @@ export const LeftArrow = styled(AiOutlineArrowLeft)`
   box-shadow: inset 0 0 0 0 var(--text-color);
   transition: 0.3s all;
   z-index: 999;
+  position: absolute;
+  top: 45%;
+  left: 0;
 
   &:hover {
     box-shadow: inset -50px 0 0 var(--text-color);
@@ -184,18 +192,15 @@ export const LeftArrow = styled(AiOutlineArrowLeft)`
     margin-left: 5px;
   }
 `;
-export const ArrowsPhoto = styled(Arrows)`
-  width: 110%;
-  top: 0;
-  display: flex;
-  align-items: center;
-  height: 100%;
-`;
+
 export const RightArrowPhoto = styled(BsChevronCompactRight)`
   font-size: 8rem;
   cursor: pointer;
   color: rgba(114, 114, 144, 0.5);
   z-index: 999;
+  position: absolute;
+  top: 40%;
+  right: 0;
 
   &:active {
     color: rgba(114, 114, 144, 0.8);
@@ -209,6 +214,9 @@ export const LeftArrowPhoto = styled(BsChevronCompactLeft)`
   cursor: pointer;
   color: rgba(114, 114, 144, 0.5);
   z-index: 999;
+  position: absolute;
+  top: 40%;
+  left: 0;
 
   &:active {
     color: rgba(114, 114, 144, 0.8);
@@ -220,13 +228,17 @@ export const LeftArrowPhoto = styled(BsChevronCompactLeft)`
 
 export const RightArrow = styled(AiOutlineArrowRight)`
   border: 2px solid var(--text-color);
+  font-size: 3.3rem;
+  color: white;
   border-radius: 100%;
   cursor: pointer;
   margin-right: 50px;
   box-shadow: inset 0 0 0 0 var(--text-color);
   transition: 0.3s all;
   z-index: 999;
-
+  position: absolute;
+  top: 45%;
+  right: 0;
   &:hover {
     box-shadow: inset 50px 0 0 var(--text-color);
     border: 2px solid black;
@@ -246,7 +258,6 @@ export const EmptyArrow = styled(LeftArrow)`
 export const PhotoCounter = styled.div`
   width: 100%;
   height: 100%;
-  background: green;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -259,6 +270,8 @@ export const CircleDots = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  bottom: 0;
   z-index: 2;
   align-self: flex-end;
 `;
@@ -269,4 +282,15 @@ export const SingleDot = styled.div<{ active: boolean }>`
   margin: 4px;
   background: rgb(114, 114, 144);
   opacity: ${({ active }) => (active ? 1 : 0.5)};
+`;
+export const WindowForPhoto = styled.div`
+  transition: 2s all;
+
+  &.window {
+    opacity: 0;
+  }
+  &.active {
+    opacity: 1;
+    transform: scale(1);
+  }
 `;

@@ -17,16 +17,28 @@ import {
   TechnologiesUsed,
   GithubLinkInBox,
   SingleOutsideBoxLink,
-  Arrows,
   LeftArrow,
   RightArrow,
   EmptyArrow,
   RightArrowPhoto,
   LeftArrowPhoto,
-  ArrowsPhoto,
   CircleDots,
   SingleDot,
+  WindowForPhoto,
 } from "./ProjectBoxElements";
+
+interface ProjectDataProps {
+  id: number;
+  name: string;
+  technologies: string[];
+  description: string;
+  smallDescription: string;
+  photos: string[];
+  photoAlt: string;
+  github: string;
+  liveDemo: string;
+}
+interface ProjectDataProps extends Array<ProjectDataProps> {}
 
 const ProjectBox = (props: {
   idOfBox: number;
@@ -53,8 +65,20 @@ const ProjectBox = (props: {
 
   // const singleDotshtml=  project.photos.map((singlePhoto, index) => (index===photoIndex?<SingleDot active={true}/>:<SingleDot active={false}))
 
+  const [current, setCurrent] = useState<number>(0);
+  const length: number = project.photos.length;
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev === length - 1 ? 0 : prev + 1));
+    console.log(current);
+  };
+  const prevSlide = () => {
+    setCurrent((prev) => (prev === 0 ? length - 1 : prev - 1));
+    console.log(current);
+  };
+
   const singleDotshtml = project.photos.map((singlePhoto, index) => {
-    return index === props.photoIndex ? (
+    return index === current ? (
       <SingleDot key={nanoid()} active={true} />
     ) : (
       <SingleDot key={nanoid()} active={false} />
@@ -64,22 +88,6 @@ const ProjectBox = (props: {
   return (
     <BoxWrapper>
       <ClosingIcon onClick={() => props.boxToggle()} />
-
-      <PhotoContainer>
-        <Photo src={project.photos[props.photoIndex]}></Photo>
-        <ArrowsPhoto>
-          <LeftArrowPhoto
-            className="left"
-            onClick={(e) => props.handlePhotoIndex(e)}
-          ></LeftArrowPhoto>
-
-          <CircleDots>{singleDotshtml}</CircleDots>
-          <RightArrowPhoto
-            className="right"
-            onClick={(e) => props.handlePhotoIndex(e)}
-          ></RightArrowPhoto>
-        </ArrowsPhoto>
-      </PhotoContainer>
       <InformationContainer>
         <ProjectTitle>{project.name}</ProjectTitle>
         <TechnologiesUsed>
@@ -100,25 +108,46 @@ const ProjectBox = (props: {
           <ReadMore>Live Demo</ReadMore>
         </SingleOutsideBoxLink>
       </InformationContainer>
-      <Arrows>
-        {props.idOfBox > 0 && (
-          <LeftArrow
-            className="minus"
-            onClick={(e) =>
-              props.projectBoxSwitch((e as any).target.classList[2])
-            }
-          ></LeftArrow>
-        )}
-        {props.idOfBox === 0 && <EmptyArrow />}
-        {props.idOfBox < projectsData.length - 1 && (
-          <RightArrow
-            className="plus"
-            onClick={(e) =>
-              props.projectBoxSwitch((e as any).target.classList[2])
-            }
-          ></RightArrow>
-        )}
-      </Arrows>
+      <PhotoContainer>
+        {project.photos.map((singlePhoto, index) => {
+          return (
+            <WindowForPhoto
+              className={index === current ? "window active" : "window"}
+              key={nanoid()}
+            >
+              {index === current && <Photo src={singlePhoto} alt="/" />}
+            </WindowForPhoto>
+          );
+        })}
+        <LeftArrowPhoto
+          className="left"
+          onClick={() => prevSlide()}
+        ></LeftArrowPhoto>
+
+        <CircleDots>{singleDotshtml}</CircleDots>
+        <RightArrowPhoto
+          className="right"
+          onClick={() => nextSlide()}
+        ></RightArrowPhoto>
+      </PhotoContainer>
+
+      {props.idOfBox > 0 && (
+        <LeftArrow
+          className="minus"
+          onClick={(e) =>
+            props.projectBoxSwitch((e as any).target.classList[2])
+          }
+        ></LeftArrow>
+      )}
+      {props.idOfBox === 0 && <EmptyArrow />}
+      {props.idOfBox < projectsData.length - 1 && (
+        <RightArrow
+          className="plus"
+          onClick={(e) =>
+            props.projectBoxSwitch((e as any).target.classList[2])
+          }
+        ></RightArrow>
+      )}
     </BoxWrapper>
   );
 };

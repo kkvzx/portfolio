@@ -3,7 +3,7 @@ export const projectsData = [
   {
     id: 0,
     name: "Tenzies",
-    technologies: ["html", "css", "javascript", "React", "Figma"],
+    technologies: ["Html", "Css", "Javascript", "React", "Figma"],
     description:
       "I started this project in order to practice React Hooks such as useState and useEffect. During the process I found more about passing states as props to children elements and  controlling functions. Also while working on Tenzies I found out a lot about how typescript works. My main problem to overcome was understanding how react rendering works.  ",
     smallDescription:
@@ -21,11 +21,11 @@ export const projectsData = [
     id: 1,
     name: "Tic Tac Toe",
     technologies: [
-      "html",
-      "css",
-      "KURWA CHUJ",
-      "styledComponents",
+      "Html",
+      "Css",
+      "Styled Components",
       "React",
+      "React Router",
       "Figma",
     ],
     description:
@@ -47,14 +47,7 @@ export const projectsData = [
   {
     id: 2,
     name: "<FunGenerator/>",
-    technologies: [
-      "html",
-      "css",
-      "javascript",
-      "styledComponents",
-      "React",
-      "Figma",
-    ],
+    technologies: ["Html", "Css", "Javascript", "React", "Figma", "API"],
     description:
       "FunGerator is an app that uses an outside API with questions. It downloads 5 questions from the API with answers. Users can answer these questions and after submitting game counts score and show all bad answers. I’ve used figma to make the design of the application. My main problem was to properly handle submitting. To overcome all logical problems I’ve made a mind map of the process on paper and implemented it.",
     smallDescription:
@@ -75,16 +68,18 @@ export const projectsData = [
     id: 3,
     name: "Game Manager",
     technologies: [
-      "html",
-      "css",
-      "javascript",
-      "styledComponents",
+      "Html",
+      "Css",
+      "Javascript",
+      "Styled Components",
       "React",
       "Figma",
+      "React Router",
     ],
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique est, reprehenderit et iste quo laboriosam dolore animi perferendis officia nemo.",
-    smallDescription: "",
+      "My main difficulty there was to make a working menu without using states because code was starting to look too complex. So I Found other tools for React such as React user. Also I had to rebuild my previous projects to build proper file structure with Styled Components. Because Game manager consists of 4 different games I had to learn more about proper file structure to prevent wasting time for file search. ",
+    smallDescription:
+      "Game manager consists of four games which are tic-tac-toe, Fun Generator, Tenzies and Flappy Bird.",
     photos: [
       "https://i.imgur.com/rq4HS4A.png?1",
       "https://i.imgur.com/idUDF3t.png?1",
@@ -101,14 +96,16 @@ export const projectsData = [
     id: 4,
     name: "Portfolio 1.0",
     technologies: [
-      "html",
-      "css",
-      "javascript",
-      "styledComponents",
+      "Html",
+      "Css",
+      "Javascript",
+      "StyledComponents",
       "React",
       "Figma",
     ],
     description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique est, reprehenderit et iste quo laboriosam dolore animi perferendis officia nemo.",
+    smallDescription:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique est, reprehenderit et iste quo laboriosam dolore animi perferendis officia nemo.",
     photos: [
       "https://images.pexels.com/photos/6431895/pexels-photo-6431895.jpeg",
