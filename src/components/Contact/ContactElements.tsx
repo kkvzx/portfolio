@@ -15,7 +15,6 @@ export const ContactWrapper = styled.div`
 export const FormSection = styled.div`
   width: 50%;
   min-width: 558px;
-  padding-left: 6rem;
   padding-right: 2rem;
   z-index: 1;
 

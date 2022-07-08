@@ -1,4 +1,5 @@
-import React from "react";
+import { motion, useCycle } from "framer-motion";
+import React, { useRef } from "react";
 import { FaBars, FaGithub, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import {
   NavLogo,
@@ -26,12 +27,39 @@ type NavMobileMenuProps = {
 };
 
 const Sidebar = (props: NavMobileMenuProps) => {
+  // animations
+  const sidebarAnimations = {
+    open: (height = 1000) => ({
+      clipPath: `circle(${height * 2 + 200}px at 95% 40px)`,
+      transition: {
+        type: "spring",
+        duration: 0.3,
+      },
+    }),
+    closed: {
+      clipPath: "circle(0 at 95% 40px)",
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 40,
+      },
+    },
+  };
+  // end of animations
   return (
-    <SidebarWrapper>
+    <SidebarWrapper
+      as={motion.div}
+      initial={false}
+      animate={props.isOpen ? "open" : "closed"}
+    >
       <MobileIcon>
         <FaBars onClick={() => props.toggle()} />
       </MobileIcon>
-      <ContentWrapper isOpen={props.isOpen} onClick={() => props.toggle()}>
+      <ContentWrapper
+        as={motion.div}
+        variants={sidebarAnimations}
+        onClick={() => props.toggle()}
+      >
         <ClosingIcon></ClosingIcon>
         <SidebarLogo>
           <LogoWrap>
@@ -60,7 +88,6 @@ const Sidebar = (props: NavMobileMenuProps) => {
             </SideLinks>
           </SideItem>
         </SidebarMenu>
-
         <OutsideLinksMobile>
           <SingleOutsideLinkMobile>
             <FaGithub />

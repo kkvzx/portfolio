@@ -113,7 +113,7 @@ export const ProjectTitle = styled.h2`
   margin-top: 260px;
   width: 100%;
   font-size: var(--h2-font-size);
-  /* position: absolute; */
+  -moz-user-select: none;
   @media screen and (max-width: 2000px) {
     margin-top: 230px;
   }
@@ -121,6 +121,8 @@ export const ProjectTitle = styled.h2`
 
 export const Title = styled.h1`
   margin-top: 4rem;
+  -moz-user-select: none;
+  user-select: none;
   font-family: var(--secondary-font);
   letter-spacing: 2px;
   color: #ffb703;
@@ -142,6 +144,7 @@ export const PortfolioText = styled.p`
   letter-spacing: 1px;
   font-size: var(--text-size);
   color: var(--text-color);
+  user-select: none;
 
   @media screen and (max-width: 900px) {
     font-size: var(--text-sizeMobile);

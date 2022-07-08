@@ -28,6 +28,7 @@ export const AboutTitle = styled.h1`
   margin: 0;
   letter-spacing: 2px;
   color: var(--additional-color);
+  user-select: none;
   @media screen and (max-width: 900px) {
     justify-self: center;
     font-size: var(--big-font-sizeMobile);

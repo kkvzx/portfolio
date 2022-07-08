@@ -1,5 +1,6 @@
 import React from "react";
 import { AboutMeText, AboutTitle } from "../AboutSection/AboutElements";
+import { PortfolioText, Title } from "../projects/ProjectsElements";
 import {
   ContactWrapper,
   Forms,
@@ -21,8 +22,8 @@ const Contact = () => {
   return (
     <ContactWrapper id="contact">
       <FormSection>
-        <AboutTitle>Contact me</AboutTitle>
-        <AboutMeText>Have a question or want to work together?</AboutMeText>
+        <Title>Contact me</Title>
+        <PortfolioText>Have a question or want to work together?</PortfolioText>
         <Forms action={FORM_ENDPOINT} method="POST">
           <Input
             name="name"

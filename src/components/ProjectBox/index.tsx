@@ -1,5 +1,6 @@
+import { motion } from "framer-motion";
 import { nanoid } from "nanoid";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { AiFillSwitcher } from "react-icons/ai";
 import { ReadMore } from "../projects/ProjectsElements";
 import { ClosingIcon } from "../Sidebar/SidebarElements";
@@ -45,24 +46,26 @@ const ProjectBox = (props: {
   switcher: (operation: string, action: string) => void;
   photoIndex: number;
   projectsData: ProjectDataProps;
+  scrollHandler: () => void;
+  useOutsideAlerter: any;
 }) => {
   const project = props.projectsData[props.idOfBox];
   const htmlTechnologies = project.technologies.map((singleTechnology) => (
     <TechnologiesLi key={nanoid()}>{singleTechnology}</TechnologiesLi>
   ));
+  // =====================================
 
-  const [current, setCurrent] = useState<number>(0);
-  const length: number = project.photos.length;
+  /**
+   * Hook that alerts clicks outside of the passed ref
+   */
 
-  const nextSlide = () => {
-    setCurrent((prev) => (prev === length - 1 ? 0 : prev + 1));
-    console.log(current);
-  };
-  const prevSlide = () => {
-    setCurrent((prev) => (prev === 0 ? length - 1 : prev - 1));
-    console.log(current);
-  };
+  /**
+   * Component that alerts if you click outside of it
+   */
+  const wrapperRef = useRef(null);
+  props.useOutsideAlerter(wrapperRef);
 
+  // =====================================
   const singleDotshtml = project.photos.map((singlePhoto, index) => {
     return index === props.photoIndex ? (
       <SingleDot key={nanoid()} active={true} />
@@ -70,9 +73,31 @@ const ProjectBox = (props: {
       <SingleDot key={nanoid()} active={false} />
     );
   });
-
+  // photo swap animation
+  const variants = {
+    enter: (direction: number) => {
+      return {
+        x: direction > 0 ? 100 : -100,
+        opacity: 0,
+      };
+    },
+    center: {
+      zIndex: 1,
+      x: 0,
+      opacity: 1,
+    },
+  };
   return (
-    <BoxWrapper>
+    <BoxWrapper
+      ref={wrapperRef}
+      as={motion.div}
+      initial={{
+        scale: 0,
+        borderRadius: "100%",
+      }}
+      animate={{ scale: 1, borderRadius: "50px" }}
+      transition={{ duration: 0.1 }}
+    >
       <ClosingIcon onClick={() => props.boxToggle()} />
       <InformationContainer>
         <ProjectTitle>{project.name}</ProjectTitle>
@@ -102,7 +127,19 @@ const ProjectBox = (props: {
               key={nanoid()}
             >
               {index === props.photoIndex && (
-                <Photo src={singlePhoto} alt="/" />
+                <Photo
+                  key={singlePhoto}
+                  as={motion.img}
+                  variants={variants}
+                  initial="enter"
+                  animate="center"
+                  transition={{
+                    x: { type: "spring", stiffness: 300, damping: 30 },
+                    opacity: { duration: 0.2 },
+                  }}
+                  src={singlePhoto}
+                  alt="/"
+                />
               )}
             </WindowForPhoto>
           );
@@ -121,12 +158,12 @@ const ProjectBox = (props: {
 
       <LeftArrow
         className="minus"
-        onClick={(e) => props.switcher("minus", "project")}
+        onClick={() => props.switcher("minus", "project")}
       />
 
       <RightArrow
         className="plus"
-        onClick={(e) => props.switcher("plus", "project")}
+        onClick={() => props.switcher("plus", "project")}
       />
     </BoxWrapper>
   );

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaBars, FaGithub, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import {
   HeaderWrapper,
   NavLogo,
@@ -10,7 +10,6 @@ import {
   SingleOutsideLink,
   HeaderLogo,
 } from "./HeaderElements";
-import Sidebar from "../Sidebar";
 
 const Header = () => {
   return (

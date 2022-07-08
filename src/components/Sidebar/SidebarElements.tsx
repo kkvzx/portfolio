@@ -27,25 +27,24 @@ export const MobileIcon = styled.div`
     align-items: center;
     padding: 10px;
     background: rgba(0, 0, 0, 0.3);
+    border-radius:100%;
+    padding:14px;
     font-size: 3rem;
     color: var(--text-color);
     cursor: pointer;
     transition: 0.3s all;
-  }
 `;
 
-export const ContentWrapper = styled.div<{ isOpen: boolean }>`
+export const ContentWrapper = styled.div`
   position: fixed;
   z-index: 999;
   width: 100%;
   height: 100%;
   background: var(--background-color);
-
   top: 0;
   right: 0;
   transition: 0.3s ease-in-out;
-  opacity: ${({ isOpen }) => (isOpen ? "`100%" : 0)};
-  right: ${({ isOpen }) => (isOpen ? "`0" : "-100%")};
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;

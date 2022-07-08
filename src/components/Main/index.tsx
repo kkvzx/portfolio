@@ -89,6 +89,24 @@ const Main = () => {
     setInnerPhotoIndex(0);
   }, [idOfProjectBox]);
 
+  function useOutsideAlerter(ref: any) {
+    useEffect(() => {
+      /**
+       * Alert if clicked on outside of element
+       */
+      function handleClickOutside(event: any) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          scrollHandler();
+        }
+      }
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [ref]);
+  }
   // ========================PROJECT BOX CONTROL END=========================
 
   // Closing SmallnavMenu while resizing
@@ -97,7 +115,7 @@ const Main = () => {
   }, [windowSize.width]);
 
   return (
-    <Router>
+    <>
       <MainWrapper>
         <Sidebar toggle={toggleSideBar} isOpen={isOpen} />
         <Header />
@@ -112,13 +130,15 @@ const Main = () => {
               switcher={switcher}
               photoIndex={innerPhotoIndex}
               projectsData={projectsData as any}
+              scrollHandler={scrollHandler}
+              useOutsideAlerter={useOutsideAlerter}
             />
           )}
           <Contact />
         </Content>
       </MainWrapper>
       <GlobalStyles />
-    </Router>
+    </>
   );
 };
 

@@ -23,17 +23,23 @@ export const BoxWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   transition: 0.3s all;
-  z-index: 3;
+  z-index: 6;
   &:after {
     content: "";
     display: block;
     padding-bottom: 100%;
+  }
+  @media screen and (max-width: 1400px) {
+    flex-direction: column;
   }
   @media screen and (max-width: 1250px) {
     padding: 0 7rem;
   }
   @media screen and (max-width: 1000px) {
     padding: 0;
+  }
+  @media screen and (max-width: 800px) {
+    height: 60%;
   }
 `;
 // export const PhotoContainer = styled.div`
@@ -55,15 +61,24 @@ export const BoxWrapper = styled.div`
 //   object-fit: cover;
 // `;
 export const PhotoContainer = styled.div`
+  width: 40%;
   position: relative;
   max-width: 30rem;
   min-width: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 1400px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 export const Photo = styled.img`
   width: 100%;
+  background:"black"
+  max-height: 30rem;
   border-radius: 10px;
 `;
 
@@ -89,8 +104,12 @@ export const InformationContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-    @media screen and (max-width: 1250px) {
-    width: 70%;
+    @media screen and (max-width: 1400px) {
+    width:100%;
+  }
+
+      @media screen and (max-width: 1000px) {
+    width: 100%;
   }
     @media screen and (max-width: 100px) {
     width:100%;
@@ -203,8 +222,8 @@ export const LeftArrow = styled(AiOutlineArrowLeft)`
     border: 2px solid black;
     color: black;
   }
-  @media screen and (max-width: 560px) {
-    margin-left: 5px;
+  @media screen and (max-width: 1000px) {
+    top: 65%;
   }
 `;
 export const RightArrow = styled(AiOutlineArrowRight)`
@@ -225,8 +244,8 @@ export const RightArrow = styled(AiOutlineArrowRight)`
     border: 2px solid black;
     color: black;
   }
-  @media screen and (max-width: 560px) {
-    margin-right: 5px;
+  @media screen and (max-width: 1000px) {
+    top: 65%;
   }
 `;
 
