@@ -1,6 +1,15 @@
 import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
 
+interface Props {
+  top?: number;
+  bottom?: number;
+  zindex?: number;
+  left?: number;
+  right?: number;
+  width?: number;
+}
+
 export const HeroContainer = styled.div`
   height: 100vh;
   width: 100%;
@@ -24,6 +33,7 @@ export const HeroBg = styled.div`
 	animation: gradient 13s ease infinite;
   display:flex;
   justify-content:space-between;
+  position:relative;
   z-index:1;
   padding-left:7%;
   @media screen and (max-width: 900px) {
@@ -47,15 +57,19 @@ export const TextContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  z-index: 3;
 `;
 export const HeroHeading = styled.div`
   font-size: 2rem;
   margin-top: 10%;
+  margin-left: 7rem;
+  z-index: 3;
   align-self: flex-start;
 `;
 export const Img = styled.img`
   width: 26rem;
   height: auto;
+  z-index: 3;
   @media screen and (max-height: 1000px) {
     width: 19rem;
   }
@@ -67,6 +81,24 @@ export const Img = styled.img`
     width: 21rem;
   }
 `;
+/*============clouds================ */
+const Clouds = styled.img`
+  position: absolute;
+  width: 18rem;
+  z-index: 1;
+`;
+
+export const CloudImg = styled(Clouds)<Props>`
+  z-index: ${(p) => (p.zindex ? p.zindex : undefined)};
+  top: ${(p) => (p.top ? p.top : undefined)}%;
+  left: ${(p) => (p.left ? p.left : undefined)}%;
+  right: ${(p) => (p.right ? p.right : undefined)}%;
+  bottom: ${(p) => (p.bottom ? p.bottom : undefined)}%;
+  width: ${(p) => (p.width ? p.width : undefined)}rem;
+`;
+
+/*============END OF clouds================ */
+
 export const HeroMainText = styled.h1`
   color: white;
   font-weight: 700;
@@ -74,8 +106,10 @@ export const HeroMainText = styled.h1`
   font-family: "Oswald", sans-serif;
   padding: 0;
   line-height: 1;
+  color: white;
+
   font-size: var(--big-font-size);
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 980px) {
     font-size: var(--big-font-sizeMobile);
   }
   @media screen and (max-height: 1050px) {
