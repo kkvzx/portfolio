@@ -12,6 +12,18 @@ export const ContactWrapper = styled.div`
     text-align: center;
   }
 `;
+export const ContactTitleContainer = styled.div`
+  justify-self: left;
+  height: 6rem;
+  padding-left: 6rem;
+  margin: 0;
+  letter-spacing: 2px;
+  user-select: none;
+  @media screen and (max-width: 1050px) {
+    padding-left: 0rem;
+    height: 4rem;
+  }
+`;
 export const FormSection = styled.div`
   width: 50%;
   min-width: 558px;
@@ -64,10 +76,10 @@ export const Input = styled.input`
   &:focus {
     outline: none;
     box-shadow: inset 0 45px 0 0 #0e5581,
-      inset 550px 0 0 0 var(--additional-color);
+      inset 800px 0 0 0 var(--additional-color);
   }
   &:focus:invalid {
-    box-shadow: inset 0 45px 0 0 #0e5581, inset 550px 0 0 0 red;
+    box-shadow: inset 0 45px 0 0 #0e5581, inset 800px 0 0 0 red;
   }
 
   &.left {
@@ -114,7 +126,7 @@ export const InputSubject = styled.input`
   &:focus {
     outline: none;
     box-shadow: inset 0 45px 0 0 #0e5581,
-      inset 1100px 0 0 0 var(--additional-color);
+      inset 1400px 0 0 0 var(--additional-color);
   }
 
   &:focus::placeholder {
@@ -156,7 +168,7 @@ export const InputMessage = styled.textarea`
   &:focus {
     outline: none;
     box-shadow: inset 0 97px 0 0 #0e5581,
-      inset 1100px 0 0 0 var(--additional-color);
+      inset 1400px 0 0 0 var(--additional-color);
   }
   &:focus::placeholder {
     color: transparent;
@@ -184,7 +196,6 @@ export const InputButton = styled.input`
 `;
 export const MapSection = styled.div`
   width: 100%;
-  /* height: 57rem; */
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -202,7 +213,7 @@ export const MapSection = styled.div`
 
 export const MapImg = styled.img`
   width: 100%;
-  height: auto;
+  height: 100vh;
   object-fit: cover;
 `;
 

@@ -3,7 +3,6 @@ import GlobalStyles from "../GlobalStyles";
 import Header from "../Header";
 import { Content, MainWrapper } from "./MainElements";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Footer from "../Footer";
 import Hero from "../Hero";
 import Sidebar from "../Sidebar";
 import AboutSection from "../AboutSection";

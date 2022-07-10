@@ -25,31 +25,36 @@ export const HeroContainer = styled.div`
 export const HeroBg = styled.div`
   width: 110%;
   height: 50vh;
-  margin-top:-3%;
+  margin-top: -3%;
   transform: rotateZ(-3deg);
   overflow: hidden;
-  background: linear-gradient(-45deg,#DFF6FF, #47B5FF, #1363DF, #06283D);
-	background-size: 400% 400%;
-	animation: gradient 13s ease infinite;
-  display:flex;
-  justify-content:space-between;
-  position:relative;
-  z-index:1;
-  padding-left:7%;
+  background: linear-gradient(-45deg, #dff6ff, #47b5ff, #1363df, #06283d);
+  background-size: 400% 400%;
+  animation: gradient 13s ease infinite;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  padding-left: 7%;
   @media screen and (max-width: 900px) {
-    height:75vh;
+    height: 75vh;
   }
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	};
-
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+`;
+export const TitleContainer = styled.div`
+  width: 40%;
+  align-self: flex-start;
+  margin-top: 12%;
 `;
 export const TextContainer = styled.div`
   width: 80%;
@@ -79,13 +84,18 @@ export const Img = styled.img`
 
   @media screen and (max-width: 900px) {
     width: 21rem;
+    margin-left: 5rem;
   }
 `;
 /*============clouds================ */
+
 const Clouds = styled.img`
   position: absolute;
   width: 18rem;
   z-index: 1;
+  @media screen and (max-width: 1000px) {
+    width: 5rem;
+  }
 `;
 
 export const CloudImg = styled(Clouds)<Props>`
@@ -95,6 +105,9 @@ export const CloudImg = styled(Clouds)<Props>`
   right: ${(p) => (p.right ? p.right : undefined)}%;
   bottom: ${(p) => (p.bottom ? p.bottom : undefined)}%;
   width: ${(p) => (p.width ? p.width : undefined)}rem;
+  @media screen and (max-width: 1000px) {
+    width: 8rem;
+  }
 `;
 
 /*============END OF clouds================ */
@@ -135,7 +148,7 @@ export const FrontPage = styled.div`
   justify-content: flex-end;
   align-items: center;
 `;
-export const ExploreButton = styled(LinkS)<{ active: boolean }>`
+export const ExploreButton = styled(LinkS)`
   padding: 20px 30px;
   overflow: hidden;
   background: linear-gradient(-45deg, #DFF6FF, #47B5FF, #1363DF, #06283D);
@@ -154,10 +167,11 @@ export const ExploreButton = styled(LinkS)<{ active: boolean }>`
   font-family:
   transition:all 2s ease-out;
   font-size:1.2rem;
-  ${({ active }) =>
-    active && "  transition:all 0.3s ease-out; font-size:1.6rem;"}
+  &:hover{
+      transition:all 0.2s ease-out;
 
-}
+    transform:scale(1.2);
+  }
   @media screen and (max-width: 900px) {
     padding:10px 20px;
   }
@@ -173,6 +187,7 @@ export const ExploreButton = styled(LinkS)<{ active: boolean }>`
 	100% {
 		background-position: 0% 50%;
 	}
+}
 
 `;
 export const Circle = styled(LinkS)`
@@ -184,7 +199,7 @@ export const Circle = styled(LinkS)`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 25px;
   margin-bottom: 5rem;
   border: 2px solid var(--additional-color);
   color: var(--additional-color);

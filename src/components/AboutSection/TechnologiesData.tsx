@@ -52,4 +52,9 @@ export const technologiesData = [
     name: "Redux",
     photoPath: "https://cdn.worldvectorlogo.com/logos/redux.svg",
   },
+  {
+    id: 10,
+    name: "Framer Motion",
+    photoPath: "https://bestofjs.org/logos/motion.dark.svg",
+  },
 ];

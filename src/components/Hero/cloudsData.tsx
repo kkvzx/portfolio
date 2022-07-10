@@ -29,14 +29,7 @@ export const clouds: {
     left: 50,
     direction: "right",
   },
-  {
-    link: require("../../img/cloud1.png"),
-    zindex: 3,
-    width: 30,
-    top: 30,
-    left: 30,
-    direction: "right",
-  },
+
   {
     link: require("../../img/cloud2.png"),
     zindex: 2,
@@ -88,5 +81,13 @@ export const clouds: {
     left: 20,
     zindex: 2,
     direction: "left",
+  },
+  {
+    link: require("../../img/cloud1.png"),
+    zindex: 3,
+    width: 30,
+    top: 30,
+    left: 30,
+    direction: "right",
   },
 ];

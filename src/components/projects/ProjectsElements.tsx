@@ -101,7 +101,7 @@ export const InfoSection = styled.div`
   position: absolute;
 `;
 export const ProjectInformation = styled.p`
-  margin: 20px;
+  margin: 10px;
   font-size: var(--text-font-size);
   color: var(--text-color);
   font-weight: 200;
@@ -112,6 +112,7 @@ export const ProjectTitle = styled.h2`
   color: white;
   margin-top: 260px;
   width: 100%;
+  margin-bottom: 5px;
   font-size: var(--h2-font-size);
   -moz-user-select: none;
   @media screen and (max-width: 2000px) {
@@ -152,5 +153,6 @@ export const PortfolioText = styled.p`
     padding: 0 5rem;
     padding-left: auto;
     text-align: center;
+    margin-top: 0;
   }
 `;

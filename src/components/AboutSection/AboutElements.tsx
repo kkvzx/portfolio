@@ -1,33 +1,35 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { PortfolioText } from "../projects/ProjectsElements";
 
 export const AboutWrapper = styled.div`
   width: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  grid-template-columns: auto auto;
-  justify-items: center;
-  align-items: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   background: var(--background-color);
   color: var(--text-color);
-  padding-left: 6rem;
   margin-top: 5rem;
+  gap: 2rem;
   @media screen and (max-width: 900px) {
     grid-template-rows: repeat(3, auto);
     grid-template-columns: auto;
     padding: 0;
   }
 `;
-export const AboutTitle = styled.h1`
-  grid-column-start: -1;
-  grid-column-end: 1;
+export const AboutmeTitleContainer = styled.div`
+  width: 100%;
   justify-self: left;
   height: 6rem;
-  font-size: var(--big-font-size);
   font-weight: 800;
   margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 6rem;
+
   letter-spacing: 2px;
-  color: var(--additional-color);
   user-select: none;
   @media screen and (max-width: 900px) {
     justify-self: center;
@@ -43,12 +45,16 @@ export const AboutMeContainer = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
+  padding-left: 6rem;
+
   @media screen and (max-width: 900px) {
     align-items: center;
   }
 `;
 export const AboutMePhoto = styled.img`
-  width: 367px;
+  width: 30rem;
+  margin-top: 2rem;
   @media screen and (max-width: 900px) {
     width: 14rem;
   }
@@ -63,11 +69,10 @@ export const AboutMeHeader = styled.h1`
   }
 `;
 export const AboutMeText = styled(PortfolioText)`
-  width: 85%;
-  padding: 0;
+  padding: 0 10rem;
   font-size: var(--text-size);
   font-family: var(--text-font);
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
   @media screen and (max-width: 900px) {
     font-size: var(--text-sizeMobile);
     padding: 0 2rem;
@@ -76,23 +81,34 @@ export const AboutMeText = styled(PortfolioText)`
 `;
 
 export const Technologies = styled.div`
-  display: grid;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
-  height: 100%;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 2%;
-  position: relative;
-  padding-right: 2rem;
-
+  height: auto;
+  position: absolute;
+  top: 0;
   @media screen and (max-width: 900px) {
     height: none;
     padding: 0 2rem;
-  }
+  } */
 `;
-export const TechnologiesSquare = styled.div`
+export const Slider = styled.div`
+  width: 100%;
+  height: 5rem;
+
+  display: flex;
+  background: rgba(0, 0, 0, 0.3);
+`;
+export const TechnologiesSquare = styled(motion.div)`
   font-size: 1.5rem;
-  aspect-ratio: 1/ 1;
+  min-width: 11rem;
+  height: 5rem;
+  margin-right: 4rem;
+  margin-left: 6rem;
+
+  /* aspect-ratio: 1/ 1; */
   display: flex;
   text-align: center;
   align-items: center;
@@ -105,7 +121,7 @@ export const TechnologiesSquare = styled.div`
   }
 `;
 export const SquareImage = styled.img`
-  width: 80%;
+  width: 3rem;
   object-fit: contain;
   object-position: center;
   position: relative;
@@ -115,5 +131,3 @@ export const SquareImage = styled.img`
     width: 40%;
   }
 `;
-
-// TODO POPRAWIĆ RESPONSYWNOSĆ ELEMENTÓW i ZMIENIĆ OBRAZKI

@@ -1,7 +1,12 @@
 import React from "react";
-import { AboutMeText, AboutTitle } from "../AboutSection/AboutElements";
+import {
+  AboutMeText,
+  AboutmeTitleContainer,
+} from "../AboutSection/AboutElements";
+import AnimatedTitle from "../AnimatedTitle";
 import { PortfolioText, Title } from "../projects/ProjectsElements";
 import {
+  ContactTitleContainer,
   ContactWrapper,
   Forms,
   FormSection,
@@ -22,7 +27,15 @@ const Contact = () => {
   return (
     <ContactWrapper id="contact">
       <FormSection>
-        <Title>Contact me</Title>
+        <ContactTitleContainer>
+          <AnimatedTitle
+            text="Contact me"
+            color="var(--additional-color)"
+            size="var(--big-font-size)"
+            sizesmall="var(--big-font-sizeMobile)"
+            colorSwap={false}
+          />
+        </ContactTitleContainer>
         <PortfolioText>Have a question or want to work together?</PortfolioText>
         <Forms action={FORM_ENDPOINT} method="POST">
           <Input

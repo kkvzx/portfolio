@@ -6,28 +6,54 @@ import {
   AboutMePhoto,
   AboutMeHeader,
   AboutMeText,
-  AboutTitle,
   AboutWrapper,
   Technologies,
   TechnologiesSquare,
   SquareImage,
+  AboutmeTitleContainer,
+  Slider,
 } from "./AboutElements";
+import AnimatedTitle from "../AnimatedTitle";
+import { motion } from "framer-motion";
 
-const photo = require("../../img/photo.png");
+const photo = require("../../img/photo2.png");
 
 const AboutSection = () => {
   const htmlTechnologiesData = technologiesData.map((singleObject) => (
-    <TechnologiesSquare key={singleObject.id}>
+    <TechnologiesSquare
+      key={singleObject.id}
+      initial={{ x: -3300 }}
+      animate={{ x: 2000 }}
+      transition={{ duration: 40, repeat: Infinity, type: "mirror" }}
+    >
       <SquareImage src={singleObject.photoPath}></SquareImage>
-      {singleObject.name}
     </TechnologiesSquare>
   ));
   return (
     <AboutWrapper id="about">
-      <AboutTitle>About me</AboutTitle>
+      <AboutmeTitleContainer>
+        <AnimatedTitle
+          text="About me"
+          color="var(--additional-color)"
+          size="var(--big-font-size)"
+          sizesmall="var(--big-font-sizeMobile)"
+          colorSwap={false}
+        />
+      </AboutmeTitleContainer>
+      <Slider>{htmlTechnologiesData}</Slider>
+
       <AboutMeContainer>
         <AboutMePhoto src={photo}></AboutMePhoto>
-        <AboutMeHeader>Who's this guy?</AboutMeHeader>
+        {/* <Technologies>{htmlTechnologiesData}</Technologies> */}
+
+        <AnimatedTitle
+          text="Who's this guy?"
+          color="var(--additional-color)"
+          size="var(--h2-font-size)"
+          sizesmall="var(--h2-font-sizeMobile)"
+          spacing="0.25em"
+          // colorSwap={false}
+        />
         <AboutMeText>
           Hi, I’m Konrad, and I’m passionate about building things for the
           web.When I was a kid I was completely hooked to the world of computers
@@ -46,7 +72,6 @@ const AboutSection = () => {
           learn among professionals.
         </AboutMeText>
       </AboutMeContainer>
-      <Technologies>{htmlTechnologiesData}</Technologies>
     </AboutWrapper>
   );
 };

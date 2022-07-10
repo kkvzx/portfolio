@@ -15,6 +15,8 @@ import {
   Title,
 } from "./ProjectsElements";
 import ProjectBox from "../ProjectBox";
+import AnimatedTitle from "../AnimatedTitle";
+import { ContactTitleContainer } from "../Contact/ContactElements";
 
 // require("../../img/projectsDataImg/tenzis/1.png")
 type ProjectsProps = {
@@ -36,7 +38,15 @@ const Projects = (props: ProjectsProps) => {
 
   return (
     <ProjectsWrapper id="projects">
-      <Title>My Portfolio</Title>
+      <ContactTitleContainer>
+        <AnimatedTitle
+          text="My Portfolio"
+          color="var(--additional-color)"
+          size="var(--big-font-size)"
+          sizesmall="var(--big-font-sizeMobile)"
+          colorSwap={false}
+        />
+      </ContactTitleContainer>
       <PortfolioText>
         A small gallery of recent project chosen by me. I've done them while
         improving my skills such as css layout, javascript, typescript and
