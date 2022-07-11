@@ -21,6 +21,7 @@ export const ContactTitleContainer = styled.div`
   user-select: none;
   @media screen and (max-width: 1050px) {
     padding-left: 0rem;
+    margin-bottom: 2rem;
     height: 4rem;
   }
 `;

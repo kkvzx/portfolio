@@ -4,31 +4,40 @@ import { AiFillHtml5 } from "react-icons/ai";
 import {
   AboutMeContainer,
   AboutMePhoto,
-  AboutMeHeader,
   AboutMeText,
   AboutWrapper,
-  Technologies,
-  TechnologiesSquare,
-  SquareImage,
   AboutmeTitleContainer,
-  Slider,
+  MarqueeContainer,
 } from "./AboutElements";
 import AnimatedTitle from "../AnimatedTitle";
 import { motion } from "framer-motion";
+import AnimatedTechnologies from "./AnimatedTechnologies";
 
 const photo = require("../../img/photo2.png");
 
 const AboutSection = () => {
-  const htmlTechnologiesData = technologiesData.map((singleObject) => (
-    <TechnologiesSquare
-      key={singleObject.id}
-      initial={{ x: -3300 }}
-      animate={{ x: 2000 }}
-      transition={{ duration: 40, repeat: Infinity, type: "mirror" }}
-    >
-      <SquareImage src={singleObject.photoPath}></SquareImage>
-    </TechnologiesSquare>
-  ));
+  // ========maraquee start=================
+
+  const marqueeVariants = {
+    animate: {
+      x: ["-5%", "-30%"],
+      transition: {
+        x: {
+          repeat: Infinity,
+          repeatType: "loop",
+          duration: 5,
+          ease: "linear",
+        },
+      },
+    },
+  };
+  // ========maraquee end===================
+
+  // const htmlTechnologiesData = technologiesData.map((singleObject) => (
+  //   <TechnologiesSquare key={singleObject.id}>
+  //     <SquareImage src={singleObject.photoPath}></SquareImage>
+  //   </TechnologiesSquare>
+  // ));
   return (
     <AboutWrapper id="about">
       <AboutmeTitleContainer>
@@ -40,11 +49,9 @@ const AboutSection = () => {
           colorSwap={false}
         />
       </AboutmeTitleContainer>
-      <Slider>{htmlTechnologiesData}</Slider>
 
       <AboutMeContainer>
         <AboutMePhoto src={photo}></AboutMePhoto>
-        {/* <Technologies>{htmlTechnologiesData}</Technologies> */}
 
         <AnimatedTitle
           text="Who's this guy?"
@@ -52,7 +59,6 @@ const AboutSection = () => {
           size="var(--h2-font-size)"
           sizesmall="var(--h2-font-sizeMobile)"
           spacing="0.25em"
-          // colorSwap={false}
         />
         <AboutMeText>
           Hi, I’m Konrad, and I’m passionate about building things for the
@@ -72,6 +78,13 @@ const AboutSection = () => {
           learn among professionals.
         </AboutMeText>
       </AboutMeContainer>
+      {/* ========================================= */}
+      {/* ======================================== */}
+      <MarqueeContainer as={motion.div} transition={{ delay: 2 }}>
+        <AnimatedTechnologies fromRight={false} textDelay={1} />
+        <AnimatedTechnologies fromRight={true} textDelay={1.5} />
+        <AnimatedTechnologies fromRight={false} textDelay={2} />
+      </MarqueeContainer>
     </AboutWrapper>
   );
 };

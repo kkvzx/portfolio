@@ -39,27 +39,13 @@ export const BoxWrapper = styled.div`
     padding: 0;
   }
   @media screen and (max-width: 800px) {
-    height: 60%;
+    height: 70%;
+  }
+  @media screen and (max-width: 600px) {
+    height: 90%;
   }
 `;
-// export const PhotoContainer = styled.div`
-//   max-width: 30rem;
-//   min-width: 20rem;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   position: relative;
-//   @media screen and (max-width: 1250px) {
-//     min-width: 10rem;
-//   }
-//   @media screen and (max-width: 1000px) {
-//     display: none;
-//   }
-// `;
-// export const Photo = styled.img`
-//   width: 100%;
-//   object-fit: cover;
-// `;
+
 export const PhotoContainer = styled.div`
   width: 40%;
   position: relative;
@@ -69,15 +55,14 @@ export const PhotoContainer = styled.div`
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 1400px) {
-    width: 100%;
+    display: none;
   }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     display: none;
   }
 `;
 export const Photo = styled.img`
   width: 100%;
-  background:"black"
   max-height: 30rem;
   border-radius: 10px;
 `;
@@ -223,7 +208,7 @@ export const LeftArrow = styled(AiOutlineArrowLeft)`
     color: black;
   }
   @media screen and (max-width: 1000px) {
-    top: 65%;
+    top: 85%;
   }
 `;
 export const RightArrow = styled(AiOutlineArrowRight)`
@@ -245,7 +230,7 @@ export const RightArrow = styled(AiOutlineArrowRight)`
     color: black;
   }
   @media screen and (max-width: 1000px) {
-    top: 65%;
+    top: 85%;
   }
 `;
 

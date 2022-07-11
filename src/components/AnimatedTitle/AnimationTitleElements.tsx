@@ -38,4 +38,7 @@ export const Character = styled(motion.span)<titleProps>`
   @media screen and (max-width: 980px) {
     font-size: ${(p) => p.sizesmall};
   }
+  @media screen and (max-height: 680px) {
+    font-size: ${(p) => p.sizesmall};
+  }
 `;

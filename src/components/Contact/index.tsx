@@ -4,7 +4,7 @@ import {
   AboutmeTitleContainer,
 } from "../AboutSection/AboutElements";
 import AnimatedTitle from "../AnimatedTitle";
-import { PortfolioText, Title } from "../projects/ProjectsElements";
+import { PortfolioText } from "../projects/ProjectsElements";
 import {
   ContactTitleContainer,
   ContactWrapper,

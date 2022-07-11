@@ -55,6 +55,14 @@ export const TitleContainer = styled.div`
   width: 40%;
   align-self: flex-start;
   margin-top: 12%;
+  z-index: 9999;
+  @media screen and (max-width: 900px) {
+    padding-left: 2rem;
+    margin-top: 30%;
+  }
+  @media screen and (max-height: 680px) {
+    margin-top: 1rem;
+  }
 `;
 export const TextContainer = styled.div`
   width: 80%;
@@ -88,6 +96,12 @@ export const Img = styled.img`
   }
 `;
 /*============clouds================ */
+export const CloudsContainer = styled.div`
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+`;
 
 const Clouds = styled.img`
   position: absolute;
@@ -95,6 +109,9 @@ const Clouds = styled.img`
   z-index: 1;
   @media screen and (max-width: 1000px) {
     width: 5rem;
+  }
+  @media screen and (max-width: 500px) {
+    display: none;
   }
 `;
 
@@ -147,6 +164,7 @@ export const FrontPage = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
 `;
 export const ExploreButton = styled(LinkS)`
   padding: 20px 30px;
@@ -210,4 +228,10 @@ export const Circle = styled(LinkS)`
     font-size: 1rem;
     margin-bottom: 1rem;
   }
+`;
+export const SmallImg = styled.img`
+  position: absolute;
+  width: 15rem;
+  bottom: 5rem;
+  left: -300px;
 `;

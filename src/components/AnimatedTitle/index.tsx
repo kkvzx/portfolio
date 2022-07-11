@@ -54,7 +54,7 @@ export default function AnimatedTitle({
         duration: 1,
         ease: [0.2, 0.65, 0.3, 0.9],
         type: "spring",
-        stiffness: 200,
+        stiffness: 500,
       },
     },
   };

@@ -12,7 +12,6 @@ import {
   ProjectTitle,
   ReadMore,
   SingleProject,
-  Title,
 } from "./ProjectsElements";
 import ProjectBox from "../ProjectBox";
 import AnimatedTitle from "../AnimatedTitle";

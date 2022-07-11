@@ -7,19 +7,19 @@ import {
   HeroMainText,
   TextContainer,
   Img,
-  HeroHeading,
-  HeroSecondaryText,
   ExploreButton,
   FrontPage,
   Circle,
+  CloudsContainer,
   CloudImg,
   TitleContainer,
+  SmallImg,
 } from "./HeroElements";
 import { nanoid } from "nanoid";
 import { clouds } from "./cloudsData";
 import AnimatedTitle from "../AnimatedTitle";
 const photo = require("../../img/photo.png");
-
+const smallImg = require("../../img/flaming.png");
 interface props {
   title: string;
   // disabled?: boolean;
@@ -87,56 +87,6 @@ const Hero = () => {
       ))}
     </motion.span>
   );
-  // ----------
-
-  const BannerRowTop = ({ title }: props) => {
-    return (
-      <div className={"banner-row"}>
-        <HeroMainText
-          as={motion.h1}
-          initial={{ opacity: 0, y: 80 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            ease: "easeInOut",
-            duration: 1,
-            delay: 0.4,
-          }}
-          className="row-col"
-        >
-          <AnimatedLetters title={title} />
-        </HeroMainText>
-      </div>
-    );
-  };
-  const BannerRowBottom = ({ title }: props) => {
-    return (
-      <div className={"banner-row center"}>
-        <HeroMainText
-          as={motion.h1}
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1, delay: 1 }}
-          className="scroll"
-        >
-          <AnimatedLetters title={title} />
-        </HeroMainText>
-      </div>
-    );
-  };
-  const BannerRowCenter = ({ title }: props) => {
-    return (
-      <HeroMainText
-        as={motion.h1}
-        initial={{ y: 310 }}
-        animate={{ y: 0 }}
-        transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1 }}
-      >
-        <AnimatedLetters title={title} />
-      </HeroMainText>
-    );
-  };
-
-  // -----------
 
   // ========end of animations=============
 
@@ -167,7 +117,7 @@ const Hero = () => {
               colorSwap={true}
             />
             <AnimatedTitle
-              text="Who choosed a diffrent way"
+              text="Junior Front-End Developer"
               color="white"
               size="var(-text-size)"
               sizesmall="var(--text-font-sizeMobile)"
@@ -177,25 +127,33 @@ const Hero = () => {
           </TitleContainer>
 
           <Img src={photo} alt="photo-png" />
-
-          {clouds.map((singleObj) => {
-            return (
-              <CloudImg
-                key={nanoid()}
-                alt={"cloud-png"}
-                src={singleObj.link}
-                top={singleObj.top}
-                bottom={singleObj.bottom}
-                left={singleObj.left}
-                right={singleObj.right}
-                width={singleObj.width}
-                as={motion.img}
-                variants={variants}
-                initial={singleObj.direction === "left" ? "hiddenL" : "hiddenR"}
-                animate={singleObj.direction === "left" ? "showL" : "showR"}
-              />
-            );
-          })}
+          <CloudsContainer
+            as={motion.div}
+            initial={{ x: 1000 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 1 }}
+          >
+            {clouds.map((singleObj) => {
+              return (
+                <CloudImg
+                  key={nanoid()}
+                  alt={"cloud-png"}
+                  src={singleObj.link}
+                  top={singleObj.top}
+                  bottom={singleObj.bottom}
+                  left={singleObj.left}
+                  right={singleObj.right}
+                  width={singleObj.width}
+                  as={motion.img}
+                  variants={variants}
+                  initial={
+                    singleObj.direction === "left" ? "hiddenL" : "hiddenR"
+                  }
+                  animate={singleObj.direction === "left" ? "showL" : "showR"}
+                />
+              );
+            })}
+          </CloudsContainer>
         </TextContainer>
       </HeroBg>
       <FrontPage>
