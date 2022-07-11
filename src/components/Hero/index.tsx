@@ -129,8 +129,8 @@ const Hero = () => {
           <Img src={photo} alt="photo-png" />
           <CloudsContainer
             as={motion.div}
-            initial={{ x: 1000 }}
-            animate={{ x: 0 }}
+            initial={{ y: -1000, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
             {clouds.map((singleObj) => {
