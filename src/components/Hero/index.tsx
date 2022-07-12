@@ -131,7 +131,7 @@ const Hero = () => {
             as={motion.div}
             initial={{ y: -1000, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1.5 }}
+            transition={{ duration: 1 }}
           >
             {clouds.map((singleObj) => {
               return (

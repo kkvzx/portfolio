@@ -176,7 +176,7 @@ export const SingleOutsideBoxLink = styled(SingleOutsideLink)`
     font-size: var(--text-size);
 
     &:hover {
-      box-shadow: inset 110px 0 0 var(--additional-color);
+      box-shadow: inset 200px 0 0 var(--additional-color);
       color: black;
     }
   }

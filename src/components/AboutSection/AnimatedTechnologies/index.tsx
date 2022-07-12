@@ -48,7 +48,7 @@ const AnimatedTechnologies = ({
         delay: textDelay,
       },
     },
-    hidden: { x: fromRight === true ? "0" : -4500 },
+    hidden: { x: fromRight === true ? 0 : -4500 },
   };
 
   const ctrls = useAnimation();

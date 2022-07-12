@@ -53,12 +53,14 @@ export const HeroBg = styled.div`
 `;
 export const TitleContainer = styled.div`
   width: 40%;
+  min-width: 520px;
   align-self: flex-start;
   margin-top: 12%;
   z-index: 9999;
   @media screen and (max-width: 900px) {
     padding-left: 2rem;
     margin-top: 30%;
+    min-width: 400px;
   }
   @media screen and (max-height: 680px) {
     margin-top: 1rem;
@@ -71,6 +73,10 @@ export const TextContainer = styled.div`
   justify-content: space-between;
   align-items: flex-end;
   z-index: 3;
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    margin: 4rem 0;
+  }
 `;
 export const HeroHeading = styled.div`
   font-size: 2rem;
@@ -92,7 +98,11 @@ export const Img = styled.img`
 
   @media screen and (max-width: 900px) {
     width: 21rem;
-    margin-left: 5rem;
+    margin-left: -40%;
+  }
+  @media screen and (max-width: 500px) {
+    width: 15rem;
+    margin-left: 0;
   }
 `;
 /*============clouds================ */
@@ -122,7 +132,7 @@ export const CloudImg = styled(Clouds)<Props>`
   right: ${(p) => (p.right ? p.right : undefined)}%;
   bottom: ${(p) => (p.bottom ? p.bottom : undefined)}%;
   width: ${(p) => (p.width ? p.width : undefined)}rem;
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1550px) {
     width: 8rem;
   }
 `;
