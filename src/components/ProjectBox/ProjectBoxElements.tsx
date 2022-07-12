@@ -56,9 +56,6 @@ export const PhotoContainer = styled.div`
   @media screen and (max-width: 1400px) {
     display: none;
   }
-  @media screen and (max-width: 900px) {
-    display: none;
-  }
 `;
 export const Photo = styled.img`
   width: 100%;
@@ -101,7 +98,7 @@ export const InformationContainer = styled.div`
     justify-content:center
   }
     @media screen and (max-width: 560px) {
-    padding: 1rem;
+    padding:2rem
   }
 `;
 export const ProjectTitle = styled.h1`
@@ -116,7 +113,11 @@ export const ProjectTitle = styled.h1`
     font-size: 1.8rem;
   }
 `;
-export const TechnologiesUsed = styled.div``;
+export const TechnologiesUsed = styled.div`
+  @media screen and (max-height: 750px) {
+    display: none;
+  }
+`;
 export const TechnologiesList = styled.ul`
   list-style: none;
   margin: 0;
@@ -166,6 +167,9 @@ export const GithubLinkInBox = styled(GithubLink)`
     color: var(--additional-color);
     cursor: pointer;
   }
+  @media screen and (max-height: 750px) {
+    font-size: 2rem;
+  }
 `;
 export const SingleOutsideBoxLink = styled(SingleOutsideLink)`
   ${ReadMore} {
@@ -211,6 +215,10 @@ export const LeftArrow = styled(AiOutlineArrowLeft)`
   @media screen and (max-width: 1000px) {
     top: 85%;
   }
+  @media screen and (max-height: 750px) {
+    font-size: 2rem;
+    top: 90%;
+  }
 `;
 export const RightArrow = styled(AiOutlineArrowRight)`
   border: 2px solid var(--text-color);
@@ -232,6 +240,10 @@ export const RightArrow = styled(AiOutlineArrowRight)`
   }
   @media screen and (max-width: 1000px) {
     top: 85%;
+  }
+  @media screen and (max-height: 750px) {
+    font-size: 2rem;
+    top: 90%;
   }
 `;
 
