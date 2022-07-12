@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContactWrapper = styled.div`
   margin-top: 10rem;
   width: 100%;
-  background: var(--background-color);
+  background: transparent;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -51,7 +51,7 @@ export const Forms = styled.form`
 export const Input = styled.input`
   width: 50%;
   padding: 12px;
-  background: #0e5581;
+  background: var(--project-box-singleContainer);
   box-sizing: border-box;
   resize: vertical;
   margin: 0.6rem 0;
@@ -64,23 +64,24 @@ export const Input = styled.input`
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus,
   &:-webkit-autofill:active {
-    transition: background-color 5000s ease-in-out 0s;
+    transition: var(--background-color) 5000s ease-in-out 0s;
   }
   &:-webkit-autofill {
     -webkit-text-fill-color: var(--text-color) !important;
   }
 
-  box-shadow: inset 0 45px 0 0 #0e5581;
+  box-shadow: inset 0 45px 0 0 var(--project-box-singleContainer);
   -webkit-transition: box-shadow 0.3s;
   transition: box-shadow 0.35s;
 
   &:focus {
     outline: none;
-    box-shadow: inset 0 45px 0 0 #0e5581,
+    box-shadow: inset 0 45px 0 0 var(--project-box-singleContainer),
       inset 800px 0 0 0 var(--additional-color);
   }
   &:focus:invalid {
-    box-shadow: inset 0 45px 0 0 #0e5581, inset 800px 0 0 0 red;
+    box-shadow: inset 0 45px 0 0 var(--project-box-singleContainer),
+      inset 800px 0 0 0 red;
   }
 
   &.left {
@@ -97,7 +98,6 @@ export const Input = styled.input`
   }
 `;
 export const InputSubject = styled.input`
-  width: 50%;
   padding: 12px;
   border-radius: 4px;
   box-sizing: border-box;
@@ -106,7 +106,7 @@ export const InputSubject = styled.input`
   width: 100%;
   border: 0;
   outline: none;
-  background: #0e5581;
+  background: var(--project-box-singleContainer);
   caret-color: var(--additional-color);
   color: var(--text-color);
   font-size: 1rem;
@@ -115,18 +115,18 @@ export const InputSubject = styled.input`
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus,
   &:-webkit-autofill:active {
-    transition: background-color 5000s ease-in-out 0s;
+    transition: var(--project-box-singleContainer) 5000s ease-in-out 0s;
   }
   &:-webkit-autofill {
     -webkit-text-fill-color: var(--text-color) !important;
   }
-  box-shadow: inset 0 45px 0 0 #0e5581;
+  box-shadow: inset 0 45px 0 0 var(--project-box-singleContainer);
   -webkit-transition: box-shadow 0.3s;
   transition: box-shadow 0.35s;
 
   &:focus {
     outline: none;
-    box-shadow: inset 0 45px 0 0 #0e5581,
+    box-shadow: inset 0 45px 0 0 var(--project-box-singleContainer),
       inset 1400px 0 0 0 var(--additional-color);
   }
 
@@ -151,26 +151,27 @@ export const InputMessage = styled.textarea`
   color: var(--text-color);
   font-size: 1rem;
   letter-spacing: 1px;
-  background: #0e5581;
+  background: var(--project-box-singleContainer);
   resize: none;
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus,
   &:-webkit-autofill:active {
-    transition: background-color 5000s ease-in-out 0s;
+    transition: var(--project-box-singleContainer) 5000s ease-in-out 0s;
   }
   &:-webkit-autofill {
     -webkit-text-fill-color: var(--text-color) !important;
   }
-  box-shadow: inset 0 97px 0 0 #0e5581;
+  box-shadow: inset 0 97px 0 0 var(--project-box-singleContainer);
   -webkit-transition: box-shadow 0.3s;
   transition: box-shadow 0.35s;
 
   &:focus {
     outline: none;
-    box-shadow: inset 0 97px 0 0 #0e5581,
+    box-shadow: inset 0 97px 0 0 var(--project-box-singleContainer),
       inset 1400px 0 0 0 var(--additional-color);
   }
+
   &:focus::placeholder {
     color: transparent;
   }
@@ -192,7 +193,7 @@ export const InputButton = styled.input`
 
   &:hover {
     box-shadow: inset 220px 0 0 var(--additional-color);
-    color: black;
+    color: var(--text-color);
   }
 `;
 export const MapSection = styled.div`
@@ -229,7 +230,7 @@ export const InfoDiv = styled.div`
   }
 `;
 export const InfoText = styled.p`
-  color: var(--text-color);
+  color: white;
   margin: 0;
   letter-spacing: 1px;
   font-size: var(--text-size);

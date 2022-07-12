@@ -11,11 +11,22 @@ import {
   HeaderLogo,
 } from "./HeaderElements";
 
-const Header = () => {
+interface props {
+  darkModeToggle: () => void;
+  darkMode: boolean;
+}
+
+const Header = (props: props) => {
   return (
     <HeaderWrapper>
       <NavLogo>
-        <HeaderLogo src="https://i.imgur.com/V83tec7.png" />
+        <HeaderLogo
+          src={
+            props.darkMode
+              ? "https://i.imgur.com/V83tec7.png"
+              : "https://i.imgur.com/csRL9uL.png"
+          }
+        />
       </NavLogo>
 
       <NavMenu>
@@ -77,10 +88,10 @@ const Header = () => {
         >
           <FaLinkedin />
         </SingleOutsideLink>
-        <SingleOutsideLink>
+        <SingleOutsideLink onClick={() => props.darkModeToggle()}>
           <FaMoon />
         </SingleOutsideLink>
-        <SingleOutsideLink>
+        <SingleOutsideLink onClick={() => props.darkModeToggle()}>
           <FaSun />
         </SingleOutsideLink>
       </OutsideLinks>

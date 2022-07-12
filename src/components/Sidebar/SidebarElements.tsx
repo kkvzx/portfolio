@@ -40,7 +40,7 @@ export const ContentWrapper = styled.div`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: var(--background-color);
+  background: var(--dark-header-color);
   top: 0;
   right: 0;
   transition: 0.3s ease-in-out;
@@ -56,12 +56,14 @@ export const ClosingIcon = styled(FaTimes)`
   top: 30px;
   right: 30px;
   font-size: 3rem;
+  color: var(--text-color);
   cursor: pointer;
 `;
 
 export const SidebarLogo = styled(NavLogo)`
   color: var(--text-color);
   text-transform: uppercase;
+  background: var(--dark-logo-color);
   margin: 0;
 `;
 export const LogoWrap = styled.div`
@@ -87,11 +89,13 @@ export const SideLinks = styled(NavLinks)`
 export const SingleOutsideLinkMobile = styled(SingleOutsideLink)`
   font-size: 2rem;
   margin: 10px;
+  color: var(--text-color);
 `;
 
 export const OutsideLinksMobile = styled(OutsideLinks)`
   width: 25%;
   height: 10%;
+  background: var(--dark-header-color);
   @media screen and (max-width: 800px) {
     width: 250px;
   }

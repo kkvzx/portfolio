@@ -24,6 +24,8 @@ import {
 type NavMobileMenuProps = {
   toggle: () => void;
   isOpen: boolean;
+  darkMode: boolean;
+  darkModeToggle: () => void;
 };
 
 const Sidebar = (props: NavMobileMenuProps) => {
@@ -63,7 +65,13 @@ const Sidebar = (props: NavMobileMenuProps) => {
         <ClosingIcon></ClosingIcon>
         <SidebarLogo>
           <LogoWrap>
-            <HeaderLogo src="https://i.imgur.com/V83tec7.png" />
+            <HeaderLogo
+              src={
+                props.darkMode
+                  ? "https://i.imgur.com/V83tec7.png"
+                  : "https://i.imgur.com/csRL9uL.png"
+              }
+            />
           </LogoWrap>
         </SidebarLogo>
         <SidebarMenu>
@@ -95,10 +103,10 @@ const Sidebar = (props: NavMobileMenuProps) => {
           <SingleOutsideLinkMobile>
             <FaLinkedin />
           </SingleOutsideLinkMobile>
-          <SingleOutsideLinkMobile>
+          <SingleOutsideLinkMobile onClick={() => props.darkModeToggle()}>
             <FaMoon />
           </SingleOutsideLinkMobile>
-          <SingleOutsideLinkMobile>
+          <SingleOutsideLinkMobile onClick={() => props.darkModeToggle()}>
             <FaSun />
           </SingleOutsideLinkMobile>
         </OutsideLinksMobile>

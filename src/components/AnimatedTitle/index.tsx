@@ -87,9 +87,11 @@ export default function AnimatedTitle({
                   variants={characterAnimation}
                   whileHover={{
                     scale: 1.4,
-                    color: "var(--additional-color)",
+                    // color: "var(--additional-color)",
 
                     transition: {
+                      type: "spring",
+                      stiffness: 800,
                       duration: 0.01,
                     },
                   }}

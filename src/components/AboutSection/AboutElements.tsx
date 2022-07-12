@@ -8,7 +8,7 @@ export const AboutWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
-  background: var(--background-color);
+  background: transparent;
   color: var(--text-color);
   margin: 8rem 0;
   @media screen and (max-width: 900px) {
@@ -39,7 +39,6 @@ export const AboutmeTitleContainer = styled.div`
 `;
 
 export const AboutMeContainer = styled.div`
-  width: 100%;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -63,7 +62,10 @@ export const AboutMePhoto = styled.img`
 `;
 
 export const AboutMeText = styled(PortfolioText)`
-  padding: 0 30%;
+  width: 70rem;
+  text-align: left;
+  padding: 0;
+  margin-bottom: 1em;
   font-size: var(--text-size);
   font-family: var(--text-font);
   @media screen and (max-width: 1400px) {
@@ -71,6 +73,7 @@ export const AboutMeText = styled(PortfolioText)`
   }
   @media screen and (max-width: 900px) {
     font-size: var(--text-sizeMobile);
+    width: 80%;
     padding: 0 2rem;
   }
 `;

@@ -6,7 +6,7 @@ export const ProjectsWrapper = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  background: var(--background-color);
+  background: transparent;
   position: relative;
   @media screen and (max-width: 1050px) {
     align-items: center;
@@ -48,13 +48,12 @@ export const GithubLink = styled(FaGithub)`
 export const SingleProject = styled.div`
   min-width: 18%;
   height: auto;
-  margin-right: 30px;
-  margin: 0 30px 30px 0;
+  margin: 0 20px 30px 0;
   border-radius: 30px;
-  background: #1f4690;
   text-align: center;
-  background: #0e5581;
+  background: var(--project-box-singleContainer);
   position: relative;
+
   transition: 0.3s all;
   cursor: pointer;
 
@@ -70,6 +69,7 @@ export const SingleProject = styled.div`
 
   &:hover {
     box-shadow: 0 0 1em 0.5em black;
+    transform: scale(1.02);
   }
 
   @media screen and (max-width: 2010px) {
@@ -120,7 +120,7 @@ export const ProjectInformation = styled.p`
 `;
 
 export const ProjectTitle = styled.h2`
-  color: white;
+  color: var(--text-color);
   margin-top: 260px;
   width: 100%;
   margin-bottom: 5px;

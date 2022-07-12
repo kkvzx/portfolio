@@ -24,8 +24,11 @@ interface props {
   title: string;
   // disabled?: boolean;
 }
+interface heroProps {
+  darkMode: boolean;
+}
 
-const Hero = () => {
+const Hero = (props: heroProps) => {
   const [exploreActive, setExploreActive] = useState(false);
 
   const toggle = () => {
@@ -92,36 +95,36 @@ const Hero = () => {
 
   return (
     <HeroContainer id="hero">
-      <HeroBg>
+      <HeroBg darkMode={props.darkMode}>
         <TextContainer>
           <TitleContainer>
             <AnimatedTitle
               text="Hi,"
-              color="white"
+              color="var(--animated-logo-color)"
               size="var(--big-font-size)"
               sizesmall="var(--big-font-sizeMobile)"
-              colorSwap={true}
+              // colorSwap={false}
             />
             <AnimatedTitle
               text="I'm Konrad"
-              color="white"
+              color="var(--animated-logo-color)"
               size="var(--big-font-size)"
               sizesmall="var(--big-font-sizeMobile)"
-              colorSwap={true}
+              // colorSwap={false}
             />
             <AnimatedTitle
               text="Aircraft Engineer"
-              color="white"
+              color="var(--animated-logo-color)"
               size="var(--big-font-size)"
               sizesmall="var(--big-font-sizeMobile)"
-              colorSwap={true}
+              // colorSwap={false}
             />
             <AnimatedTitle
               text="Junior Front-End Developer"
-              color="white"
+              color="var(--animated-logo-color)"
               size="var(-text-size)"
               sizesmall="var(--text-font-sizeMobile)"
-              colorSwap={true}
+              // colorSwap={false}
               spacing="0.25em"
             />
           </TitleContainer>

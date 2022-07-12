@@ -9,6 +9,9 @@ interface Props {
   right?: number;
   width?: number;
 }
+interface propsHero {
+  darkMode: boolean;
+}
 
 export const HeroContainer = styled.div`
   height: 100vh;
@@ -20,15 +23,18 @@ export const HeroContainer = styled.div`
   justify-content: space-between;
   color: white;
   overflow: hidden;
-  background: #08324c;
+  background: transparent;
 `;
-export const HeroBg = styled.div`
+export const HeroBg = styled.div<propsHero>`
   width: 110%;
-  height: 50vh;
+  height: 75vh;
   margin-top: -3%;
   transform: rotateZ(-3deg);
   overflow: hidden;
-  background: linear-gradient(-45deg, #dff6ff, #47b5ff, #1363df, #06283d);
+  background: ${(p) =>
+    p.darkMode
+      ? "linear-gradient(-45deg, #dff6ff, #47b5ff, #1363df, #06283d)"
+      : "linear-gradient(-45deg, #b3d8f8, #b3f8f6, #b3b5f8)"};
   background-size: 400% 400%;
   animation: gradient 13s ease infinite;
   display: flex;
@@ -86,11 +92,11 @@ export const HeroHeading = styled.div`
   align-self: flex-start;
 `;
 export const Img = styled.img`
-  width: 26rem;
+  width: 30rem;
   height: auto;
   z-index: 3;
   @media screen and (max-height: 1000px) {
-    width: 19rem;
+    width: 22rem;
   }
   @media screen and (max-height: 700px) {
     width: 16rem;
@@ -120,7 +126,7 @@ const Clouds = styled.img`
   @media screen and (max-width: 1000px) {
     width: 5rem;
   }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 700px) {
     display: none;
   }
 `;
@@ -228,7 +234,7 @@ export const Circle = styled(LinkS)`
   align-items: center;
   justify-content: center;
   margin-top: 25px;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   border: 2px solid var(--additional-color);
   color: var(--additional-color);
   cursor: pointer;

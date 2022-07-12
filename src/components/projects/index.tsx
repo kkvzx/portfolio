@@ -49,7 +49,7 @@ const Projects = (props: ProjectsProps) => {
       <PortfolioText>
         A small gallery of recent project chosen by me. I've done them while
         improving my skills such as css layout, javascript, typescript and
-        react. Click on them to read more about all difficulties in each
+        react. Click on them to read more about all Fdifficulties in each
         project.
       </PortfolioText>
       <ProjectsContainer>{htmlProjectsData}</ProjectsContainer>

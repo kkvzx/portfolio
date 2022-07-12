@@ -20,6 +20,7 @@ const Main = () => {
       height,
     };
   };
+  const [darkMode, setDarkMode] = useState<boolean>(true);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [windowSize, SetWindowSize] = useState(getWindowSize());
   const [isOpenProjectBox, setIsOpenProjectBox] = useState<boolean>(false);
@@ -29,6 +30,9 @@ const Main = () => {
   const length: number = projectsData.length;
 
   // functions and hooks
+  const darkModeToggle = () => {
+    setDarkMode((prev) => !prev);
+  };
 
   const toggleSideBar = () => {
     setIsOpen((prev) => !prev);
@@ -116,10 +120,15 @@ const Main = () => {
   return (
     <>
       <MainWrapper>
-        <Sidebar toggle={toggleSideBar} isOpen={isOpen} />
-        <Header />
+        <Sidebar
+          toggle={toggleSideBar}
+          darkMode={darkMode}
+          darkModeToggle={darkModeToggle}
+          isOpen={isOpen}
+        />
+        <Header darkModeToggle={darkModeToggle} darkMode={darkMode} />
         <Content>
-          <Hero />
+          <Hero darkMode={darkMode} />
           <AboutSection />
           <Projects projectBoxToggle={projectBoxToggle} />
           {isOpenProjectBox && (
@@ -136,7 +145,7 @@ const Main = () => {
           <Contact />
         </Content>
       </MainWrapper>
-      <GlobalStyles />
+      <GlobalStyles darkMode={darkMode} />
     </>
   );
 };

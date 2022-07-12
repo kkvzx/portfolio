@@ -12,6 +12,7 @@ import {
 import AnimatedTitle from "../AnimatedTitle";
 import { motion } from "framer-motion";
 import AnimatedTechnologies from "./AnimatedTechnologies";
+import { Stroke } from "./AnimatedTechnologies/AnimatedTechnologiesElements.tsx";
 
 const photo = require("../../img/photo2.png");
 
@@ -52,6 +53,8 @@ const AboutSection = () => {
 
       <AboutMeContainer>
         <AboutMePhoto src={photo}></AboutMePhoto>
+        {/* break in text */}
+        <AboutMeText />
 
         <AnimatedTitle
           text="Who's this guy?"
@@ -60,22 +63,32 @@ const AboutSection = () => {
           sizesmall="var(--h2-font-sizeMobile)"
           spacing="0.25em"
         />
+        {/* break in text */}
+        <AboutMeText />
         <AboutMeText>
           Hi, I’m Konrad, and I’m passionate about building things for the
           web.When I was a kid I was completely hooked to the world of computers
           and creating things so I found tutorials about C++ and managed to
-          learn fundamentals of the language. In the years, I’ve graduated
-          Aircraft Engineering at Silesian University of Technology - during
-          that time I often used my experience in C++.During time spent at the
-          airport and university I learned a lot about importance of
-          standarization and complex systems such as an airplane, transport
-          systems or design processes. When the chance occured after graduation
-          I fully focused on my passion for coding by learning React and how
-          systems in IT works. I was building games using JavaScript becouse i
-          found them interesting.First time in a long time I find passion in my
-          work and the beauty behind creating things. I’m now looking for a
-          junior dev position or internship to finally kick start my career and
-          learn among professionals.
+          learn fundamentals of the language.
+        </AboutMeText>
+        <AboutMeText>
+          In the years, I’ve graduated Aircraft Engineering at Silesian
+          University of Technology - where I often used my experience in C++.
+          During time spent at the airport and university I learned a lot about{" "}
+          <Stroke>importance of standarization</Stroke> and complex systems such
+          as an airplane, transport systems or design processes. When the chance
+          occured after graduation I fully focused on my passion for coding by
+          learning React and how IT systems works.
+        </AboutMeText>
+        <AboutMeText>
+          I'm a self-motivated learner with strong organization, time management
+          and communiaction skills.{" "}
+          <Stroke>
+            First time in a long time I find passion in my work and the beauty
+            behind creating things.
+          </Stroke>{" "}
+          Now looking for a junior dev position or internship to finally kick
+          start my career and learn among professionals.
         </AboutMeText>
       </AboutMeContainer>
       {/* ========================================= */}

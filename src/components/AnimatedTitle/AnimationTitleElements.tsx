@@ -6,6 +6,7 @@ interface titleProps {
   sizesmall: string;
   color: string;
   additional?: string;
+  dark?: boolean;
 }
 interface spacing {
   spacing: string;

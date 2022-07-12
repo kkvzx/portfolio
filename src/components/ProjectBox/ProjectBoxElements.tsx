@@ -8,13 +8,12 @@ import { BsChevronCompactRight, BsChevronCompactLeft } from "react-icons/bs";
 import styled from "styled-components";
 import { SingleOutsideLink } from "../Header/HeaderElements";
 import { GithubLink, ReadMore } from "../projects/ProjectsElements";
-import { keyframes } from "styled-components";
 
 export const BoxWrapper = styled.div`
   width: 80%;
   height: 80%;
   position: fixed;
-  background: rgb(6, 40, 61, 0.9);
+  background: var(--project-box-color);
   top: 10%;
   left: auto;
   border-radius: 40px;
@@ -106,7 +105,7 @@ export const InformationContainer = styled.div`
   }
 `;
 export const ProjectTitle = styled.h1`
-  color: var(--additional-color);
+  color: var(--text-color);
   font-size: 3.8rem;
   margin: 0;
   font-weight: 700;
@@ -126,7 +125,7 @@ export const TechnologiesList = styled.ul`
 export const TechnologiesLi = styled.li`
   display: inline-block;
   background: var(--background-color);
-  color: white;
+  color: var(--text-color);
   margin: 2px;
   padding: 2px 6px;
   font-weight: 200;
@@ -159,7 +158,9 @@ export const DifficultiesToOvercomeText = styled.p`
 
 export const GithubLinkInBox = styled(GithubLink)`
   margin: 0;
-  font-size: var(--h2-font-size);
+  /* font-size: var(--h2-font-size); */
+  font-size: 2.5rem;
+
   transition: 0.3s all;
   &:hover {
     color: var(--additional-color);
@@ -190,7 +191,7 @@ export const LiveDemo = styled.div`
 export const LeftArrow = styled(AiOutlineArrowLeft)`
   border: 2px solid var(--text-color);
   font-size: 3.3rem;
-  color: white;
+  color: var(--text-color);
   border-radius: 100%;
   padding: 4px;
   cursor: pointer;
@@ -205,7 +206,7 @@ export const LeftArrow = styled(AiOutlineArrowLeft)`
   &:hover {
     box-shadow: inset -50px 0 0 var(--text-color);
     border: 2px solid black;
-    color: black;
+    color: var(--background-color);
   }
   @media screen and (max-width: 1000px) {
     top: 85%;
@@ -214,7 +215,7 @@ export const LeftArrow = styled(AiOutlineArrowLeft)`
 export const RightArrow = styled(AiOutlineArrowRight)`
   border: 2px solid var(--text-color);
   font-size: 3.3rem;
-  color: white;
+  color: var(--text-color);
   border-radius: 100%;
   cursor: pointer;
   margin-right: 50px;
@@ -227,7 +228,7 @@ export const RightArrow = styled(AiOutlineArrowRight)`
   &:hover {
     box-shadow: inset 50px 0 0 var(--text-color);
     border: 2px solid black;
-    color: black;
+    color: var(--background-color);
   }
   @media screen and (max-width: 1000px) {
     top: 85%;

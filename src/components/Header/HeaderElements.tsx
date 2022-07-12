@@ -10,7 +10,7 @@ export const HeaderWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
-  background: #06283d;
+  background: var(--dark-header-color);
   position: fixed;
   z-index: 999;
   @media screen and (max-width: 1275px) {
@@ -25,7 +25,7 @@ export const NavLogo = styled.div`
   color: var(--text-color);
   height: 10rem;
   width: 100%;
-  background: #041926;
+  background: var(--dark-logo-color);
 
   /* @media screen and (max-width: 768px) {
     width: 100%;
@@ -63,7 +63,7 @@ export const NavLinks = styled(LinkS)`
   justify-content: center;
   text-decoration: none;
   cursor: pointer;
-  font-weight: 200;
+  font-weight: 300;
   position: relative;
   height: 60px;
   border-top: 1px solid #414141;
@@ -109,9 +109,9 @@ export const SingleOutsideLink = styled.a`
   box-shadow: inset 0 0 0 0 var(--additional-color);
   transition: ease-out 0.25s;
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
   &:visited {
-    color: white;
+    color: var(--text-color);
   }
   &:hover {
     box-shadow: inset 0 -10rem 0 0 var(--additional-color);
