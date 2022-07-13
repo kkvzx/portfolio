@@ -166,6 +166,7 @@ const Hero = (props: heroProps) => {
           smooth={true}
           offset={0}
           duration={500}
+          darkMode={props.darkMode}
         >
           Explore!
         </ExploreButton>

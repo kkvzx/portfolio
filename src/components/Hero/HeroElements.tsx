@@ -182,14 +182,23 @@ export const FrontPage = styled.div`
   align-items: center;
   position: relative;
 `;
-export const ExploreButton = styled(LinkS)`
+
+export const ExploreButton = styled(LinkS)<propsHero>`
   padding: 20px 30px;
   overflow: hidden;
-  background: linear-gradient(-45deg, #DFF6FF, #47B5FF, #1363DF, #06283D);
-	background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
-  display:flex;
-  justify-content:center;
+  background: ${(p) =>
+    p.darkMode
+      ? "linear-gradient(-45deg, #dff6ff, #47b5ff, #1363df, #06283d)"
+      : "linear-gradient(-45deg, #b3d8f8, #b3f8f6, #b3b5f8)"};
+      
+      background: ${(p) =>
+        p.darkMode
+          ? "linear-gradient(-45deg, #dff6ff, #47b5ff, #1363df, #06283d)"
+          : "linear-gradient(-45deg, #b3d8f8, #b3f8f6, #b3b5f8)"};
+  background-size: 400% 400%;
+  position: relative;
+
+  animation: gradient 10s ease infinite;
   align-items:flex-end;
   border:none;
   border-radius:20px;
@@ -197,7 +206,7 @@ export const ExploreButton = styled(LinkS)`
   font-family: "Oswald", sans-serif;
   letter-spacing:1px;
   cursor:pointer;
-  color:white;
+  color:var(--animated-logo-color);
   font-family:
   transition:all 2s ease-out;
   font-size:1.2rem;

@@ -55,6 +55,8 @@ export const NavMenu = styled.ul`
 `;
 export const NavItem = styled.li`
   width: 100%;
+  margin-top: -1px;
+  margin-left: -1px;
 `;
 export const NavLinks = styled(LinkS)`
   color: var(--text-color);

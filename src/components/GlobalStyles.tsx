@@ -9,11 +9,15 @@ const GlobalStyles = createGlobalStyle<props>`
  --text-color:${(p) => (p.darkMode ? "#dfdfdf" : "black")};
  --secondary-color:#ffdc85;
  --secondary-font: "Oswald", sans-serif;
- --additional-color:${(p) => (p.darkMode ? "#FFB703" : "#b3b5f8")};
+ --additional-color:${(p) => (p.darkMode ? "#FFB703" : "#b1b3fb")};
  --background-color:${(p) => (p.darkMode ? "#08324c" : "#DDF0FF")};
- --dark-header-color:${(p) => (p.darkMode ? "#06283d" : "#b3f8f6")};
+ --dark-header-color:${(p) => (p.darkMode ? "#06283d" : "#DDF0FF")};
  --dark-logo-color:${(p) => (p.darkMode ? "#041926" : "#b3b5f8")};
  --animated-logo-color:${(p) => (p.darkMode ? "white" : "black")};
+ --linear-gradient:${(p) =>
+   p.darkMode
+     ? "linear-gradient(-45deg, #dff6ff, #47b5ff, #1363df, #06283d)"
+     : "linear-gradient(-45deg, #b3d8f8, #b3f8f6, #b3b5f8)"};
  --text-size:1.6rem;
  --text-sizeMobile:1rem;
  --big-font-size:5rem;

@@ -12,7 +12,7 @@ import {
 } from "./HeaderElements";
 
 interface props {
-  darkModeToggle: () => void;
+  darkModeToggle: (toggle: string) => void;
   darkMode: boolean;
 }
 
@@ -88,10 +88,10 @@ const Header = (props: props) => {
         >
           <FaLinkedin />
         </SingleOutsideLink>
-        <SingleOutsideLink onClick={() => props.darkModeToggle()}>
+        <SingleOutsideLink onClick={() => props.darkModeToggle("dark")}>
           <FaMoon />
         </SingleOutsideLink>
-        <SingleOutsideLink onClick={() => props.darkModeToggle()}>
+        <SingleOutsideLink onClick={() => props.darkModeToggle("light")}>
           <FaSun />
         </SingleOutsideLink>
       </OutsideLinks>

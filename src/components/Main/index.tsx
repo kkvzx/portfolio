@@ -30,8 +30,8 @@ const Main = () => {
   const length: number = projectsData.length;
 
   // functions and hooks
-  const darkModeToggle = () => {
-    setDarkMode((prev) => !prev);
+  const darkModeToggle = (toggle: string) => {
+    toggle === "light" ? setDarkMode(false) : setDarkMode(true);
   };
 
   const toggleSideBar = () => {

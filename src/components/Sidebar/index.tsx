@@ -25,7 +25,7 @@ type NavMobileMenuProps = {
   toggle: () => void;
   isOpen: boolean;
   darkMode: boolean;
-  darkModeToggle: () => void;
+  darkModeToggle: (e: any) => void;
 };
 
 const Sidebar = (props: NavMobileMenuProps) => {
@@ -103,10 +103,12 @@ const Sidebar = (props: NavMobileMenuProps) => {
           <SingleOutsideLinkMobile>
             <FaLinkedin />
           </SingleOutsideLinkMobile>
-          <SingleOutsideLinkMobile onClick={() => props.darkModeToggle()}>
+          <SingleOutsideLinkMobile onClick={() => props.darkModeToggle("dark")}>
             <FaMoon />
           </SingleOutsideLinkMobile>
-          <SingleOutsideLinkMobile onClick={() => props.darkModeToggle()}>
+          <SingleOutsideLinkMobile
+            onClick={() => props.darkModeToggle("light")}
+          >
             <FaSun />
           </SingleOutsideLinkMobile>
         </OutsideLinksMobile>
