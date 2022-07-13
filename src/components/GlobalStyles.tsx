@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle<props>`
  --dark-header-color:${(p) => (p.darkMode ? "#06283d" : "#DDF0FF")};
  --dark-logo-color:${(p) => (p.darkMode ? "#041926" : "#b3b5f8")};
  --animated-logo-color:${(p) => (p.darkMode ? "white" : "black")};
- --linear-gradient:${(p) =>
+ --linear-gradient-color:${(p) =>
    p.darkMode
      ? "linear-gradient(-45deg, #dff6ff, #47b5ff, #1363df, #06283d)"
      : "linear-gradient(-45deg, #b3d8f8, #b3f8f6, #b3b5f8)"};
