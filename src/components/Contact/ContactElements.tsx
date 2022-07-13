@@ -193,7 +193,7 @@ export const InputButton = styled.input`
 
   &:hover {
     box-shadow: inset 220px 0 0 var(--additional-color);
-    color: var(--text-color);
+    color: var(--animated-header-color);
   }
 `;
 export const MapSection = styled.div`
