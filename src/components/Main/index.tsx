@@ -78,19 +78,14 @@ const Main = () => {
         console.log("No mathcing conditions");
       }
     } else if (action === "photo") {
-      if (operation === "right") {
-        setInnerPhotoIndex((prev) =>
-          prev === projectsData[idOfProjectBox].photos.length - 1 ? 0 : prev + 1
-        );
-      } else if (operation === "left") {
-        setInnerPhotoIndex((prev) =>
-          prev === 0 ? projectsData[idOfProjectBox].photos.length - 1 : prev - 1
-        );
-      } else {
-        console.log(operation);
-      }
+      setInnerPhotoIndex((prev) =>
+        prev === projectsData[idOfProjectBox].photos.length - 1 ? 0 : prev + 1
+      );
+    } else {
+      console.log(operation);
     }
   };
+
   // --------------------------------------------------------------
 
   // Reseting PhotoIndex after change of project (valid?)

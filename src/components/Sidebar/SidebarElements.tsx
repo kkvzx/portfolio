@@ -81,8 +81,7 @@ export const SidebarMenu = styled(NavMenu)`
 `;
 export const SideItem = styled(NavItem)``;
 export const SideLinks = styled(NavLinks)`
-  margin: 20px;
-  height: 60px;
+  height: 80px;
   margin: 0;
   color: var(--text-color);
 `;

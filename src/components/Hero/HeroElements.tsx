@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
+import { OutsideLinks, SingleOutsideLink } from "../Header/HeaderElements";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 interface Props {
   top?: number;
@@ -8,9 +10,6 @@ interface Props {
   left?: number;
   right?: number;
   width?: number;
-}
-interface propsHero {
-  darkMode: boolean;
 }
 
 export const HeroContainer = styled.div`
@@ -25,16 +24,13 @@ export const HeroContainer = styled.div`
   overflow: hidden;
   background: transparent;
 `;
-export const HeroBg = styled.div<propsHero>`
+export const HeroBg = styled.div`
   width: 110%;
   height: 75vh;
   margin-top: -3%;
   transform: rotateZ(-3deg);
   overflow: hidden;
-  background: ${(p) =>
-    p.darkMode
-      ? "linear-gradient(-45deg, #dff6ff, #47b5ff, #1363df, #06283d)"
-      : "linear-gradient(-45deg, #b3d8f8, #b3f8f6, #b3b5f8)"};
+  background: var(--linear-gradient-color);
   background-size: 400% 400%;
   animation: gradient 13s ease infinite;
   display: flex;
@@ -86,7 +82,6 @@ export const TextContainer = styled.div`
 `;
 export const HeroHeading = styled.div`
   font-size: 2rem;
-  margin-top: 10%;
   margin-left: 7rem;
   z-index: 3;
   align-self: flex-start;
@@ -145,23 +140,6 @@ export const CloudImg = styled(Clouds)<Props>`
 
 /*============END OF clouds================ */
 
-export const HeroMainText = styled.h1`
-  color: white;
-  font-weight: 700;
-  margin: 2px;
-  font-family: "Oswald", sans-serif;
-  padding: 0;
-  line-height: 1;
-  color: white;
-
-  font-size: var(--big-font-size);
-  @media screen and (max-width: 980px) {
-    font-size: var(--big-font-sizeMobile);
-  }
-  @media screen and (max-height: 1050px) {
-    font-size: var(--big-font-sizeMobile);
-  }
-`;
 export const HeroSecondaryText = styled.p`
   color: white;
   font-size: var(--h2-font-size);
@@ -183,56 +161,6 @@ export const FrontPage = styled.div`
   position: relative;
 `;
 
-export const ExploreButton = styled(LinkS)<propsHero>`
-  padding: 20px 30px;
-  overflow: hidden;
-  background: ${(p) =>
-    p.darkMode
-      ? "linear-gradient(-45deg, #dff6ff, #47b5ff, #1363df, #06283d)"
-      : "linear-gradient(-45deg, #b3d8f8, #b3f8f6, #b3b5f8)"};
-      
-      background: ${(p) =>
-        p.darkMode
-          ? "linear-gradient(-45deg, #dff6ff, #47b5ff, #1363df, #06283d)"
-          : "linear-gradient(-45deg, #b3d8f8, #b3f8f6, #b3b5f8)"};
-  background-size: 400% 400%;
-  position: relative;
-
-  animation: gradient 10s ease infinite;
-  align-items:flex-end;
-  border:none;
-  border-radius:20px;
-  font-weight:800;
-  font-family: "Oswald", sans-serif;
-  letter-spacing:1px;
-  cursor:pointer;
-  color:var(--animated-logo-color);
-  font-family:
-  transition:all 2s ease-out;
-  font-size:1.2rem;
-  &:hover{
-      transition:all 0.2s ease-out;
-
-    transform:scale(1.2);
-  }
-  @media screen and (max-width: 900px) {
-    padding:10px 20px;
-  }
-
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-`;
 export const Circle = styled(LinkS)`
   border-radius: 100%;
   font-size: 1.5rem;
@@ -247,6 +175,10 @@ export const Circle = styled(LinkS)`
   border: 2px solid var(--additional-color);
   color: var(--additional-color);
   cursor: pointer;
+  transition: 0.3 all;
+  &:hover {
+    transform: scale(1.05) rotateZ(90deg);
+  }
   @media screen and (max-width: 900px) {
     width: 3rem;
     height: 3rem;
@@ -259,4 +191,26 @@ export const SmallImg = styled.img`
   width: 15rem;
   bottom: 5rem;
   left: -300px;
+`;
+
+export const GitLink = styled(FaGithub)`
+  font-size: var(--h2-font-size);
+  color: var(--animated-logo-color);
+  cursor: pointer;
+  &:hover {
+    color: var(--additional-color);
+  }
+`;
+export const LinedLink = styled(FaLinkedin)`
+  font-size: var(--h2-font-size);
+  color: var(--animated-logo-color);
+  cursor: pointer;
+  &:hover {
+    color: var(--additional-color);
+  }
+`;
+export const PageLink = styled.a`
+  :hover {
+    fill: var(--additional-color);
+  }
 `;

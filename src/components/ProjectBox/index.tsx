@@ -25,6 +25,8 @@ import {
   CircleDots,
   SingleDot,
   WindowForPhoto,
+  Demo,
+  OutsideWrapper,
 } from "./ProjectBoxElements";
 
 interface ProjectDataProps {
@@ -55,13 +57,6 @@ const ProjectBox = (props: {
   ));
   // =====================================
 
-  /**
-   * Hook that alerts clicks outside of the passed ref
-   */
-
-  /**
-   * Component that alerts if you click outside of it
-   */
   const wrapperRef = useRef(null);
   props.useOutsideAlerter(wrapperRef);
 
@@ -112,12 +107,14 @@ const ProjectBox = (props: {
             {project.description}
           </DifficultiesToOvercomeText>
         </DifficultiesToOvercomeContainer>
-        <SingleOutsideBoxLink href={project.github} target="_blank">
-          <GithubLinkInBox></GithubLinkInBox>
-        </SingleOutsideBoxLink>
-        <SingleOutsideBoxLink href={project.liveDemo} target="_blank">
-          <ReadMore>Live Demo</ReadMore>
-        </SingleOutsideBoxLink>
+        <OutsideWrapper>
+          <SingleOutsideBoxLink href={project.github} target="_blank">
+            <GithubLinkInBox></GithubLinkInBox>
+          </SingleOutsideBoxLink>
+          <SingleOutsideBoxLink href={project.liveDemo} target="_blank">
+            <Demo>Live Demo</Demo>
+          </SingleOutsideBoxLink>
+        </OutsideWrapper>
       </InformationContainer>
       <PhotoContainer>
         {project.photos.map((singlePhoto, index) => {
@@ -130,6 +127,7 @@ const ProjectBox = (props: {
                 <Photo
                   key={singlePhoto}
                   as={motion.img}
+                  onClick={() => props.switcher("right", "photo")}
                   variants={variants}
                   initial="enter"
                   animate="center"
@@ -144,16 +142,8 @@ const ProjectBox = (props: {
             </WindowForPhoto>
           );
         })}
-        <LeftArrowPhoto
-          className="left"
-          onClick={(e) => props.switcher("left", "photo")}
-        ></LeftArrowPhoto>
 
         <CircleDots>{singleDotshtml}</CircleDots>
-        <RightArrowPhoto
-          className="right"
-          onClick={(e) => props.switcher("right", "photo")}
-        ></RightArrowPhoto>
       </PhotoContainer>
 
       <LeftArrow

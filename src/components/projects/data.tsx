@@ -2,21 +2,32 @@ import React from "react";
 export const projectsData = [
   {
     id: 0,
-    name: "Tenzies",
-    technologies: ["Html", "Css", "Javascript", "React", "Figma"],
+    name: "Game Manager",
+    technologies: [
+      "Html",
+      "Css",
+      "Javascript",
+      "Styled Components",
+      "React",
+      "Figma",
+      "React Router",
+    ],
     description:
-      "I started this project in order to practice React Hooks such as useState and useEffect. During the process I found more about passing states as props to children elements and  controlling functions. Also while working on Tenzies I found out a lot about how typescript works. My main problem to overcome was understanding how react rendering works.  ",
+      "My main difficulty there was to make a working menu without using states because code was starting to look too complex. So I Found other tools for React such as React user. Also I had to rebuild my previous projects to build proper file structure with Styled Components. Because Game manager consists of 4 different games I had to learn more about proper file structure to prevent wasting time for file search. ",
     smallDescription:
-      "The object of the game is to roll the dice as fast as possible, the player who gets all dice on the same number is the winner.",
+      "Game manager consists of four games which are tic-tac-toe, Fun Generator, Tenzies and Flappy Bird.",
     photos: [
-      "https://i.imgur.com/1odyL7L.png?1",
-      "https://i.imgur.com/2DgCdde.png?1",
-      "https://i.imgur.com/6N2HMTZ.png?1",
+      "https://i.imgur.com/rq4HS4A.png?1",
+      "https://i.imgur.com/idUDF3t.png?1",
+      "https://i.imgur.com/qxbGXA0.png?1",
+      "https://i.imgur.com/aeFCaKc.png?1",
+      "https://i.imgur.com/3RHqkrd.png?1",
     ],
     photoAlt: "/",
-    github: "https://github.com/kkvzx/Tenzies",
+    github: "https://github.com/kkvzx/game-manager",
     liveDemo: "https://game-manager.vercel.app/",
   },
+
   {
     id: 1,
     name: "Tic Tac Toe",
@@ -66,29 +77,19 @@ export const projectsData = [
   },
   {
     id: 3,
-    name: "Game Manager",
-    technologies: [
-      "Html",
-      "Css",
-      "Javascript",
-      "Styled Components",
-      "React",
-      "Figma",
-      "React Router",
-    ],
+    name: "Tenzies",
+    technologies: ["Html", "Css", "Javascript", "React", "Figma"],
     description:
-      "My main difficulty there was to make a working menu without using states because code was starting to look too complex. So I Found other tools for React such as React user. Also I had to rebuild my previous projects to build proper file structure with Styled Components. Because Game manager consists of 4 different games I had to learn more about proper file structure to prevent wasting time for file search. ",
+      "I started this project in order to practice React Hooks such as useState and useEffect. During the process I found more about passing states as props to children elements and  controlling functions. Also while working on Tenzies I found out a lot about how typescript works. My main problem to overcome was understanding how react rendering works.  ",
     smallDescription:
-      "Game manager consists of four games which are tic-tac-toe, Fun Generator, Tenzies and Flappy Bird.",
+      "The object of the game is to roll the dice as fast as possible, the player who gets all dice on the same number is the winner.",
     photos: [
-      "https://i.imgur.com/rq4HS4A.png?1",
-      "https://i.imgur.com/idUDF3t.png?1",
-      "https://i.imgur.com/qxbGXA0.png?1",
-      "https://i.imgur.com/aeFCaKc.png?1",
-      "https://i.imgur.com/3RHqkrd.png?1",
+      "https://i.imgur.com/1odyL7L.png?1",
+      "https://i.imgur.com/2DgCdde.png?1",
+      "https://i.imgur.com/6N2HMTZ.png?1",
     ],
     photoAlt: "/",
-    github: "https://github.com/kkvzx/game-manager",
+    github: "https://github.com/kkvzx/Tenzies",
     liveDemo: "https://game-manager.vercel.app/",
   },
 
@@ -115,58 +116,4 @@ export const projectsData = [
     github: "https://github.com/kkvzx/portfolio",
     liveDemo: "",
   },
-  // {
-  //   id: 6,
-  //   name: "Meme Generator",
-  //   technologies: [
-  //     "html",
-  //     "css",
-  //     "javascript",
-  //     "styledComponents",
-  //     "React",
-  //     "Figma",
-  //   ],
-  //   description:
-  //     "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique est, reprehenderit et iste quo laboriosam dolore animi perferendis officia nemo.",
-  //   photos: [
-  //     "https://images.pexels.com/photos/6431895/pexels-photo-6431895.jpeg",
-  //   ],
-  //   photoAlt: "/",
-  // },
-  // {
-  //   id: 7,
-  //   name: "Chess",
-  //   technologies: [
-  //     "html",
-  //     "css",
-  //     "javascript",
-  //     "styledComponents",
-  //     "React",
-  //     "Figma",
-  //   ],
-  //   description:
-  //     "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique est, reprehenderit et iste quo laboriosam dolore animi perferendis officia nemo.",
-  //   photos: [
-  //     "https://images.pexels.com/photos/6431895/pexels-photo-6431895.jpeg",
-  //   ],
-  //   photoAlt: "/",
-  // },
-  // {
-  //   id: 8,
-  //   name: "Instagram clone",
-  //   technologies: [
-  //     "html",
-  //     "css",
-  //     "javascript",
-  //     "styledComponents",
-  //     "React",
-  //     "Figma",
-  //   ],
-  //   description:
-  //     "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique est, reprehenderit et iste quo laboriosam dolore animi perferendis officia nemo.",
-  //   photos: [
-  //     "https://images.pexels.com/photos/6431895/pexels-photo-6431895.jpeg",
-  //   ],
-  //   photoAlt: "/",
-  // },
 ];

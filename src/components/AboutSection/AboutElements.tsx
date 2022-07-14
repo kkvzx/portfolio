@@ -66,7 +66,8 @@ export const AboutMeText = styled(PortfolioText)`
   padding: 0;
   margin-bottom: 1em;
   font-size: var(--text-size);
-  font-family: var(--text-font);
+
+  font-family: var(--main-font);
   @media screen and (max-width: 1400px) {
     padding: 0 6rem;
   }

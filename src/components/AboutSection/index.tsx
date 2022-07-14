@@ -15,23 +15,6 @@ import { Stroke } from "./AnimatedTechnologies/AnimatedTechnologiesElements.tsx"
 const photo = require("../../img/photo2.png");
 
 const AboutSection = () => {
-  // ========maraquee start=================
-
-  const marqueeVariants = {
-    animate: {
-      x: ["-5%", "-30%"],
-      transition: {
-        x: {
-          repeat: Infinity,
-          repeatType: "loop",
-          duration: 5,
-          ease: "linear",
-        },
-      },
-    },
-  };
-  // ========maraquee end===================
-
   return (
     <AboutWrapper id="about">
       <AboutmeTitleContainer>
@@ -59,10 +42,11 @@ const AboutSection = () => {
         {/* break in text */}
         <AboutMeText />
         <AboutMeText>
-          Hi, I’m Konrad and I’m passionate about building things for the
-          web.When I was a kid I was completely hooked to the world of computers
-          and creating things so I found tutorials about C++ and managed to
-          learn fundamentals of the language.
+          Hi, I’m Konrad. I’m former Aircraft Engineer and aspiring Junior
+          Front-end Developer, who is passionate about building things for the
+          web. When I was a kid I was completely hooked to the world of
+          computers and creating things so I found tutorials about C++ and
+          managed to learn fundamentals of the language.
         </AboutMeText>
         <AboutMeText>
           In the years, I’ve graduated Aircraft Engineering at Silesian

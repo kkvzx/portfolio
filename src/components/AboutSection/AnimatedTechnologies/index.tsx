@@ -7,7 +7,7 @@ import {
   MarqueeH3,
   MarqueeTitle,
   MarqueeWrapper,
-  Stroke,
+  AddStroke,
 } from "./AnimatedTechnologiesElements.tsx";
 
 const AnimatedTechnologies = ({
@@ -25,9 +25,9 @@ const AnimatedTechnologies = ({
         : singleObj.name;
     } else {
       return index != technologiesData.length - 1 ? (
-        <Stroke>{singleObj.name + " /"}</Stroke>
+        <AddStroke>{singleObj.name + " /"}</AddStroke>
       ) : (
-        <Stroke>{singleObj.name}</Stroke>
+        <AddStroke>{singleObj.name}</AddStroke>
       );
     }
   });

@@ -1,3 +1,4 @@
+import { AiOutlineFilePdf } from "react-icons/ai";
 import styled from "styled-components";
 import { SingleProject } from "../projects/ProjectsElements";
 interface props {
@@ -9,48 +10,51 @@ export const ResumeContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  padding: 2rem;
+  /* justify-content: center; */
+
+  margin: 2rem 12rem 6rem 18rem;
 `;
 export const PersonalInfomrationContainer = styled.div`
-  width: 35%;
-  min-height: 260px;
-  min-width: 335px;
-  margin: 10px;
+  width: 40%;
+  height: 18rem;
   background: var(--project-box-color);
   border-radius: 30px;
   color: var(--text-color);
   transition: 0.3s all;
+  margin: 8px;
 
   &:hover {
-    border: 1px solid var(--additional-color);
+    box-shadow: 0 0 0.5em 0.1em var(--additional-color);
     transform: scale(1.02);
   }
   @media screen and (max-width: 780px) {
     width: 100%;
   }
 `;
-
+export const Bolder = styled.div`
+  font-weight: 700;
+  display: inline;
+`;
 export const FirstContainer = styled(PersonalInfomrationContainer)`
+  width: 71%;
   text-align: center;
   position: relative;
-  margin-left: 6rem;
+  margin: 0;
+  margin-right: 1%;
+  margin-bottom: 1%;
 `;
 export const NameH1 = styled.h1`
   color: var(--animated-logo-color);
   font-style: var(--secondary-font);
-  width: 100%;
   font-size: 6rem;
   letter-spacing: -5px;
-  position: absolute;
-  bottom: 10%;
-  right: 0%;
+  /* position: absolute; */
 `;
 export const Title = styled.h2`
   position: absolute;
-  bottom: 15%;
+  bottom: 7%;
   font-size: var(--h2-font-size);
-  right: 4%;
+  right: 10%;
   text-decoration: underline;
   text-decoration-color: var(--additional-color);
   color: var(--text-color);
@@ -58,11 +62,16 @@ export const Title = styled.h2`
 
 // SECOND DIV
 export const SecondContainer = styled(PersonalInfomrationContainer)`
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  width: 27%;
+  height: 18rem;
+  margin: 0;
+  margin-left: 1%;
+  margin-bottom: 1%;
   padding: 1rem 3rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
 `;
 export const IconSpan = styled.span`
   font-size: 1.2rem;
@@ -70,39 +79,45 @@ export const IconSpan = styled.span`
   color: var(--animated-logo-color);
 `;
 
-export const StandardText = styled.p<props>`
+export const StandardText = styled.p`
   display: flex;
-  width: 40%;
-  margin: 1rem;
   align-items: center;
-  justify-content: ${(p) => (p.left ? "flex-end" : "flex-start")};
+  justify-content: center;
   font-size: 1rem;
+  margin: 4px;
   color: var(--animated-logo-color);
-  display: flex;
-  position: relative;
+  font-family: var(--main-font);
+  display: block;
 `;
 
 // Third div
 
 export const ThirdDiv = styled(PersonalInfomrationContainer)`
+  width: 58%;
+  margin: 1% 1% 1% 0;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
   padding: 1rem 6rem 1rem 2rem;
-  margin-left: 6rem;
 `;
 export const SecondaryHeader = styled.h2`
+  grid-column-start: -1;
+  grid-column-end: 1;
+  text-align: left;
   font-size: var(--h2-font-size);
   color: var(--animated-logo-color);
   margin-bottom: 1rem;
 `;
 export const NormalText = styled.p`
   color: var(--text-color);
+  font-family: var(--main-font);
 `;
 
 // fourthDiv
 export const FourthDiv = styled(PersonalInfomrationContainer)`
+  width: 40%;
+  margin: 1% 0 1% 1%;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -112,11 +127,10 @@ export const FourthDiv = styled(PersonalInfomrationContainer)`
 
 // fifth div
 
-export const FifthDiv = styled(ThirdDiv)`
+export const FifthDiv = styled(FourthDiv)`
   align-content: center;
-  margin-left: 6rem;
-
-  width: 25%;
+  width: 38%;
+  margin: 1% 1% 1% 0;
 `;
 export const FifthUl = styled.ul`
   margin: 0;
@@ -124,16 +138,55 @@ export const FifthUl = styled.ul`
 export const FifthLi = styled.li`
   margin: 1px;
 `;
-
-export const SixthDiv = styled(PersonalInfomrationContainer)`
-  width: 45%;
+// six
+export const EducationDiv = styled(PersonalInfomrationContainer)`
+  width: 60%;
+  margin: 1% 0 1% 1%;
   padding: 1rem 6rem 1rem 2rem;
+`;
+// SEVENTH
+export const SixthDiv = styled.div`
+  width: 68%;
+  border-radius: 30px;
+  background: var(--project-box-color);
+  display: grid;
+  margin: 1% 1% 0 0;
+
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 5rem 18rem;
+  padding: 1rem 2rem 1rem 2rem;
+  &:hover {
+    box-shadow: 0 0 0.5em 0.1em var(--additional-color);
+    transform: scale(1.02);
+  }
 `;
 
 export const SeventhDiv = styled(ThirdDiv)`
-  width: 71%;
+  width: 100%;
+  margin: 0;
+  margin-top: 1%;
 `;
 
 export const ExpContainer = styled.div`
-  width: 2rem;
+  width: 15rem;
+  margin-right: 8px;
+`;
+
+export const Colored = styled.span`
+  color: var(--additional-color);
+`;
+export const EightDiv = styled(PersonalInfomrationContainer)`
+  width: 30%;
+  height: 25rem;
+  margin: 1% 0 1% 1%;
+  padding: 1rem 0 1rem 2rem;
+`;
+
+export const DownloadLink = styled.a`
+  margin-top: 16px;
+  font-size: 4rem;
+  color: var(--text-color);
+  &:visited {
+    color: var(--text-color);
+  }
 `;

@@ -63,12 +63,12 @@ export const SingleProject = styled.div`
     padding-bottom: 150%;
   }
   &:hover ${ReadMore} {
-    color: black;
-    background: var(--additional-color);
+    text-decoration: underline;
+    text-decoration-color: var(--additional-color);
   }
 
   &:hover {
-    box-shadow: 0 0 0.5em 0.1em black;
+    box-shadow: 0 0 0.5em 0.5em black;
     transform: scale(1.02);
   }
 
@@ -114,8 +114,8 @@ export const ProjectInformation = styled.p`
   margin: 10px;
   font-size: 1rem;
   color: var(--text-color);
-  font-weight: 200;
-  letter-spacing: 1px;
+  font-family: var(--main-font);
+  font-weight: 400;
   @media screen and (max-width: 900px) {
     font-size: 1rem;
   }
@@ -136,10 +136,9 @@ export const ProjectTitle = styled.h2`
 export const PortfolioText = styled.p`
   margin-bottom: 6rem;
   margin-top: 0;
-  padding: 0 30% 0 6rem;
-  font-family: var(--secondary-font);
-  font-weight: 200;
-  letter-spacing: 1px;
+  padding: 0 40% 0 6rem;
+  font-family: var(--main-font);
+  font-weight: 400;
   font-size: var(--text-size);
   color: var(--text-color);
   user-select: none;
@@ -150,6 +149,7 @@ export const PortfolioText = styled.p`
     font-size: var(--text-sizeMobile);
     margin-bottom: 2rem;
     padding: 0 5rem;
+    text-align: left;
     padding-left: auto;
     margin-top: 0;
   }

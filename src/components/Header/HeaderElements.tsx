@@ -83,6 +83,9 @@ export const LinkRouter = styled(LinkR)`
     transform: scaleX(1);
   }
 `;
+export const LogoLink = styled(LinkR)`
+  cursor: pointer;
+`;
 
 // ===========Third element=================
 export const OutsideLinks = styled.div`

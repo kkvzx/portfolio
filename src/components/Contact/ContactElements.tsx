@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { PortfolioText } from "../projects/ProjectsElements";
 
 export const ContactWrapper = styled.div`
   margin-top: 10rem;
@@ -6,9 +7,9 @@ export const ContactWrapper = styled.div`
   background: transparent;
   display: flex;
   flex-direction: column;
+  text-align: center;
   position: relative;
   @media screen and (max-width: 1050px) {
-    flex-direction: column;
     text-align: center;
   }
 `;
@@ -20,13 +21,15 @@ export const ContactTitleContainer = styled.div`
   letter-spacing: 2px;
   user-select: none;
   @media screen and (max-width: 1050px) {
+    text-align: center;
     padding-left: 0rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
     height: 4rem;
   }
 `;
 export const FormSection = styled.div`
-  width: 50%;
+  width: 100%;
+  text-align: left;
   min-width: 558px;
   padding-right: 2rem;
   z-index: 1;
@@ -35,31 +38,38 @@ export const FormSection = styled.div`
     padding-left: 2rem;
     width: 100%;
     min-width: 0;
+    & > ${PortfolioText} {
+      text-align: center;
+    }
   }
 `;
 export const Forms = styled.form`
-  width: 50%;
-  position: absolute;
-  bottom: 5%;
-  right: 10%;
+  width: 100%;
+  padding: 0 6rem;
+  margin-bottom: 5%;
 
   @media screen and (max-width: 900px) {
-    width: 95%;
-    position: static;
+    width: 100%;
   }
 `;
 export const Input = styled.input`
   width: 50%;
   padding: 12px;
+  height: 50px;
   background: var(--project-box-singleContainer);
   box-sizing: border-box;
   resize: vertical;
-  margin: 0.6rem 0;
-  border: 0;
+  /* margin: 8px 8px; */
+  border: inset 2px solid var(--project-box-singleContainer);
+  border-radius: 8px;
   caret-color: var(--additional-color);
   color: var(--text-color);
   font-size: 1rem;
-  letter-spacing: 1px;
+  font-family: var(--main-font);
+
+  box-shadow: inset 0 47px 0 0 var(--project-box-singleContainer);
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.35s;
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus,
@@ -70,18 +80,14 @@ export const Input = styled.input`
     -webkit-text-fill-color: var(--text-color) !important;
   }
 
-  box-shadow: inset 0 45px 0 0 var(--project-box-singleContainer);
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.35s;
-
   &:focus {
     outline: none;
-    box-shadow: inset 0 45px 0 0 var(--project-box-singleContainer),
+    box-shadow: inset 0 47px 0 0 var(--project-box-singleContainer),
       inset 800px 0 0 0 var(--additional-color);
   }
   &:focus:invalid {
-    box-shadow: inset 0 45px 0 0 var(--project-box-singleContainer),
-      inset 800px 0 0 0 red;
+    box-shadow: inset 0 47px 0 0 var(--project-box-singleContainer),
+      inset 1250px 0 0 0 red;
   }
 
   &.left {
@@ -92,25 +98,33 @@ export const Input = styled.input`
     width: 49%;
     margin-left: 1%;
   }
-
+  &::placeholder {
+    color: var(--text-color);
+  }
   &:focus::placeholder {
-    color: transparent;
+    color: var(--animated-logo-color);
   }
 `;
 export const InputSubject = styled.input`
-  padding: 12px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  resize: vertical;
-  margin: 0.6rem 0;
   width: 100%;
-  border: 0;
+  margin: 16px 0;
+  padding: 12px;
+  border: inset 2px solid var(--project-box-singleContainer);
+  border-radius: 8px;
+  font-family: var(--main-font);
+  box-sizing: border-box;
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
   outline: none;
-  background: var(--project-box-singleContainer);
   caret-color: var(--additional-color);
   color: var(--text-color);
   font-size: 1rem;
   letter-spacing: 1px;
+  background: var(--project-box-singleContainer);
+  resize: none;
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus,
@@ -120,27 +134,31 @@ export const InputSubject = styled.input`
   &:-webkit-autofill {
     -webkit-text-fill-color: var(--text-color) !important;
   }
-  box-shadow: inset 0 45px 0 0 var(--project-box-singleContainer);
+
+  box-shadow: inset 0 47px 0 0 var(--project-box-singleContainer);
   -webkit-transition: box-shadow 0.3s;
   transition: box-shadow 0.35s;
 
   &:focus {
     outline: none;
-    box-shadow: inset 0 45px 0 0 var(--project-box-singleContainer),
-      inset 1400px 0 0 0 var(--additional-color);
+    box-shadow: inset 0 47px 0 0 var(--project-box-singleContainer),
+      inset 2500px 0 0 0 var(--additional-color);
   }
-
+  &::placeholder {
+    color: var(--text-color);
+  }
   &:focus::placeholder {
-    color: transparent;
+    color: var(--animated-logo-color);
   }
 `;
 export const InputMessage = styled.textarea`
   width: 100%;
-  margin: 0.6rem 0;
+  margin: 8px 0;
   padding: 12px;
-  border: 0;
+  border: inset 2px solid var(--project-box-singleContainer);
+  border-radius: 8px;
+  font-family: var(--main-font);
   box-sizing: border-box;
-  resize: vertical;
   height: 100px;
   display: flex;
   flex-wrap: wrap;
@@ -169,19 +187,22 @@ export const InputMessage = styled.textarea`
   &:focus {
     outline: none;
     box-shadow: inset 0 97px 0 0 var(--project-box-singleContainer),
-      inset 1400px 0 0 0 var(--additional-color);
+      inset 2500px 0 0 0 var(--additional-color);
   }
-
+  &::placeholder {
+    color: var(--text-color);
+  }
   &:focus::placeholder {
-    color: transparent;
+    color: var(--animated-logo-color);
   }
 `;
 export const InputButton = styled.input`
   background: none;
   width: 220px;
   border: 2px solid var(--additional-color);
+  border-radius: 8px;
   color: var(--additional-color);
-  padding: 10px 0;
+  padding: 15px 5px;
   letter-spacing: 3px;
   font-size: 1rem;
   margin-top: 1rem;
@@ -196,45 +217,25 @@ export const InputButton = styled.input`
     color: var(--animated-header-color);
   }
 `;
-export const MapSection = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  overflow: hidden;
-  position: relative;
-
-  @media screen and (max-width: 1050px) {
-    width: 100%;
-    justify-content: center;
-  }
-  @media screen and (max-width: 900px) {
-    display: none;
-  }
-`;
-
-export const MapImg = styled.img`
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-`;
 
 export const InfoDiv = styled.div`
-  position: absolute;
-  top: 3rem;
-  left: 6rem;
-  padding: 10px 15px;
-  background: rgb(0, 0, 0, 0.4);
+  width: 100%;
+  background: var(--dark-header-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6rem;
   @media screen and (max-width: 1050px) {
-    left: 2rem;
+    padding: 0 2rem;
+    margin-top: 2rem;
   }
 `;
 export const InfoText = styled.p`
   color: white;
+
   margin: 0;
   letter-spacing: 1px;
   font-size: var(--text-size);
-  font-weight: 700;
+  color: var(--text-color);
   &.email {
     color: var(--additional-color);
     margin-top: 2rem;
@@ -244,6 +245,10 @@ export const InfoText = styled.p`
   }
 `;
 export const InfoTextBig = styled(InfoText)`
-  font-size: 1.8rem;
   margin-bottom: 15px;
+  font-size: var(--text-size);
+`;
+export const SingleInfo = styled.div`
+  text-align: left;
+  display: inline-block;
 `;

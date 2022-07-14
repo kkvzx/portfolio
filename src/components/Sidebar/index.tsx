@@ -6,6 +6,7 @@ import {
   OutsideLinks,
   SingleOutsideLink,
   HeaderLogo,
+  LinkRouter,
 } from "../Header/HeaderElements";
 import {
   ClosingIcon,
@@ -77,22 +78,22 @@ const Sidebar = (props: NavMobileMenuProps) => {
         <SidebarMenu>
           <SideItem>
             <SideLinks to="hero" onClick={() => props.toggle()}>
-              Start Page
+              <LinkRouter to="/">Start Page</LinkRouter>
             </SideLinks>
           </SideItem>
           <SideItem>
             <SideLinks to="about" onClick={() => props.toggle()}>
-              About Me
+              <LinkRouter to="/">About Me</LinkRouter>
             </SideLinks>
           </SideItem>
           <SideItem>
             <SideLinks to="projects" onClick={() => props.toggle()}>
-              My Portfolio
+              <LinkRouter to="/">My Portfolio</LinkRouter>
             </SideLinks>
           </SideItem>
           <SideItem>
             <SideLinks to="contact" onClick={() => props.toggle()}>
-              Contact
+              <LinkRouter to="/">Contact</LinkRouter>
             </SideLinks>
           </SideItem>
         </SidebarMenu>

@@ -61,6 +61,7 @@ export const Photo = styled.img`
   width: 100%;
   max-height: 30rem;
   border-radius: 10px;
+  cursor: pointer;
 `;
 
 export const WindowForPhoto = styled.div<{ active: boolean }>`
@@ -156,12 +157,15 @@ export const DifficultiesToOvercomeText = styled.p`
     font-size: var(--text-size-mobile);
   }
 `;
-
+export const OutsideWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+`;
 export const GithubLinkInBox = styled(GithubLink)`
   margin: 0;
   /* font-size: var(--h2-font-size); */
   font-size: 2.5rem;
-
   transition: 0.3s all;
   &:hover {
     color: var(--additional-color);
@@ -171,8 +175,19 @@ export const GithubLinkInBox = styled(GithubLink)`
     font-size: 2rem;
   }
 `;
-export const SingleOutsideBoxLink = styled(SingleOutsideLink)`
-  ${ReadMore} {
+export const Demo = styled.a`
+  font-size: 1.4rem;
+  color: var(--text-color);
+  font-weight: 400;
+  background: none;
+  padding: 1px 10px;
+  border-radius: 20px;
+  margin-right: 30px;
+  float: right;
+  transition: 0.3s all;
+`;
+export const SingleOutsideBoxLink = styled.a`
+  ${Demo} {
     float: left;
     margin-left: 10px;
     border: 2px solid var(--additional-color);

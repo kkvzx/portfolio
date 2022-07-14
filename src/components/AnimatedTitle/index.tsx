@@ -3,7 +3,10 @@ import styled from "styled-components";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Title, Word, Character } from "./AnimationTitleElements";
-
+// ----------------
+// AnimatedTitle it's a function that is destructuring
+// whole sentence into single letter and animating them
+// ---------------
 interface titleProps {
   text: string;
   size: string;
@@ -21,6 +24,7 @@ export default function AnimatedTitle({
   spacing = "0.5em",
   colorSwap = false,
 }: titleProps) {
+  // ---------start of animations----------------
   const ctrls = useAnimation();
 
   const { ref, inView } = useInView({
@@ -58,6 +62,7 @@ export default function AnimatedTitle({
       },
     },
   };
+  // ---------end of animations----------------
 
   return (
     <Title aria-label={text} role="heading">

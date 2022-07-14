@@ -6,6 +6,7 @@ import {
   AiOutlineHome,
   AiFillLinkedin,
   AiFillGithub,
+  AiOutlineFilePdf,
 } from "react-icons/ai";
 import { FiMonitor } from "react-icons/fi";
 import {
@@ -33,54 +34,54 @@ import {
   FifthDiv,
   SeventhDiv,
   ExpContainer,
+  Colored,
+  Bolder,
+  EducationDiv,
+  EightDiv,
+  DownloadLink,
 } from "./ResumeElements";
-import { Stroke } from "../AboutSection/AnimatedTechnologies/AnimatedTechnologiesElements.tsx";
-import {
-  ProjectInformation,
-  SingleProject,
-  InfoSection,
-  ProjectTitle,
-} from "../projects/ProjectsElements";
+
+const cv = require("../../files/Curriculum_vitae_Kazusek_Konrad.pdf");
 
 const Resume = () => {
   return (
     <ResumeContainer>
       <FirstContainer>
         <NameH1>Konrad Kazusek</NameH1>
-        <Title>Front-end developer</Title>
+        <Title>Junior Front-end developer</Title>
       </FirstContainer>
       <SecondContainer>
-        <StandardText left={true}>
+        <StandardText>
           <IconSpan>
             <AiOutlineMail></AiOutlineMail>
           </IconSpan>{" "}
           konrad.kazusek3@gmail.com
         </StandardText>
-        <StandardText left={false}>
+        <StandardText>
           <IconSpan>
             <AiOutlinePhone></AiOutlinePhone>
           </IconSpan>{" "}
           +48 737 919 224
         </StandardText>
-        <StandardText left={true}>
+        <StandardText>
           <IconSpan>
             <AiOutlineHome></AiOutlineHome>
           </IconSpan>{" "}
           Katowice, Polska
         </StandardText>
-        <StandardText left={false}>
+        <StandardText>
           <IconSpan>
             <FiMonitor></FiMonitor>
           </IconSpan>{" "}
           www.konradkvzxsek.com
         </StandardText>
-        <StandardText left={true}>
+        <StandardText>
           <IconSpan>
             <AiFillLinkedin></AiFillLinkedin>
           </IconSpan>{" "}
           linkedin.konradkazusek.com
         </StandardText>
-        <StandardText left={false}>
+        <StandardText>
           <IconSpan>
             <AiFillGithub></AiFillGithub>
           </IconSpan>{" "}
@@ -88,7 +89,7 @@ const Resume = () => {
         </StandardText>
       </SecondContainer>
       <ThirdDiv>
-        <SecondaryHeader>Summary</SecondaryHeader>
+        <SecondaryHeader>About me</SecondaryHeader>
         <NormalText>
           I recently started my journey in tech industry after graduation
           Aircraft Engineering at Silesian University of Technology. I'm self
@@ -123,46 +124,75 @@ const Resume = () => {
           </FifthUl>
         </NormalText>
       </FifthDiv>
+      {/* ================= */}
+      <EducationDiv>
+        <SecondaryHeader>Education</SecondaryHeader>
+        <NormalText>
+          <Bolder>2015- 2018:</Bolder> Extramural three-year IT technical
+          college
+          <br />
+          <Bolder>2015- 2018:</Bolder> High School in Poręba by the name of
+          Nicolaus Copernicus
+          <br />
+          <Bolder>2018- 2022:</Bolder> Silesian University of Technology
+          <br /> Facult of Transport and Aviation Engineering -{" "}
+          <Colored>ENG title</Colored>
+          <br />
+        </NormalText>
+      </EducationDiv>
+      {/* ================= */}
+
       <SixthDiv>
         <SecondaryHeader>Work History</SecondaryHeader>
-        {/* <ExpContainer>
-          <InfoSection>
-            <ProjectTitle>
-              Linetech Aircraft Maintenance in Pyrzowice
-            </ProjectTitle>
-            <ProjectTitle>Period of work:2018-2021</ProjectTitle>
-            <ProjectInformation>Position: Apprentice</ProjectInformation>
-            <ProjectInformation>
-              Assistance in the work of aviation mechanics during daily repairs,
-            </ProjectInformation>
-            <ProjectInformation>
-              Gaining knowledge in the field of reading complex documentation -
-              similiar to technologies documentation
-            </ProjectInformation>
-          </InfoSection>
-        </ExpContainer> */}
+        <ExpContainer>
+          <NormalText>
+            <Bolder>Linetech Aircraft Maintenance in Pyrzowice</Bolder>
+            <br />
+            <Bolder>2018- 2021</Bolder>
+            <br />
+            <Bolder>Position:</Bolder> Apprentice
+            <br />
+            -Assistance in the work of aviation mechanics during daily repairs.
+            <br />
+            -Gaining knowledge in the field of technical documentation of
+            aircraft systems
+          </NormalText>
+        </ExpContainer>
+        <ExpContainer>
+          <NormalText>
+            <Bolder>Aircom in Pyrzowice</Bolder>
+            <br />
+            <Bolder>2018- 2021</Bolder>
+            <br />
+            <Bolder>Position:</Bolder> Apprentice
+            <br />
+            -Assistance in the work of aviation mechanics during daily repairs.
+            <br />
+            -Gaining knowledge in the field of technical documentation of
+            aircraft systems
+          </NormalText>
+        </ExpContainer>
+        <ExpContainer>
+          <NormalText>
+            <Bolder>Wroclaw Airport Maintanance Services - Ryanair </Bolder>
+            <br />
+            <Bolder>2022- 2022</Bolder>
+            <br />
+            <Bolder>Position:</Bolder> Mechanic
+            <br />
+            -Work of aviation mechanics during periodical services.
+            <br />
+            -Gaining knowledge in the field of technical documentation of
+            aircraft systems
+          </NormalText>
+        </ExpContainer>
       </SixthDiv>
-      <ThirdDiv>
-        <SecondaryHeader>Education</SecondaryHeader>
-        <TechnologiesList>
-          <TechnologiesLi>
-            2015- 2018: Extramural three-year IT technical college
-          </TechnologiesLi>
-          <TechnologiesLi>
-            2015- 2018: High School in Poręba by the name of Nicolaus Copernicus
-          </TechnologiesLi>
-          <TechnologiesLi>
-            2018- 2022: Silesian University of Technology, Facult of Transport
-            and Aviation Engineering - <Stroke>ENG title</Stroke>
-          </TechnologiesLi>
-        </TechnologiesList>
-      </ThirdDiv>
-      <FourthDiv>
+      <EightDiv>
         <SecondaryHeader>Foreign Languages</SecondaryHeader>
         <NormalText>
           English - very good written and spoken knowledge
         </NormalText>
-      </FourthDiv>
+      </EightDiv>
       <SeventhDiv>
         <SecondaryHeader>Soft skills</SecondaryHeader>
         <NormalText>
@@ -186,6 +216,9 @@ const Resume = () => {
           </TechnologiesUsed>
         </NormalText>
       </SeventhDiv>
+      <DownloadLink href={cv} download={cv}>
+        <AiOutlineFilePdf />
+      </DownloadLink>
     </ResumeContainer>
   );
 };

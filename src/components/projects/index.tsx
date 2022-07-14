@@ -30,7 +30,6 @@ const Projects = (props: ProjectsProps) => {
         <ProjectTitle>{singleObj.name}</ProjectTitle>
         <ProjectInformation>{singleObj.smallDescription}</ProjectInformation>
         <ReadMore>Show More</ReadMore>
-        <GithubLink />
       </InfoSection>
     </SingleProject>
   ));

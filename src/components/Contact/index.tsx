@@ -17,8 +17,7 @@ import {
   InputButton,
   InputMessage,
   InputSubject,
-  MapImg,
-  MapSection,
+  SingleInfo,
 } from "./ContactElements";
 const mapPhoto = require("../../img/map.png");
 const FORM_ENDPOINT = "https://formsubmit.co/0a2e73ee5eeb3a0c900ca5e8e3823519";
@@ -64,16 +63,17 @@ const Contact = () => {
           <InputButton type="submit" value="Send message!" required />
         </Forms>
       </FormSection>
-      <MapSection>
-        <MapImg src={mapPhoto} />
-        <InfoDiv>
-          <InfoTextBig>KONRAD KAZUSEK</InfoTextBig>
-          <InfoText>EMAIL:</InfoText>
+      <InfoDiv>
+        <SingleInfo>
+          <InfoTextBig>KONRAD KAZUSEK</InfoTextBig>{" "}
+        </SingleInfo>
+        <SingleInfo>
           <InfoTextBig>KONRAD.KAZUSEK3@GMAIL.COM</InfoTextBig>
-          <InfoText>PHONE NUMBER:</InfoText>
+        </SingleInfo>
+        <SingleInfo>
           <InfoTextBig>+48 737 919 224</InfoTextBig>
-        </InfoDiv>
-      </MapSection>
+        </SingleInfo>
+      </InfoDiv>
     </ContactWrapper>
   );
 };

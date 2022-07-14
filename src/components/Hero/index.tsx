@@ -1,23 +1,32 @@
 import React, { useState } from "react";
-import { FaGreaterThan, FaToggleOn } from "react-icons/fa";
+import {
+  FaGithub,
+  FaGreaterThan,
+  FaLinkedin,
+  FaToggleOn,
+} from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   HeroBg,
   HeroContainer,
-  HeroMainText,
   TextContainer,
   Img,
-  ExploreButton,
   FrontPage,
   Circle,
   CloudsContainer,
   CloudImg,
   TitleContainer,
-  SmallImg,
+  LinedLink,
+  GitLink,
+  PageLink,
 } from "./HeroElements";
 import { nanoid } from "nanoid";
 import { clouds } from "./cloudsData";
 import AnimatedTitle from "../AnimatedTitle";
+import {
+  GithubLinkInBox,
+  OutsideWrapper,
+} from "../ProjectBox/ProjectBoxElements";
 const photo = require("../../img/photo.png");
 const smallImg = require("../../img/flaming.png");
 interface props {
@@ -65,7 +74,7 @@ const Hero = (props: heroProps) => {
 
   return (
     <HeroContainer id="hero">
-      <HeroBg darkMode={props.darkMode}>
+      <HeroBg>
         <TextContainer>
           <TitleContainer>
             <AnimatedTitle
@@ -80,12 +89,7 @@ const Hero = (props: heroProps) => {
               size="var(--big-font-size)"
               sizesmall="var(--big-font-sizeMobile)"
             />
-            <AnimatedTitle
-              text="Aircraft Engineer"
-              color="var(--animated-logo-color)"
-              size="var(--big-font-size)"
-              sizesmall="var(--big-font-sizeMobile)"
-            />
+
             <AnimatedTitle
               text="Junior Front-End Developer"
               color="var(--animated-logo-color)"
@@ -93,6 +97,17 @@ const Hero = (props: heroProps) => {
               sizesmall="var(--text-font-sizeMobile)"
               spacing="0.25em"
             />
+            <OutsideWrapper>
+              <PageLink href="https://github.com/kkvzx" target="_blank">
+                <GitLink />
+              </PageLink>
+              <PageLink
+                href="https://www.linkedin.com/in/konrad-kazusek-630b1716a/"
+                target="_blank"
+              >
+                <LinedLink />
+              </PageLink>
+            </OutsideWrapper>
           </TitleContainer>
 
           <Img src={photo} alt="photo-png" />
@@ -126,23 +141,7 @@ const Hero = (props: heroProps) => {
         </TextContainer>
       </HeroBg>
       <FrontPage>
-        <ExploreButton
-          to="projects"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-          darkMode={props.darkMode}
-        >
-          Explore!
-        </ExploreButton>
-        <Circle
-          to="projects"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-        >
+        <Circle to="about" spy={true} smooth={true} offset={0} duration={500}>
           <FaGreaterThan />
         </Circle>
       </FrontPage>

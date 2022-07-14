@@ -6,14 +6,15 @@ interface props {
 
 const GlobalStyles = createGlobalStyle<props>`
 :root{
- --text-color:${(p) => (p.darkMode ? "#dfdfdf" : "black")};
+ --text-color:${(p) => (p.darkMode ? "#dfdfdf" : "3c3c3c")};
  --secondary-color:#ffdc85;
+ --main-font:'Raleway', sans-serif;
  --secondary-font: "Oswald", sans-serif;
- --additional-color:${(p) => (p.darkMode ? "#FFB703" : "#b1b3fb")};
- --background-color:${(p) => (p.darkMode ? "#08324c" : "#DDF0FF")};
- --dark-header-color:${(p) => (p.darkMode ? "#06283d" : "#DDF0FF")};
- --dark-logo-color:${(p) => (p.darkMode ? "#041926" : "#b3b5f8")};
- --animated-logo-color:${(p) => (p.darkMode ? "white" : "black")};
+ --additional-color:${(p) => (p.darkMode ? "#FFB703" : "#eb8140")};
+ --background-color:${(p) => (p.darkMode ? "#08324c" : "#41b6fe")};
+ --dark-header-color:${(p) => (p.darkMode ? "#06283d" : "#37a0e0")};
+ --dark-logo-color:${(p) => (p.darkMode ? "#041926" : "#2c7eb0")};
+ --animated-logo-color:${(p) => (p.darkMode ? "#e7e7e7" : "black")};
  --linear-gradient-color:${(p) =>
    p.darkMode
      ? "linear-gradient(-45deg, #dff6ff, #47b5ff, #1363df, #06283d)"
@@ -24,10 +25,8 @@ const GlobalStyles = createGlobalStyle<props>`
  --big-font-sizeMobile:3rem;
  --h2-font-size:2.2rem;
  --h2-font-sizeMobile:1.3rem;
- --project-box-color:${(p) =>
-   p.darkMode ? "rgba(6, 40, 61, 0.95)" : "rgba(176, 216, 251, 0.95)"};
-  --project-box-singleContainer:${(p) =>
-    p.darkMode ? "#0e5581" : "rgba(176, 216, 251, 0.9)"};
+ --project-box-color:${(p) => (p.darkMode ? "rgba(6, 40, 61, 1)" : "#2c7eb0")};
+  --project-box-singleContainer:${(p) => (p.darkMode ? "#0e5581" : "#338fc7")};
  
 }
 *{
