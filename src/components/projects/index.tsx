@@ -16,6 +16,7 @@ import {
 import ProjectBox from "../ProjectBox";
 import AnimatedTitle from "../AnimatedTitle";
 import { ContactTitleContainer } from "../Contact/ContactElements";
+import { AboutMeText } from "../AboutSection/AboutElements";
 
 // require("../../img/projectsDataImg/tenzis/1.png")
 type ProjectsProps = {
@@ -45,12 +46,12 @@ const Projects = (props: ProjectsProps) => {
           colorSwap={false}
         />
       </ContactTitleContainer>
-      <PortfolioText>
+      <AboutMeText>
         A small gallery of recent project chosen by me. I've done them while
         improving my skills such as css layout, javascript, typescript and
         react. Click on them to read more about all Fdifficulties in each
         project.
-      </PortfolioText>
+      </AboutMeText>
       <ProjectsContainer>{htmlProjectsData}</ProjectsContainer>
     </ProjectsWrapper>
   );

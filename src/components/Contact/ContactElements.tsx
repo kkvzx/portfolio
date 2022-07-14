@@ -36,7 +36,6 @@ export const FormSection = styled.div`
 
   @media screen and (max-width: 1050px) {
     padding-left: 2rem;
-    width: 100%;
     min-width: 0;
     & > ${PortfolioText} {
       text-align: center;
@@ -50,6 +49,7 @@ export const Forms = styled.form`
 
   @media screen and (max-width: 900px) {
     width: 100%;
+    padding: 0 2rem;
   }
 `;
 export const Input = styled.input`
@@ -93,10 +93,20 @@ export const Input = styled.input`
   &.left {
     margin-right: 1%;
     width: 49%;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 8px;
+    }
   }
   &.right {
     width: 49%;
     margin-left: 1%;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      margin: 0;
+      margin-top: 8px;
+    }
   }
   &::placeholder {
     color: var(--text-color);
