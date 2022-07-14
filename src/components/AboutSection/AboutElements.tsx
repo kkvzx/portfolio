@@ -47,7 +47,6 @@ export const AboutMeContainer = styled.div`
   text-align: center;
   position: relative;
   margin-top: 8rem;
-  /* padding-left: 6rem; */
 
   @media screen and (max-width: 900px) {
     align-items: center;

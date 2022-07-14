@@ -1,6 +1,4 @@
 import React from "react";
-import { technologiesData } from "./TechnologiesData";
-import { AiFillHtml5 } from "react-icons/ai";
 import {
   AboutMeContainer,
   AboutMePhoto,
@@ -34,11 +32,6 @@ const AboutSection = () => {
   };
   // ========maraquee end===================
 
-  // const htmlTechnologiesData = technologiesData.map((singleObject) => (
-  //   <TechnologiesSquare key={singleObject.id}>
-  //     <SquareImage src={singleObject.photoPath}></SquareImage>
-  //   </TechnologiesSquare>
-  // ));
   return (
     <AboutWrapper id="about">
       <AboutmeTitleContainer>
@@ -91,8 +84,6 @@ const AboutSection = () => {
           start my career and learn among professionals.
         </AboutMeText>
       </AboutMeContainer>
-      {/* ========================================= */}
-      {/* ======================================== */}
       <MarqueeContainer as={motion.div} transition={{ delay: 2 }}>
         <AnimatedTechnologies fromRight={false} textDelay={1} />
         <AnimatedTechnologies fromRight={true} textDelay={1.5} />

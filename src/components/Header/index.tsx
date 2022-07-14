@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaGithub, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import {
   HeaderWrapper,
   NavLogo,
@@ -9,6 +10,7 @@ import {
   OutsideLinks,
   SingleOutsideLink,
   HeaderLogo,
+  LinkRouter,
 } from "./HeaderElements";
 
 interface props {
@@ -38,7 +40,7 @@ const Header = (props: props) => {
             offset={0}
             duration={500}
           >
-            Start Page
+            <LinkRouter to="/">Start Page</LinkRouter>
           </NavLinks>
         </NavItem>
 
@@ -50,7 +52,7 @@ const Header = (props: props) => {
             offset={0}
             duration={500}
           >
-            About Me
+            <LinkRouter to="/">About Me</LinkRouter>
           </NavLinks>
         </NavItem>
 
@@ -62,7 +64,7 @@ const Header = (props: props) => {
             offset={0}
             duration={500}
           >
-            My Portfolio
+            <LinkRouter to="/">My Portfolio</LinkRouter>
           </NavLinks>
         </NavItem>
         <NavItem>
@@ -73,8 +75,11 @@ const Header = (props: props) => {
             offset={0}
             duration={500}
           >
-            Contact
+            <LinkRouter to="/">Contact</LinkRouter>
           </NavLinks>
+        </NavItem>
+        <NavItem>
+          <LinkRouter to="/resume">Resume</LinkRouter>
         </NavItem>
       </NavMenu>
 

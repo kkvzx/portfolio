@@ -2,7 +2,12 @@ import React, { useEffect, useState, useCallback, useRef } from "react";
 import GlobalStyles from "../GlobalStyles";
 import Header from "../Header";
 import { Content, MainWrapper } from "./MainElements";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
 import Hero from "../Hero";
 import Sidebar from "../Sidebar";
 import AboutSection from "../AboutSection";
@@ -10,6 +15,7 @@ import Projects from "../projects";
 import Contact from "../Contact";
 import ProjectBox from "../ProjectBox";
 import { projectsData } from "../projects/data";
+import Resume from "../Resume";
 
 const Main = () => {
   // constants
@@ -118,7 +124,7 @@ const Main = () => {
   }, [windowSize.width]);
 
   return (
-    <>
+    <BrowserRouter>
       <MainWrapper>
         <Sidebar
           toggle={toggleSideBar}
@@ -127,26 +133,34 @@ const Main = () => {
           isOpen={isOpen}
         />
         <Header darkModeToggle={darkModeToggle} darkMode={darkMode} />
-        <Content>
-          <Hero darkMode={darkMode} />
-          <AboutSection />
-          <Projects projectBoxToggle={projectBoxToggle} />
-          {isOpenProjectBox && (
-            <ProjectBox
-              idOfBox={idOfProjectBox}
-              boxToggle={scrollHandler}
-              switcher={switcher}
-              photoIndex={innerPhotoIndex}
-              projectsData={projectsData as any}
-              scrollHandler={scrollHandler}
-              useOutsideAlerter={useOutsideAlerter}
-            />
-          )}
-          <Contact />
-        </Content>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Content>
+                <Hero darkMode={darkMode} />
+                <AboutSection />
+                <Projects projectBoxToggle={projectBoxToggle} />
+                {isOpenProjectBox && (
+                  <ProjectBox
+                    idOfBox={idOfProjectBox}
+                    boxToggle={scrollHandler}
+                    switcher={switcher}
+                    photoIndex={innerPhotoIndex}
+                    projectsData={projectsData as any}
+                    scrollHandler={scrollHandler}
+                    useOutsideAlerter={useOutsideAlerter}
+                  />
+                )}
+                <Contact />
+              </Content>
+            }
+          />
+          <Route path="/resume" element={<Resume />} />
+        </Routes>
       </MainWrapper>
       <GlobalStyles darkMode={darkMode} />
-    </>
+    </BrowserRouter>
   );
 };
 

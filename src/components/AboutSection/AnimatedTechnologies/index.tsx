@@ -17,6 +17,7 @@ const AnimatedTechnologies = ({
   fromRight?: boolean;
   textDelay: number;
 }) => {
+  // data mapping
   const htmlTechnologies = technologiesData.map((singleObj, index) => {
     if (index % 2 === 0) {
       return index != technologiesData.length - 1
@@ -30,6 +31,8 @@ const AnimatedTechnologies = ({
       );
     }
   });
+
+  // ---------start of animations----------------
   const wrapperVariants = {
     visible: {
       opacity: 1,
@@ -64,7 +67,8 @@ const AnimatedTechnologies = ({
       ctrls.start("hidden");
     }
   }, [ctrls, inView]);
-  // -------------------------
+  // ---------end of animations----------------
+
   return (
     <Marquee
       as={motion.div}

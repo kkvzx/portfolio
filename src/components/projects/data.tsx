@@ -102,14 +102,15 @@ export const projectsData = [
       "StyledComponents",
       "React",
       "Figma",
+      "Photoshop",
+      "Framer Motion",
+      "Intersection Observer API",
     ],
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique est, reprehenderit et iste quo laboriosam dolore animi perferendis officia nemo.",
+      "I had to design website in a way to be more just a static page. During the process I managed to learn fundamentals of Framer Motion with intersection observer API which will be really useful in the future.I improved my file structuring to be simpler.While coding i used a lot of Framer Motion and React documentation.",
     smallDescription:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique est, reprehenderit et iste quo laboriosam dolore animi perferendis officia nemo.",
-    photos: [
-      "https://images.pexels.com/photos/6431895/pexels-photo-6431895.jpeg",
-    ],
+      "This is first version of my personal website which contains a portfolio and resume. I built it using React, Framer Motion and intersection observer API",
+    photos: ["https://i.imgur.com/E3YMLvw.png"],
     photoAlt: "/",
     github: "https://github.com/kkvzx/portfolio",
     liveDemo: "",

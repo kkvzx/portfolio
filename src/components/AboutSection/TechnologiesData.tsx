@@ -49,4 +49,5 @@ export const technologiesData = [
     id: 12,
     name: "Photoshop",
   },
+  { id: 13, name: "Github" },
 ];

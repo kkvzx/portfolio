@@ -60,37 +60,7 @@ const Hero = (props: heroProps) => {
       },
     },
   };
-  // banner animation
-  const banner = {
-    animate: {
-      transition: {
-        delayChildren: 0.4,
-        staggerChildren: 0.1,
-      },
-    },
-  };
-  const letterAnimation = {
-    initial: {
-      y: 400,
-    },
-    animate: {
-      y: 0,
-      transition: {
-        ease: [0.6, 0.01, -0.05, 0.95],
-        duration: 1,
-      },
-    },
-  };
-  const AnimatedLetters = ({ title }: props) => (
-    <motion.span variants={banner} initial="initial" animate="animate">
-      {[...title].map((letter) => (
-        <motion.span key={nanoid()} variants={letterAnimation}>
-          {letter}
-        </motion.span>
-      ))}
-    </motion.span>
-  );
-
+  // The rest of animations is in AnimatedTitle function
   // ========end of animations=============
 
   return (
@@ -103,28 +73,24 @@ const Hero = (props: heroProps) => {
               color="var(--animated-logo-color)"
               size="var(--big-font-size)"
               sizesmall="var(--big-font-sizeMobile)"
-              // colorSwap={false}
             />
             <AnimatedTitle
               text="I'm Konrad"
               color="var(--animated-logo-color)"
               size="var(--big-font-size)"
               sizesmall="var(--big-font-sizeMobile)"
-              // colorSwap={false}
             />
             <AnimatedTitle
               text="Aircraft Engineer"
               color="var(--animated-logo-color)"
               size="var(--big-font-size)"
               sizesmall="var(--big-font-sizeMobile)"
-              // colorSwap={false}
             />
             <AnimatedTitle
               text="Junior Front-End Developer"
               color="var(--animated-logo-color)"
               size="var(-text-size)"
               sizesmall="var(--text-font-sizeMobile)"
-              // colorSwap={false}
               spacing="0.25em"
             />
           </TitleContainer>

@@ -1,3 +1,4 @@
+import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 import styled from "styled-components";
 
@@ -26,11 +27,6 @@ export const NavLogo = styled.div`
   height: 10rem;
   width: 100%;
   background: var(--dark-logo-color);
-
-  /* @media screen and (max-width: 768px) {
-    width: 100%;
-    justify-content: center;
-  } */
 `;
 
 export const HeaderLogo = styled.img`
@@ -48,17 +44,15 @@ export const NavMenu = styled.ul`
   flex-direction: column;
   width: 100%;
   padding: 0;
-
-  /* @media screen and (max-width: 1275px) {
-    display: none;
-  } */
 `;
 export const NavItem = styled.li`
   width: 100%;
   margin-top: -1px;
   margin-left: -1px;
 `;
-export const NavLinks = styled(LinkS)`
+export const NavLinks = styled(LinkS)``;
+
+export const LinkRouter = styled(LinkR)`
   color: var(--text-color);
   display: flex;
   align-items: center;
@@ -120,10 +114,3 @@ export const SingleOutsideLink = styled.a`
     color: black;
   }
 `;
-// box-shadow: inset 0 0 0 0 var(--additional-color);
-// transition: ease-out 0.25s;
-
-// &:hover {
-//   box-shadow: inset 220px 0 0 var(--additional-color);
-//   color: black;
-// }

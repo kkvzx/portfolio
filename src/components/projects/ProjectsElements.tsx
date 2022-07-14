@@ -88,6 +88,8 @@ export const ProjectPhoto = styled.img`
   position: absolute;
   object-fit: cover;
   left: 0;
+  object-position: center 5%;
+
   top: 0;
   border-radius: 20px 20px 0 0;
 
