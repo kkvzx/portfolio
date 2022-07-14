@@ -59,7 +59,7 @@ const AboutSection = () => {
         {/* break in text */}
         <AboutMeText />
         <AboutMeText>
-          Hi, I’m Konrad, and I’m passionate about building things for the
+          Hi, I’m Konrad and I’m passionate about building things for the
           web.When I was a kid I was completely hooked to the world of computers
           and creating things so I found tutorials about C++ and managed to
           learn fundamentals of the language.

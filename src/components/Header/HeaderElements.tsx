@@ -67,9 +67,7 @@ export const LinkRouter = styled(LinkR)`
   font-family: "Oswald", sans-serif;
   letter-spacing: 1px;
   font-size: 1.2rem;
-  &.active {
-    .border-bottom: 3px solid violet;
-  }
+
   &:after {
     content: "";
     position: absolute;

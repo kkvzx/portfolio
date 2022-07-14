@@ -49,7 +49,7 @@ export const SingleProject = styled.div`
   min-width: 18%;
   height: auto;
   margin: 0 20px 30px 0;
-  border-radius: 30px;
+  border-radius: 20px;
   text-align: center;
   background: var(--project-box-singleContainer);
   position: relative;
@@ -68,7 +68,7 @@ export const SingleProject = styled.div`
   }
 
   &:hover {
-    box-shadow: 0 0 1em 0.5em black;
+    box-shadow: 0 0 0.5em 0.1em black;
     transform: scale(1.02);
   }
 
