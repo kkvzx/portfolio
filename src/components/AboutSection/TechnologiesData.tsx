@@ -33,21 +33,18 @@ export const technologiesData = [
     id: 8,
     name: "React Router",
   },
+
   {
     id: 9,
-    name: "Redux",
-  },
-  {
-    id: 10,
     name: "Framer Motion",
   },
   {
-    id: 11,
+    id: 10,
     name: "Figma",
   },
   {
-    id: 12,
+    id: 11,
     name: "Photoshop",
   },
-  { id: 13, name: "Github" },
+  { id: 12, name: "Github" },
 ];
