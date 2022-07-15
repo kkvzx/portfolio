@@ -40,7 +40,11 @@ export const HeroBg = styled.div`
   padding-left: 7%;
   @media screen and (max-width: 900px) {
     height: 75vh;
+    @media screen and (max-height: 800px) {
+      height: 90vh;
+    }
   }
+
   @keyframes gradient {
     0% {
       background-position: 0% 50%;
