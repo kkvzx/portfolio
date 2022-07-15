@@ -96,6 +96,9 @@ const Sidebar = (props: NavMobileMenuProps) => {
               <LinkRouter to="/">Contact</LinkRouter>
             </SideLinks>
           </SideItem>
+          <SideItem>
+            <LinkRouter to="/resume">Resume</LinkRouter>
+          </SideItem>
         </SidebarMenu>
         <OutsideLinksMobile>
           <SingleOutsideLinkMobile>
