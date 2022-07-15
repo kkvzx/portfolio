@@ -76,8 +76,8 @@ const Resume = () => {
           <IconSpan>
             <FiMonitor></FiMonitor>
           </IconSpan>{" "}
-          <AddressTo href="http://www.konrvdkvzxsek.com/" target="_blank">
-            www.konrvdkvzxsek.com
+          <AddressTo href="http://www.kkazusek.com/" target="_blank">
+            www.kkazusek.com
           </AddressTo>{" "}
         </StandardText>
         <StandardText>

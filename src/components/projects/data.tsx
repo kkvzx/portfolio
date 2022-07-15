@@ -114,6 +114,6 @@ export const projectsData = [
     photos: ["https://i.imgur.com/E3YMLvw.png"],
     photoAlt: "/",
     github: "https://github.com/kkvzx/portfolio",
-    liveDemo: "",
+    liveDemo: "https://kkazusek.com",
   },
 ];
