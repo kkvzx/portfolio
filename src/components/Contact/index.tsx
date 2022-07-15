@@ -18,6 +18,7 @@ import {
   InputMessage,
   InputSubject,
   SingleInfo,
+  AddresTo,
 } from "./ContactElements";
 const mapPhoto = require("../../img/map.png");
 const FORM_ENDPOINT = "https://formsubmit.co/0a2e73ee5eeb3a0c900ca5e8e3823519";
@@ -68,10 +69,16 @@ const Contact = () => {
           <InfoTextBig>KONRAD KAZUSEK</InfoTextBig>{" "}
         </SingleInfo>
         <SingleInfo>
-          <InfoTextBig>KONRAD.KAZUSEK3@GMAIL.COM</InfoTextBig>
+          <InfoTextBig>
+            <AddresTo href="mailto:konrad.kazusek@gmail.com">
+              KONRAD.KAZUSEK3@GMAIL.COM
+            </AddresTo>
+          </InfoTextBig>
         </SingleInfo>
         <SingleInfo>
-          <InfoTextBig>+48 737 919 224</InfoTextBig>
+          <InfoTextBig>
+            <AddresTo href="tel:+48-737-919-224">+48 737 919 224</AddresTo>
+          </InfoTextBig>
         </SingleInfo>
       </InfoDiv>
     </ContactWrapper>

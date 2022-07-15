@@ -36,7 +36,7 @@ export const Character = styled(motion.span)<titleProps>`
   font-family: "Oswald", sans-serif;
   font-weight: 700;
 
-  @media screen and (max-width: 980px) {
+  @media screen and (max-width: 990px) {
     font-size: ${(p) => p.sizesmall};
   }
   @media screen and (max-height: 680px) {

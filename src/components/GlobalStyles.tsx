@@ -6,7 +6,7 @@ interface props {
 
 const GlobalStyles = createGlobalStyle<props>`
 :root{
- --text-color:${(p) => (p.darkMode ? "#dfdfdf" : "3c3c3c")};
+ --text-color:${(p) => (p.darkMode ? "#dfdfdf" : "#3c3c3c")};
  --secondary-color:#ffdc85;
  --main-font:'Raleway', sans-serif;
  --secondary-font: "Oswald", sans-serif;

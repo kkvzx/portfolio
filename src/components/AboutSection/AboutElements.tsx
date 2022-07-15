@@ -28,7 +28,7 @@ export const AboutmeTitleContainer = styled.div`
 
   user-select: none;
   @media screen and (max-width: 1050px) {
-    justify-content: center;
+    justify-content: ;
     padding-left: 0;
   }
   @media screen and (max-width: 900px) {
@@ -71,7 +71,7 @@ export const AboutMeText = styled(PortfolioText)`
   @media screen and (max-width: 1400px) {
     padding: 0 6rem;
   }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 990px) {
     font-size: var(--text-sizeMobile);
     width: 80%;
     padding: 0 2rem;

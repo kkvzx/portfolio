@@ -20,7 +20,7 @@ export const ContactTitleContainer = styled.div`
   margin: 0;
   letter-spacing: 2px;
   user-select: none;
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 990px) {
     text-align: center;
     padding-left: 0rem;
     margin-bottom: 0rem;
@@ -238,6 +238,9 @@ export const InfoDiv = styled.div`
     padding: 0 2rem;
     margin-top: 2rem;
   }
+  @media screen and (max-width: 525px) {
+    flex-wrap: wrap;
+  }
 `;
 export const InfoText = styled.p`
   color: white;
@@ -256,7 +259,10 @@ export const InfoText = styled.p`
 `;
 export const InfoTextBig = styled(InfoText)`
   margin-bottom: 15px;
-  font-size: var(--text-size);
+`;
+export const AddresTo = styled.a`
+  text-decoration: none;
+  color: var(--text-color);
 `;
 export const SingleInfo = styled.div`
   text-align: left;

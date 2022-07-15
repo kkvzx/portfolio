@@ -39,6 +39,7 @@ import {
   EducationDiv,
   EightDiv,
   DownloadLink,
+  AddressTo,
 } from "./ResumeElements";
 
 const cv = require("../../files/Curriculum_vitae_Kazusek_Konrad.pdf");
@@ -55,13 +56,15 @@ const Resume = () => {
           <IconSpan>
             <AiOutlineMail></AiOutlineMail>
           </IconSpan>{" "}
-          konrad.kazusek3@gmail.com
+          <AddressTo href="mailto:konrad.kazusek3@gmail.com">
+            konrad.kazusek3@gmail.com
+          </AddressTo>
         </StandardText>
         <StandardText>
           <IconSpan>
             <AiOutlinePhone></AiOutlinePhone>
-          </IconSpan>{" "}
-          +48 737 919 224
+          </IconSpan>
+          <AddressTo href="tel:+48-737-919-224">+48 737 919 224</AddressTo>
         </StandardText>
         <StandardText>
           <IconSpan>
@@ -73,19 +76,28 @@ const Resume = () => {
           <IconSpan>
             <FiMonitor></FiMonitor>
           </IconSpan>{" "}
-          www.konradkvzxsek.com
+          <AddressTo href="http://www.konrvdkvzxsek.com/" target="_blank">
+            www.konrvdkvzxsek.com
+          </AddressTo>{" "}
         </StandardText>
         <StandardText>
           <IconSpan>
             <AiFillLinkedin></AiFillLinkedin>
-          </IconSpan>{" "}
-          linkedin.konradkazusek.com
+          </IconSpan>
+          <AddressTo
+            href="https://www.linkedin.com/in/konrad-kazusek-630b1716a/"
+            target="_blank"
+          >
+            linkedin.konradkazusek.com
+          </AddressTo>
         </StandardText>
         <StandardText>
           <IconSpan>
             <AiFillGithub></AiFillGithub>
           </IconSpan>{" "}
-          github.kkvzx.com
+          <AddressTo href="https://github.com/kkvzx" target="_blank">
+            github.kkvzx.com
+          </AddressTo>
         </StandardText>
       </SecondContainer>
       <ThirdDiv>

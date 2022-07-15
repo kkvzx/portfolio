@@ -13,7 +13,7 @@ export const projectsData = [
       "React Router",
     ],
     description:
-      "My main difficulty there was to make a working menu without using states because code was starting to look too complex. So I Found other tools for React such as React user. Also I had to rebuild my previous projects to build proper file structure with Styled Components. Because Game manager consists of 4 different games I had to learn more about proper file structure to prevent wasting time for file search. ",
+      "My main difficulty there was to make a working menu without using states because code was starting to look too complex. So I Found other tools for React such as React Router. Also I had to rebuild my previous projects to build proper file structure with Styled Components. Because Game manager consists of 4 different games I had to learn more about proper file structure to prevent wasting time for file search. ",
     smallDescription:
       "Game manager consists of four games which are tic-tac-toe, Fun Generator, Tenzies and Flappy Bird.",
     photos: [
@@ -108,7 +108,7 @@ export const projectsData = [
       "Intersection Observer API",
     ],
     description:
-      "I had to design website in a way to be more just a static page. During the process I managed to learn fundamentals of Framer Motion with intersection observer API which will be really useful in the future.I improved my file structuring to be simpler.While coding i used a lot of Framer Motion and React documentation.",
+      "I had to design website in a way to be more than static page. During the process I managed to learn fundamentals of Framer Motion with intersection observer API which will be really useful in the future. I improved my file structuring to be simpler.While coding i used a lot of Framer Motion and React documentation.",
     smallDescription:
       "This is first version of my personal website which contains a portfolio and resume. I built it using React, Framer Motion and intersection observer API",
     photos: ["https://i.imgur.com/E3YMLvw.png"],

@@ -19,7 +19,7 @@ export const ProjectsContainer = styled.div`
   display: flex;
   padding-left: 6rem;
   flex-wrap: wrap;
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 990px) {
     padding-left: 2rem;
     justify-content: center;
   }
@@ -106,7 +106,7 @@ export const InfoSection = styled.div`
   width: 100%;
   padding: 0 2em;
   position: absolute;
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 990px) {
     padding: 0;
   }
 `;
@@ -116,7 +116,7 @@ export const ProjectInformation = styled.p`
   color: var(--text-color);
   font-family: var(--main-font);
   font-weight: 400;
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 990px) {
     font-size: 1rem;
   }
 `;
@@ -145,7 +145,7 @@ export const PortfolioText = styled.p`
   @media screen and (max-width: 1050px) {
     padding: 0 2rem;
   }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 990px) {
     font-size: var(--text-sizeMobile);
     margin-bottom: 2rem;
     padding: 0 5rem;

@@ -46,12 +46,12 @@ const Projects = (props: ProjectsProps) => {
           colorSwap={false}
         />
       </ContactTitleContainer>
-      <AboutMeText>
+      <PortfolioText>
         A small gallery of recent project chosen by me. I've done them while
         improving my skills such as css layout, javascript, typescript and
         react. Click on them to read more about all Fdifficulties in each
         project.
-      </AboutMeText>
+      </PortfolioText>
       <ProjectsContainer>{htmlProjectsData}</ProjectsContainer>
     </ProjectsWrapper>
   );

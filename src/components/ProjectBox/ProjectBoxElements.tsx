@@ -194,6 +194,14 @@ export const SingleOutsideBoxLink = styled.a`
     box-shadow: inset 0 0 0 0 var(--additional-color);
     transition: ease-out 0.3s;
     font-size: var(--text-size);
+    text-decoration: none;
+    color: var(--text-color);
+    &:link {
+      color: var(--text-color);
+    }
+    a:visited {
+      color: green;
+    }
 
     &:hover {
       box-shadow: inset 200px 0 0 var(--additional-color);
@@ -205,6 +213,7 @@ export const SingleOutsideBoxLink = styled.a`
 export const LiveDemo = styled.div`
   width: 10rem;
   height: 10rem;
+  color: var(--text-color);
 `;
 
 export const LeftArrow = styled(AiOutlineArrowLeft)`
