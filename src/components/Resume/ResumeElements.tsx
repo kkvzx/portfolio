@@ -223,7 +223,8 @@ export const FourthDiv = styled(PersonalInfomrationContainer)`
     margin-right: 0;
   }
   @media screen and (max-width: 630px) {
-    height: 22em;
+    min-height: 320px;
+    padding: 1rem 3rem 1rem 2rem;
   }
 `;
 

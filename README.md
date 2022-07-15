@@ -1,1 +1,1 @@
-Hello, this is my portfolio webstie.
+Hello, this is my personal webstie.

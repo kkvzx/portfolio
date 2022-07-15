@@ -77,7 +77,11 @@ export const WindowForPhoto = styled.div<{ active: boolean }>`
     opacity:1;
     `};
 `;
-
+export const TechnologiesUsed = styled.div`
+  /* @media screen and (max-height: 750px) {
+    display: none;
+  } */
+`;
 export const InformationContainer = styled.div`
   width: 60%;
   height: 100%;
@@ -101,6 +105,11 @@ export const InformationContainer = styled.div`
     @media screen and (max-width: 560px) {
     padding:2rem
   }
+      @media screen and (max-height: 750px) {
+    &>${TechnologiesUsed}{
+      display:none;
+    }
+  }
 `;
 export const ProjectTitle = styled.h1`
   color: var(--text-color);
@@ -114,11 +123,7 @@ export const ProjectTitle = styled.h1`
     font-size: 1.8rem;
   }
 `;
-export const TechnologiesUsed = styled.div`
-  @media screen and (max-height: 750px) {
-    display: none;
-  }
-`;
+
 export const TechnologiesList = styled.ul`
   list-style: none;
   margin: 0;
