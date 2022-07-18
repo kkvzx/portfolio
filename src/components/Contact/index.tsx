@@ -21,7 +21,7 @@ import {
   AddresTo,
 } from "./ContactElements";
 const mapPhoto = require("../../img/map.png");
-const FORM_ENDPOINT = "https://formsubmit.co/Kazusek.kontakt.com";
+const FORM_ENDPOINT = "https://formsubmit.co/Kazusek.kontakt@gmail.com";
 
 const Contact = () => {
   return (
