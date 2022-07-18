@@ -41,7 +41,7 @@ export const HeroBg = styled.div`
   @media screen and (max-width: 900px) {
     height: 75vh;
     @media screen and (max-height: 800px) {
-      height: 90vh;
+      height: 80vh;
     }
   }
 
