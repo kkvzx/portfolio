@@ -202,7 +202,7 @@ const Resume = () => {
       <EightDiv>
         <SecondaryHeader>Foreign Languages</SecondaryHeader>
         <NormalText>
-          English - very good written and spoken knowledge
+          English - Fluent written and spoken knowledge
         </NormalText>
       </EightDiv>
       <SeventhDiv>
