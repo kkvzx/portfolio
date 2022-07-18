@@ -21,7 +21,7 @@ import {
   AddresTo,
 } from "./ContactElements";
 const mapPhoto = require("../../img/map.png");
-const FORM_ENDPOINT = "https://formsubmit.co/0a2e73ee5eeb3a0c900ca5e8e3823519";
+const FORM_ENDPOINT = "https://formsubmit.co/Kazusek.kontakt.com";
 
 const Contact = () => {
   return (
@@ -58,7 +58,6 @@ const Contact = () => {
             placeholder="Subject"
             required
           />
-          <Input type="hidden" name="_captcha" value="false" />
 
           <InputMessage name="message" placeholder="Message" />
           <InputButton type="submit" value="Send message!" required />
