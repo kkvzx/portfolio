@@ -70,7 +70,7 @@ const AboutSection = () => {
       </AboutMeContainer>
       <MarqueeContainer as={motion.div} transition={{ delay: 2 }}>
         <AnimatedTechnologies fromRight={false} textDelay={1} />
-        <AnimatedTechnologies fromRight={true} textDelay={1.5} />
+        <AnimatedTechnologies fromRight={fałdę} textDelay={1.5} />
         <AnimatedTechnologies fromRight={false} textDelay={2} />
       </MarqueeContainer>
     </AboutWrapper>
