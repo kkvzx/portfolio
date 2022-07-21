@@ -11,6 +11,7 @@ import AnimatedTitle from "../AnimatedTitle";
 import { motion } from "framer-motion";
 import AnimatedTechnologies from "./AnimatedTechnologies";
 import { Stroke } from "./AnimatedTechnologies/AnimatedTechnologiesElements.tsx";
+import { Colored } from "../Resume/ResumeElements";
 
 const photo = require("../../img/photo2.png");
 
@@ -52,18 +53,18 @@ const AboutSection = () => {
           In the years, I’ve graduated Aircraft Engineering at Silesian
           University of Technology - where I often used my experience in C++.
           During time spent at the airport and university I learned a lot about{" "}
-          <Stroke>importance of standarization</Stroke> and complex systems such
-          as an airplane, transport systems or design processes. When the chance
-          occured after graduation I fully focused on my passion for coding by
-          learning React and how IT systems works.
+          <Colored>importance of standarization</Colored> and complex systems
+          such as an airplane, transport systems or design processes. When the
+          chance occured after graduation I fully focused on my passion for
+          coding by learning React and how IT systems works.
         </AboutMeText>
         <AboutMeText>
           I'm a self-motivated learner with strong organization, time management
-          and communiaction skills.{" "}
-          <Stroke>
+          and communiaction skills.
+          <Colored>
             First time in a long time I find passion in my work and the beauty
             behind creating things.
-          </Stroke>{" "}
+          </Colored>
           Now looking for a junior dev position or internship to finally kick
           start my career and learn among professionals.
         </AboutMeText>

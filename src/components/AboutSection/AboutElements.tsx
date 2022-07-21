@@ -26,7 +26,6 @@ export const AboutmeTitleContainer = styled.div`
   padding-left: 6rem;
   z-index: 1;
 
-  user-select: none;
   @media screen and (max-width: 1050px) {
     justify-content: ;
     padding-left: 0;
