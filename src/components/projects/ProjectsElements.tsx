@@ -53,6 +53,7 @@ export const SingleProject = styled.div`
   text-align: center;
   background: var(--project-box-singleContainer);
   position: relative;
+  overflow: hidden;
 
   transition: 0.3s all;
   cursor: pointer;
@@ -82,7 +83,7 @@ export const SingleProject = styled.div`
   } ;
 `;
 
-export const ProjectPhoto = styled.img`
+export const ProjectPhoto = styled.img<{ ended: boolean }>`
   width: 100%;
   max-height: 250px;
   position: absolute;
@@ -92,6 +93,12 @@ export const ProjectPhoto = styled.img`
 
   top: 0;
   border-radius: 20px 20px 0 0;
+  ${({ ended }) =>
+    !ended &&
+    `
+    filter:blur(8px);
+    -webkit-filter:blur(8px);
+    `};
 
   &:after {
     content: "";

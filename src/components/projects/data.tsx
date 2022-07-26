@@ -13,9 +13,9 @@ export const projectsData = [
       "React Router",
     ],
     description:
-      "My main difficulty there was to make a working menu without using states because code was starting to look too complex. So I Found other tools for React such as React Router. Also I had to rebuild my previous projects to build proper file structure with Styled Components. Because Game manager consists of 4 different games I had to learn more about proper file structure to prevent wasting time for file search. ",
+      "My main difficulty there was to make a working menu without using states because code was starting to look too complex. So I Found other tools for React such as React Router. Also I had to rebuild my previous projects to build proper file structure with Styled Components. Because Game manager consists of 3 different games I had to learn more about proper file structure to prevent wasting time for file search. ",
     smallDescription:
-      "Game manager consists of four games which are tic-tac-toe, Fun Generator, Tenzies and Flappy Bird.",
+      "Game manager consists of four games which are tic-tac-toe, Fun Generator & Tenzies",
     photos: [
       "https://i.imgur.com/rq4HS4A.png?1",
       "https://i.imgur.com/idUDF3t.png?1",
@@ -26,6 +26,7 @@ export const projectsData = [
     photoAlt: "/",
     github: "https://github.com/kkvzx/game-manager",
     liveDemo: "https://game-manager.vercel.app/",
+    ended: true,
   },
 
   {
@@ -54,6 +55,7 @@ export const projectsData = [
     photoAlt: "/",
     github: "https://github.com/kkvzx/tic-tac-toe",
     liveDemo: "https://game-manager.vercel.app/",
+    ended: true,
   },
   {
     id: 2,
@@ -74,27 +76,11 @@ export const projectsData = [
     photoAlt: "/",
     github: "https://github.com/kkvzx/quizapp",
     liveDemo: "https://game-manager.vercel.app/",
-  },
-  {
-    id: 3,
-    name: "Tenzies",
-    technologies: ["Html", "Css", "Javascript", "React", "Figma"],
-    description:
-      "I started this project in order to practice React Hooks such as useState and useEffect. During the process I found more about passing states as props to children elements and  controlling functions. Also while working on Tenzies I found out a lot about how typescript works. My main problem to overcome was understanding how react rendering works.  ",
-    smallDescription:
-      "The object of the game is to roll the dice as fast as possible, the player who gets all dice on the same number is the winner.",
-    photos: [
-      "https://i.imgur.com/1odyL7L.png?1",
-      "https://i.imgur.com/2DgCdde.png?1",
-      "https://i.imgur.com/6N2HMTZ.png?1",
-    ],
-    photoAlt: "/",
-    github: "https://github.com/kkvzx/Tenzies",
-    liveDemo: "https://game-manager.vercel.app/",
+    ended: true,
   },
 
   {
-    id: 4,
+    id: 3,
     name: "Portfolio 1.0",
     technologies: [
       "Html",
@@ -115,5 +101,27 @@ export const projectsData = [
     photoAlt: "/",
     github: "https://github.com/kkvzx/portfolio",
     liveDemo: "https://kkazusek.com",
+    ended: true,
+  },
+  {
+    id: 4,
+    name: "Instagram clone",
+    technologies: [
+      "Html",
+      "Css",
+      "Javascript",
+      "React",
+      "React Hooks",
+      "Styled Components",
+      "Firebase",
+    ],
+    description:
+      "During the procces I used Firebase to hold all the users data. The most challenging thing was to build consistent file structure and working with firebase with use of custom hooks. I also used this project to practice using React hooks such as useContext and custom hooks.",
+    smallDescription: "Practice of working with React Hooks and firebase",
+    photos: ["https://i.imgur.com/qWVYZL1.png"],
+    photoAlt: "/",
+    github: "https://github.com/kkvzx/social-media-clone",
+    liveDemo: "https://game-manager.vercel.app/",
+    ended: false,
   },
 ];

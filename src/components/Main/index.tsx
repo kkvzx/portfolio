@@ -1,13 +1,8 @@
-import React, { useEffect, useState, useCallback, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import GlobalStyles from "../GlobalStyles";
 import Header from "../Header";
 import { Content, MainWrapper } from "./MainElements";
-import {
-  BrowserRouter,
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Hero from "../Hero";
 import Sidebar from "../Sidebar";
 import AboutSection from "../AboutSection";
@@ -32,8 +27,6 @@ const Main = () => {
   const [isOpenProjectBox, setIsOpenProjectBox] = useState<boolean>(false);
   const [idOfProjectBox, setIdOfProjectBox] = useState<number>(0);
   const [innerPhotoIndex, setInnerPhotoIndex] = useState(0);
-  const [currentProject, setCurrentProject] = useState<number>(0);
-  const length: number = projectsData.length;
 
   // functions and hooks
   const darkModeToggle = (toggle: string) => {

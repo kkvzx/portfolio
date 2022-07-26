@@ -9,9 +9,6 @@ export const ContactWrapper = styled.div`
   flex-direction: column;
   text-align: center;
   position: relative;
-  @media screen and (max-width: 1050px) {
-    text-align: center;
-  }
 `;
 export const ContactTitleContainer = styled.div`
   justify-self: left;
@@ -48,7 +45,6 @@ export const Forms = styled.form`
   margin-bottom: 5%;
 
   @media screen and (max-width: 900px) {
-    width: 100%;
     padding: 0 2rem;
   }
 `;
@@ -239,7 +235,7 @@ export const InfoDiv = styled.div`
     margin-top: 2rem;
   }
   @media screen and (max-width: 525px) {
-    flex-wrap: wrap;
+    padding: 0 4rem;
   }
 `;
 export const InfoText = styled.p`
@@ -259,6 +255,12 @@ export const InfoText = styled.p`
 `;
 export const InfoTextBig = styled(InfoText)`
   margin-bottom: 15px;
+
+  @media screen and (max-width: 525px) {
+    &.name {
+      display: none;
+    }
+  }
 `;
 export const AddresTo = styled.a`
   text-decoration: none;

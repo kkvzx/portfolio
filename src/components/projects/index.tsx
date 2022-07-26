@@ -26,11 +26,16 @@ type ProjectsProps = {
 const Projects = (props: ProjectsProps) => {
   const htmlProjectsData = projectsData.map((singleObj, index) => (
     <SingleProject key={nanoid()} onClick={() => props.projectBoxToggle(index)}>
-      <ProjectPhoto src={singleObj.photos[0]}></ProjectPhoto>
+      <ProjectPhoto
+        src={singleObj.photos[0]}
+        ended={singleObj.ended}
+      ></ProjectPhoto>
       <InfoSection>
         <ProjectTitle>{singleObj.name}</ProjectTitle>
-        <ProjectInformation>{singleObj.smallDescription}</ProjectInformation>
-        <ReadMore>Show More</ReadMore>
+        <ProjectInformation>
+          {singleObj.ended ? singleObj.smallDescription : "Work in progress"}
+        </ProjectInformation>
+        {singleObj.ended && <ReadMore>Show More</ReadMore>}
       </InfoSection>
     </SingleProject>
   ));

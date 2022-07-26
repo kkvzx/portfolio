@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import {
-  FaGithub,
-  FaGreaterThan,
-  FaLinkedin,
-  FaToggleOn,
-} from "react-icons/fa";
+import { FaGreaterThan } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   HeroBg,
@@ -31,7 +26,6 @@ const photo = require("../../img/photo.png");
 const smallImg = require("../../img/flaming.png");
 interface props {
   title: string;
-  // disabled?: boolean;
 }
 interface heroProps {
   darkMode: boolean;

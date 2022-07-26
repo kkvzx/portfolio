@@ -1,13 +1,7 @@
-import {
-  AiOutlineArrowLeft,
-  AiOutlineArrowRight,
-  AiOutlineLeft,
-  AiOutlineRight,
-} from "react-icons/ai";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { BsChevronCompactRight, BsChevronCompactLeft } from "react-icons/bs";
 import styled from "styled-components";
-import { SingleOutsideLink } from "../Header/HeaderElements";
-import { GithubLink, ReadMore } from "../projects/ProjectsElements";
+import { GithubLink } from "../projects/ProjectsElements";
 
 export const BoxWrapper = styled.div`
   width: 80%;
@@ -57,11 +51,17 @@ export const PhotoContainer = styled.div`
     display: none;
   }
 `;
-export const Photo = styled.img`
+export const Photo = styled.img<{ ended: boolean }>`
   width: 100%;
   max-height: 30rem;
   border-radius: 10px;
   cursor: pointer;
+  ${({ ended }) =>
+    !ended &&
+    `
+    filter:blur(8px);
+    -webkit-filter:blur(8px);
+    `};
 `;
 
 export const WindowForPhoto = styled.div<{ active: boolean }>`
@@ -77,11 +77,7 @@ export const WindowForPhoto = styled.div<{ active: boolean }>`
     opacity:1;
     `};
 `;
-export const TechnologiesUsed = styled.div`
-  /* @media screen and (max-height: 750px) {
-    display: none;
-  } */
-`;
+export const TechnologiesUsed = styled.div``;
 export const InformationContainer = styled.div`
   width: 60%;
   height: 100%;
@@ -158,9 +154,14 @@ export const DifficultiesToOvercomeText = styled.p`
   font-size: var(--text-size);
   letter-spacing: 1px;
   margin-bottom: 50px;
+
   @media screen and (max-width: 1600px) {
     font-size: var(--text-size-mobile);
   }
+`;
+export const Blur = styled.span`
+  text-shadow: 0 0 12px white;
+  color: transparent;
 `;
 export const OutsideWrapper = styled.div`
   display: flex;
@@ -169,7 +170,6 @@ export const OutsideWrapper = styled.div`
 `;
 export const GithubLinkInBox = styled(GithubLink)`
   margin: 0;
-  /* font-size: var(--h2-font-size); */
   font-size: 2.5rem;
   transition: 0.3s all;
   &:hover {

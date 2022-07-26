@@ -27,8 +27,6 @@ export const MarqueeTitle = styled.div`
 
 export const Stroke = styled.span`
   color: var(--additional-color);
-  /* -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: var(--additional-color); */
 `;
 export const AddStroke = styled.span`
   color: transparent;

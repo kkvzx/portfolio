@@ -1,8 +1,3 @@
-import React from "react";
-import {
-  AboutMeText,
-  AboutmeTitleContainer,
-} from "../AboutSection/AboutElements";
 import AnimatedTitle from "../AnimatedTitle";
 import { PortfolioText } from "../projects/ProjectsElements";
 import {
@@ -11,7 +6,6 @@ import {
   Forms,
   FormSection,
   InfoDiv,
-  InfoText,
   InfoTextBig,
   Input,
   InputButton,
@@ -65,7 +59,7 @@ const Contact = () => {
       </FormSection>
       <InfoDiv>
         <SingleInfo>
-          <InfoTextBig>KONRAD KAZUSEK</InfoTextBig>{" "}
+          <InfoTextBig className="name">KONRAD KAZUSEK</InfoTextBig>{" "}
         </SingleInfo>
         <SingleInfo>
           <InfoTextBig>

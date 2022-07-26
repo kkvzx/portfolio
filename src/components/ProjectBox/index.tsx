@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { nanoid } from "nanoid";
-import React, { useEffect, useRef, useState } from "react";
-import { AiFillSwitcher } from "react-icons/ai";
-import { ReadMore } from "../projects/ProjectsElements";
+import { useRef } from "react";
+
 import { ClosingIcon } from "../Sidebar/SidebarElements";
 import {
   BoxWrapper,
@@ -20,13 +19,12 @@ import {
   SingleOutsideBoxLink,
   LeftArrow,
   RightArrow,
-  RightArrowPhoto,
-  LeftArrowPhoto,
   CircleDots,
   SingleDot,
   WindowForPhoto,
   Demo,
   OutsideWrapper,
+  Blur,
 } from "./ProjectBoxElements";
 
 interface ProjectDataProps {
@@ -39,6 +37,7 @@ interface ProjectDataProps {
   photoAlt: string;
   github: string;
   liveDemo: string;
+  ended: boolean;
 }
 interface ProjectDataProps extends Array<ProjectDataProps> {}
 
@@ -94,28 +93,48 @@ const ProjectBox = (props: {
       transition={{ duration: 0.1 }}
     >
       <ClosingIcon onClick={() => props.boxToggle()} />
-      <InformationContainer>
-        <ProjectTitle>{project.name}</ProjectTitle>
-        <TechnologiesUsed>
-          <TechnologiesList>{htmlTechnologies}</TechnologiesList>
-        </TechnologiesUsed>
-        <DifficultiesToOvercomeContainer>
-          <DifficultiesToOvercomeHeader>
-            Difficulties to overcome
-          </DifficultiesToOvercomeHeader>
-          <DifficultiesToOvercomeText>
-            {project.description}
-          </DifficultiesToOvercomeText>
-        </DifficultiesToOvercomeContainer>
-        <OutsideWrapper>
-          <SingleOutsideBoxLink href={project.github} target="_blank">
-            <GithubLinkInBox></GithubLinkInBox>
-          </SingleOutsideBoxLink>
-          <SingleOutsideBoxLink href={project.liveDemo} target="_blank">
-            <Demo>Live Demo</Demo>
-          </SingleOutsideBoxLink>
-        </OutsideWrapper>
-      </InformationContainer>
+      {project.ended ? (
+        <InformationContainer>
+          <ProjectTitle>{project.name}</ProjectTitle>
+          <TechnologiesUsed>
+            <TechnologiesList>{htmlTechnologies}</TechnologiesList>
+          </TechnologiesUsed>
+          <DifficultiesToOvercomeContainer>
+            <DifficultiesToOvercomeHeader>
+              Difficulties to overcome
+            </DifficultiesToOvercomeHeader>
+            <DifficultiesToOvercomeText>
+              {project.description}
+            </DifficultiesToOvercomeText>
+          </DifficultiesToOvercomeContainer>
+          <OutsideWrapper>
+            <SingleOutsideBoxLink href={project.github} target="_blank">
+              <GithubLinkInBox></GithubLinkInBox>
+            </SingleOutsideBoxLink>
+            <SingleOutsideBoxLink href={project.liveDemo} target="_blank">
+              <Demo>Live Demo</Demo>
+            </SingleOutsideBoxLink>
+          </OutsideWrapper>
+        </InformationContainer>
+      ) : (
+        <InformationContainer>
+          <ProjectTitle>{project.name}</ProjectTitle>
+          <TechnologiesList className="unfinished">
+            <Blur>
+              Html Css Javascript React ReactHooks Styled Components Firebase
+            </Blur>
+          </TechnologiesList>
+
+          <DifficultiesToOvercomeContainer>
+            <DifficultiesToOvercomeHeader>
+              Work in progress
+            </DifficultiesToOvercomeHeader>
+            <DifficultiesToOvercomeText>
+              <Blur>{project.description}</Blur>
+            </DifficultiesToOvercomeText>
+          </DifficultiesToOvercomeContainer>
+        </InformationContainer>
+      )}
       <PhotoContainer>
         {project.photos.map((singlePhoto, index) => {
           return (
@@ -137,6 +156,7 @@ const ProjectBox = (props: {
                   }}
                   src={singlePhoto}
                   alt="/"
+                  ended={project.ended}
                 />
               )}
             </WindowForPhoto>

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
-import { OutsideLinks, SingleOutsideLink } from "../Header/HeaderElements";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 interface Props {

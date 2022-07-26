@@ -47,4 +47,5 @@ export const technologiesData = [
     name: "Photoshop",
   },
   { id: 12, name: "Github" },
+  { id: 13, name: "React Hooks" },
 ];

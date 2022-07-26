@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import {
   HeaderWrapper,
@@ -98,5 +97,3 @@ const Header = (props: props) => {
 };
 
 export default Header;
-
-// TODO SIDEBAR MENU - PROJECT SEGMENT - WORKING CONTACT FORM - REACT ROUTER

@@ -10,7 +10,6 @@ import {
 import AnimatedTitle from "../AnimatedTitle";
 import { motion } from "framer-motion";
 import AnimatedTechnologies from "./AnimatedTechnologies";
-import { Stroke } from "./AnimatedTechnologies/AnimatedTechnologiesElements.tsx";
 import { Colored } from "../Resume/ResumeElements";
 
 const photo = require("../../img/photo2.png");
