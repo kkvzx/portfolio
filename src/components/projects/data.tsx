@@ -114,14 +114,16 @@ export const projectsData = [
       "React Hooks",
       "Styled Components",
       "Firebase",
+      "Skeleton",
     ],
     description:
-      "During the procces I used Firebase to hold all the users data. The most challenging thing was to build consistent file structure and working with firebase with use of custom hooks. I also used this project to practice using React hooks such as useContext and custom hooks.",
-    smallDescription: "Practice of working with React Hooks and firebase",
+      "During the procces I used Firebase to hold all the users data. The most challenging thing was to build consistent file structure and working with firebase with use of custom hooks. I also used this project to practice using React hooks such as useContext and much more.",
+    smallDescription: "Practice of React Hooks and firebase",
     photos: ["https://i.imgur.com/qWVYZL1.png"],
     photoAlt: "/",
     github: "https://github.com/kkvzx/social-media-clone",
-    liveDemo: "https://game-manager.vercel.app/",
-    ended: false,
+    liveDemo:
+      "https://vercel.com/kkvzx/social-media-clone/3KKYJqQXtWCJcAHnLm74yzM9JGA1",
+    ended: true,
   },
 ];
