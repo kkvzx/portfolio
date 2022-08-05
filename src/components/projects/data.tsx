@@ -122,8 +122,7 @@ export const projectsData = [
     photos: ["https://i.imgur.com/qWVYZL1.png"],
     photoAlt: "/",
     github: "https://github.com/kkvzx/social-media-clone",
-    liveDemo:
-      "https://vercel.com/kkvzx/social-media-clone/3KKYJqQXtWCJcAHnLm74yzM9JGA1",
+    liveDemo: "https://social-media-clone-7ldyo0356-kkvzx.vercel.app/login",
     ended: true,
   },
 ];
