@@ -13,8 +13,8 @@ import {
   TechnologiesLi,
   TechnologiesList,
   TechnologiesUsed,
-} from "../ProjectBox/ProjectBoxElements";
-import { technologiesData } from "../AboutSection/TechnologiesData";
+} from "../../components/ProjectBox/ProjectBoxElements";
+import { technologiesData } from "../../components/AboutSection/TechnologiesData";
 import {
   PersonalInfomrationContainer,
   ResumeContainer,
@@ -150,6 +150,8 @@ const Resume = () => {
           <br /> Facult of Transport and Aviation Engineering -{" "}
           <Colored>ENG title</Colored>
           <br />
+          <Bolder>2022-2022</Bolder> Completed The Frontend Developer Career
+          Path at Scrimba
         </NormalText>
       </EducationDiv>
       {/* ================= */}

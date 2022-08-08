@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
+import * as ROUTES from "../../constants/routes";
+
 import GlobalStyles from "../GlobalStyles";
 import Header from "../Header";
 import { Content, MainWrapper } from "./MainElements";
@@ -10,7 +12,11 @@ import Projects from "../projects";
 import Contact from "../Contact";
 import ProjectBox from "../ProjectBox";
 import { projectsData } from "../projects/data";
-import Resume from "../Resume";
+import Resume from "../../pages/Resume";
+import MainPage from "../../pages/MainPage/MainPage";
+import NotFound from "../../pages/NotFound";
+import { AboutMeText } from "../AboutSection/AboutElements";
+import { Colored } from "../../pages/Resume/ResumeElements";
 
 const Main = () => {
   // constants
@@ -86,24 +92,24 @@ const Main = () => {
     setInnerPhotoIndex(0);
   }, [idOfProjectBox]);
 
-  function useOutsideAlerter(ref: any) {
-    useEffect(() => {
-      /**
-       * Alert if clicked on outside of element
-       */
-      function handleClickOutside(event: any) {
-        if (ref.current && !ref.current.contains(event.target)) {
-          scrollHandler();
-        }
-      }
-      // Bind the event listener
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => {
-        // Unbind the event listener on clean up
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }, [ref]);
-  }
+  // function useOutsideAlerter(ref: any) {
+  //   useEffect(() => {
+  //     /**
+  //      * Alert if clicked on outside of element
+  //      */
+  //     function handleClickOutside(event: any) {
+  //       if (ref.current && !ref.current.contains(event.target)) {
+  //         scrollHandler();
+  //       }
+  //     }
+  //     // Bind the event listener
+  //     document.addEventListener("mousedown", handleClickOutside);
+  //     return () => {
+  //       // Unbind the event listener on clean up
+  //       document.removeEventListener("mousedown", handleClickOutside);
+  //     };
+  //   }, [ref]);
+  // }
   // ========================PROJECT BOX CONTROL END=========================
 
   // Closing SmallnavMenu while resizing
@@ -121,31 +127,34 @@ const Main = () => {
           isOpen={isOpen}
         />
         <Header darkModeToggle={darkModeToggle} darkMode={darkMode} />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Content>
-                <Hero darkMode={darkMode} />
-                <AboutSection />
-                <Projects projectBoxToggle={projectBoxToggle} />
-                {isOpenProjectBox && (
-                  <ProjectBox
-                    idOfBox={idOfProjectBox}
-                    boxToggle={scrollHandler}
-                    switcher={switcher}
-                    photoIndex={innerPhotoIndex}
-                    projectsData={projectsData as any}
-                    scrollHandler={scrollHandler}
-                    useOutsideAlerter={useOutsideAlerter}
-                  />
-                )}
-                <Contact />
-              </Content>
-            }
-          />
-          <Route path="/resume" element={<Resume />} />
-        </Routes>
+        <Suspense
+          fallback={
+            <AboutMeText>
+              <Colored>Loading</Colored>
+            </AboutMeText>
+          }
+        >
+          <Routes>
+            <Route
+              path={ROUTES.DASHBOARD}
+              element={
+                <MainPage
+                  darkMode={darkMode}
+                  projectBoxToggle={projectBoxToggle}
+                  idOfBox={idOfProjectBox}
+                  scrollHandler={scrollHandler}
+                  switcher={switcher}
+                  projectsData={projectsData as any}
+                  innerPhotoIndex={innerPhotoIndex}
+                  idOfProjectBox={idOfProjectBox}
+                  isOpenProjectBox={isOpenProjectBox}
+                />
+              }
+            />
+            <Route path={ROUTES.RESUME} element={<Resume />} />
+            <Route path={ROUTES.NOT_FOUND} element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </MainWrapper>
       <GlobalStyles darkMode={darkMode} />
     </BrowserRouter>

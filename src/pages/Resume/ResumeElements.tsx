@@ -1,6 +1,6 @@
 import { AiOutlineFilePdf } from "react-icons/ai";
 import styled from "styled-components";
-import { SingleProject } from "../projects/ProjectsElements";
+import { SingleProject } from "../../components/projects/ProjectsElements";
 interface props {
   left: boolean;
 }
