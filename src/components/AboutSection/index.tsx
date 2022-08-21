@@ -59,7 +59,7 @@ const AboutSection = () => {
         </AboutMeText>
         <AboutMeText>
           I'm a self-motivated learner with strong organization, time management
-          and communiaction skills.
+          and communiaction skills.{" "}
           <Colored>
             First time in a long time I find passion in my work and the beauty
             behind creating things.
