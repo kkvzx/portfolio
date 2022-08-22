@@ -274,6 +274,8 @@ export const SixthDiv = styled.div`
   grid-template-columns: auto auto auto;
   grid-template-rows: 5rem 18rem;
   padding: 1rem 2rem 1rem 2rem;
+  transition: 0.3s all;
+
   &:hover {
     box-shadow: 0 0 0.5em 0.1em var(--additional-color);
     transform: scale(1.02);
