@@ -125,4 +125,18 @@ export const projectsData = [
     liveDemo: "https://social-media-clone-7ldyo0356-kkvzx.vercel.app/login",
     ended: true,
   },
+  {
+    id: 5,
+    name: "Event HR Manager",
+    technologies: ["React", "Figma", "Tailwind Css", "PostgreSQL", "Skeleton"],
+    description:
+      "It's platform made with Tailwind CSS and PostgreSQL as database. It helps managing human resources at event's such as FEST Festival, Tommorowland, concerts, etc. where a lot of ManPower is needed for a short period of time. It takes in account human factors. Platform rely on simple structure - admins - coordinator, zone leader, worker where every role has own responsibilites and check's subordinates. Every data should be included in platform. In addtion user's would have function to anonymously report others.",
+    smallDescription:
+      " It helps managing human resources at big events with multiple selling zones",
+    photos: ["https://i.imgur.com/ySRDhwU.png"],
+    photoAlt: "/",
+    github: "https://github.com/kkvzx/event-hr-manager",
+    liveDemo: "",
+    ended: false,
+  },
 ];

@@ -111,7 +111,7 @@ export const ProjectPhoto = styled.img<{ ended: boolean }>`
 `;
 export const InfoSection = styled.div`
   width: 100%;
-  padding: 0 2em;
+  padding: 0 1em;
   position: absolute;
   @media screen and (max-width: 990px) {
     padding: 0;

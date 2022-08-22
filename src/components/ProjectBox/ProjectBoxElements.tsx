@@ -155,7 +155,7 @@ export const DifficultiesToOvercomeText = styled.p`
   letter-spacing: 1px;
   margin-bottom: 50px;
 
-  @media screen and (max-width: 1600px) {
+  @media screen and (max-width: 1800px) {
     font-size: var(--text-size-mobile);
   }
 `;
