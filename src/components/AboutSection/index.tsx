@@ -52,17 +52,17 @@ const AboutSection = () => {
           In the years, I’ve graduated Aircraft Engineering at Silesian
           University of Technology - where I often used my experience in C++.
           During time spent at the airport and university, I learned a lot about{" "}
-          <Colored>the importance of standarization</Colored> and complex
-          systems, such as an airplane, transport systems or design processes.
-          When a chance occured after graduation I fully focused on my passion
-          for coding by learning React and how IT systems works.
+          <Colored>the importance of standarization, problem solving</Colored>{" "}
+          and complex systems, such as an airplane, transport systems or design
+          processes. When a chance occured after graduation I fully focused on
+          my passion for coding by learning React and how IT systems works.
         </AboutMeText>
         <AboutMeText>
           I'm a self-motivated learner with strong organization, time management
           and communication skills.{" "}
           <Colored>
             First time in a long time I find passion in my work and the beauty
-            behind creating things.
+            behind creating things.{" "}
           </Colored>
           Now looking for a junior dev position or internship to finally kick
           start my career and learn among professionals.
