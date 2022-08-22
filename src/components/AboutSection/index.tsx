@@ -42,24 +42,24 @@ const AboutSection = () => {
         {/* break in text */}
         <AboutMeText />
         <AboutMeText>
-          Hi, I’m Konrad. I’m former Aircraft Engineer and aspiring Junior
+          Hi, I’m Konrad. I’m a former Aircraft Engineer and aspiring Junior
           Front-end Developer, who is passionate about building things for the
-          web. When I was a kid I was completely hooked to the world of
-          computers and creating things so I found tutorials about C++ and
-          managed to learn fundamentals of the language.
+          web. When I was a kid, I was completely hooked on the world of
+          computers and creating things, so I found tutorials about C++ and I
+          managed to learn the fundamentals of the language.
         </AboutMeText>
         <AboutMeText>
           In the years, I’ve graduated Aircraft Engineering at Silesian
           University of Technology - where I often used my experience in C++.
-          During time spent at the airport and university I learned a lot about{" "}
-          <Colored>importance of standarization</Colored> and complex systems
-          such as an airplane, transport systems or design processes. When the
-          chance occured after graduation I fully focused on my passion for
-          coding by learning React and how IT systems works.
+          During time spent at the airport and university, I learned a lot about{" "}
+          <Colored>the importance of standarization</Colored> and complex
+          systems, such as an airplane, transport systems or design processes.
+          When a chance occured after graduation I fully focused on my passion
+          for coding by learning React and how IT systems works.
         </AboutMeText>
         <AboutMeText>
           I'm a self-motivated learner with strong organization, time management
-          and communiaction skills.{" "}
+          and communication skills.{" "}
           <Colored>
             First time in a long time I find passion in my work and the beauty
             behind creating things.
