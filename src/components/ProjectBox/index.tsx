@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
-import { nanoid } from "nanoid";
-import { useRef } from "react";
+import { motion } from 'framer-motion'
+import { nanoid } from 'nanoid'
+import { useRef } from 'react'
 
-import { ClosingIcon } from "../Sidebar/SidebarElements";
+import { ClosingIcon } from '../Sidebar/SidebarElements'
 import {
   BoxWrapper,
   DifficultiesToOvercomeContainer,
@@ -25,39 +25,39 @@ import {
   Demo,
   OutsideWrapper,
   Blur,
-} from "./ProjectBoxElements";
+} from './ProjectBoxElements'
 
 interface ProjectDataProps {
-  id: number;
-  name: string;
-  technologies: string[];
-  description: string;
-  smallDescription: string;
-  photos: string[];
-  photoAlt: string;
-  github: string;
-  liveDemo: string;
-  ended: boolean;
+  id: number
+  name: string
+  technologies: string[]
+  description: string
+  smallDescription: string
+  photos: string[]
+  photoAlt: string
+  github: string
+  liveDemo: string
+  ended: boolean
 }
 interface ProjectDataProps extends Array<ProjectDataProps> {}
 
 const ProjectBox = (props: {
-  idOfBox: number;
-  boxToggle: () => void;
-  switcher: (operation: string, action: string) => void;
-  photoIndex: number;
-  projectsData: ProjectDataProps;
-  scrollHandler: () => void;
-  useOutsideAlerter: any;
+  idOfBox: number
+  boxToggle: () => void
+  switcher: (operation: string, action: string) => void
+  photoIndex: number
+  projectsData: ProjectDataProps
+  scrollHandler: () => void
+  useOutsideAlerter: any
 }) => {
-  const project = props.projectsData[props.idOfBox];
+  const project = props.projectsData[props.idOfBox]
   const htmlTechnologies = project.technologies.map((singleTechnology) => (
     <TechnologiesLi key={nanoid()}>{singleTechnology}</TechnologiesLi>
-  ));
+  ))
   // =====================================
 
-  const wrapperRef = useRef(null);
-  props.useOutsideAlerter(wrapperRef);
+  const wrapperRef = useRef(null)
+  props.useOutsideAlerter(wrapperRef)
 
   // =====================================
   const singleDotshtml = project.photos.map((singlePhoto, index) => {
@@ -65,31 +65,31 @@ const ProjectBox = (props: {
       <SingleDot key={nanoid()} active={true} />
     ) : (
       <SingleDot key={nanoid()} active={false} />
-    );
-  });
+    )
+  })
   // photo swap animation
   const variants = {
     enter: (direction: number) => {
       return {
         x: direction > 0 ? 100 : -100,
         opacity: 0,
-      };
+      }
     },
     center: {
       zIndex: 1,
       x: 0,
       opacity: 1,
     },
-  };
+  }
   return (
     <BoxWrapper
       ref={wrapperRef}
       as={motion.div}
       initial={{
         scale: 0,
-        borderRadius: "100%",
+        borderRadius: '100%',
       }}
-      animate={{ scale: 1, borderRadius: "50px" }}
+      animate={{ scale: 1, borderRadius: '50px' }}
       transition={{ duration: 0.1 }}
     >
       <ClosingIcon onClick={() => props.boxToggle()} />
@@ -101,17 +101,17 @@ const ProjectBox = (props: {
           </TechnologiesUsed>
           <DifficultiesToOvercomeContainer>
             <DifficultiesToOvercomeHeader>
-              Difficulties to overcome
+              Description
             </DifficultiesToOvercomeHeader>
             <DifficultiesToOvercomeText>
               {project.description}
             </DifficultiesToOvercomeText>
           </DifficultiesToOvercomeContainer>
           <OutsideWrapper>
-            <SingleOutsideBoxLink href={project.github} target="_blank">
+            <SingleOutsideBoxLink href={project.github} target='_blank'>
               <GithubLinkInBox></GithubLinkInBox>
             </SingleOutsideBoxLink>
-            <SingleOutsideBoxLink href={project.liveDemo} target="_blank">
+            <SingleOutsideBoxLink href={project.liveDemo} target='_blank'>
               <Demo>Live Demo</Demo>
             </SingleOutsideBoxLink>
           </OutsideWrapper>
@@ -119,7 +119,7 @@ const ProjectBox = (props: {
       ) : (
         <InformationContainer>
           <ProjectTitle>{project.name}</ProjectTitle>
-          <TechnologiesList className="unfinished">
+          <TechnologiesList className='unfinished'>
             <Blur>
               Html Css Javascript React ReactHooks Styled Components Firebase
             </Blur>
@@ -146,37 +146,37 @@ const ProjectBox = (props: {
                 <Photo
                   key={singlePhoto}
                   as={motion.img}
-                  onClick={() => props.switcher("right", "photo")}
+                  onClick={() => props.switcher('right', 'photo')}
                   variants={variants}
-                  initial="enter"
-                  animate="center"
+                  initial='enter'
+                  animate='center'
                   transition={{
-                    x: { type: "spring", stiffness: 300, damping: 30 },
+                    x: { type: 'spring', stiffness: 300, damping: 30 },
                     opacity: { duration: 0.2 },
                   }}
                   src={singlePhoto}
-                  alt="/"
+                  alt='/'
                   ended={project.ended}
                 />
               )}
             </WindowForPhoto>
-          );
+          )
         })}
 
         <CircleDots>{singleDotshtml}</CircleDots>
       </PhotoContainer>
 
       <LeftArrow
-        className="minus"
-        onClick={() => props.switcher("minus", "project")}
+        className='minus'
+        onClick={() => props.switcher('minus', 'project')}
       />
 
       <RightArrow
-        className="plus"
-        onClick={() => props.switcher("plus", "project")}
+        className='plus'
+        onClick={() => props.switcher('plus', 'project')}
       />
     </BoxWrapper>
-  );
-};
+  )
+}
 
-export default ProjectBox;
+export default ProjectBox
