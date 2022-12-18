@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Link as LinkS } from "react-scroll";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import styled from 'styled-components';
+import { Link as LinkS } from 'react-scroll';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 interface Props {
   top?: number;
@@ -113,7 +113,6 @@ export const Img = styled.img`
 export const CloudsContainer = styled.div`
   width: 100%;
   height: 100%;
-
   position: absolute;
 `;
 
@@ -148,7 +147,7 @@ export const HeroSecondaryText = styled.p`
   font-size: var(--h2-font-size);
   font-weight: 200;
   letter-spacing: 1px;
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   @media screen and (max-width: 900px) {
     font-size: var(--h2-font-sizeMobile);
   }

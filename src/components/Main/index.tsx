@@ -1,22 +1,23 @@
-import React, { Suspense, useEffect, useState } from "react";
-import * as ROUTES from "../../constants/routes";
+import React, { Suspense, useEffect, useState } from 'react';
+import * as ROUTES from '../../constants/routes';
 
-import GlobalStyles from "../GlobalStyles";
-import Header from "../Header";
-import { Content, MainWrapper } from "./MainElements";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Hero from "../Hero";
-import Sidebar from "../Sidebar";
-import AboutSection from "../AboutSection";
-import Projects from "../projects";
-import Contact from "../Contact";
-import ProjectBox from "../ProjectBox";
-import { projectsData } from "../projects/data";
-import Resume from "../../pages/Resume";
-import MainPage from "../../pages/MainPage/MainPage";
-import NotFound from "../../pages/NotFound";
-import { AboutMeText } from "../AboutSection/AboutElements";
-import { Colored } from "../../pages/Resume/ResumeElements";
+import GlobalStyles from '../GlobalStyles';
+import Header from '../Header';
+import { Content, MainWrapper } from './MainElements';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Hero from '../Hero';
+import Sidebar from '../Sidebar';
+import AboutSection from '../AboutSection';
+import Projects from '../projects';
+import Contact from '../Contact';
+import ProjectBox from '../ProjectBox';
+import { projectsData } from '../projects/data';
+import Resume from '../../pages/Resume';
+import MainPage from '../../pages/MainPage/MainPage';
+import NotFound from '../../pages/NotFound';
+import { AboutMeText } from '../AboutSection/AboutElements';
+import { Colored } from '../../pages/Resume/ResumeElements';
+import UnderMaintenance from '../../pages/UnderMaintanance/UnderMaintanace';
 
 const Main = () => {
   // constants
@@ -36,7 +37,7 @@ const Main = () => {
 
   // functions and hooks
   const darkModeToggle = (toggle: string) => {
-    toggle === "light" ? setDarkMode(false) : setDarkMode(true);
+    toggle === 'light' ? setDarkMode(false) : setDarkMode(true);
   };
 
   const toggleSideBar = () => {
@@ -51,10 +52,10 @@ const Main = () => {
     const windowResize = () => {
       SetWindowSize(getWindowSize());
     };
-    window.addEventListener("resize", windowResize);
-    window.addEventListener("scroll", scrollHandler);
+    window.addEventListener('resize', windowResize);
+    window.addEventListener('scroll', scrollHandler);
     return () => {
-      window.removeEventListener("resize", windowResize);
+      window.removeEventListener('resize', windowResize);
     };
   }, []);
   // ========================PROJECT BOX CONTROL START=========================
@@ -64,19 +65,19 @@ const Main = () => {
   // change of ProjectBox and innerPhotos (from data)
   // -------------------------------------------------------------
   const switcher = (operation: string, action: string) => {
-    if (action === "project") {
-      if (operation === "plus") {
+    if (action === 'project') {
+      if (operation === 'plus') {
         setIdOfProjectBox((prev) =>
           prev === projectsData.length - 1 ? 0 : prev + 1
         );
-      } else if (operation === "minus") {
+      } else if (operation === 'minus') {
         setIdOfProjectBox((prev) =>
           prev === 0 ? projectsData.length - 1 : prev - 1
         );
       } else {
-        console.log("No mathcing conditions");
+        console.log('No mathcing conditions');
       }
-    } else if (action === "photo") {
+    } else if (action === 'photo') {
       setInnerPhotoIndex((prev) =>
         prev === projectsData[idOfProjectBox].photos.length - 1 ? 0 : prev + 1
       );
@@ -120,13 +121,13 @@ const Main = () => {
   return (
     <BrowserRouter>
       <MainWrapper>
-        <Sidebar
+        {/* <Sidebar
           toggle={toggleSideBar}
           darkMode={darkMode}
           darkModeToggle={darkModeToggle}
           isOpen={isOpen}
         />
-        <Header darkModeToggle={darkModeToggle} darkMode={darkMode} />
+        <Header darkModeToggle={darkModeToggle} darkMode={darkMode} /> */}
         <Suspense
           fallback={
             <AboutMeText>
@@ -135,7 +136,7 @@ const Main = () => {
           }
         >
           <Routes>
-            <Route
+            {/* <Route
               path={ROUTES.DASHBOARD}
               element={
                 <MainPage
@@ -151,8 +152,8 @@ const Main = () => {
                 />
               }
             />
-            <Route path={ROUTES.RESUME} element={<Resume />} />
-            <Route path={ROUTES.NOT_FOUND} element={<NotFound />} />
+            <Route path={ROUTES.RESUME} element={<Resume />} /> */}
+            <Route path={ROUTES.NOT_FOUND} element={<UnderMaintenance />} />
           </Routes>
         </Suspense>
       </MainWrapper>

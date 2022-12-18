@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
-import AboutSection from "../../components/AboutSection";
-import Contact from "../../components/Contact";
-import Hero from "../../components/Hero";
-import ProjectBox from "../../components/ProjectBox";
-import Projects from "../../components/projects";
-import { Content } from "./MainPageElements";
+import React, { useEffect } from 'react';
+import AboutSection from '../../components/AboutSection';
+import Contact from '../../components/Contact';
+import Hero from '../../components/Hero';
+import ProjectBox from '../../components/ProjectBox';
+import Projects from '../../components/projects';
+import { Content } from './MainPageElements';
 
 const MainPage = ({
   darkMode,
@@ -28,10 +28,10 @@ const MainPage = ({
         }
       }
       // Bind the event listener
-      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener('mousedown', handleClickOutside);
       return () => {
         // Unbind the event listener on clean up
-        document.removeEventListener("mousedown", handleClickOutside);
+        document.removeEventListener('mousedown', handleClickOutside);
       };
     }, [ref]);
   }
